@@ -8,7 +8,6 @@
 
 
 FILENAME = Modelo-TCC-DCOMP
-#FILENAME = Modelo-Mestrado-PROCC
 
 
 all: $(FILENAME).pdf
