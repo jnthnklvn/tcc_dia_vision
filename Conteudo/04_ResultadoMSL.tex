@@ -1,0 +1,138 @@
+\newpage{}
+
+\section{Resultados Encontrados}
+
+Nesta seção, são apresentados os resumos com as principais características, relacionadas ao tema deste trabalho, dos artigos selecionados na fase de extração, visando encontrar respostas para as questões levantadas na definição do protocolo de MSL.
+
+\subsection{\emph{A Mobile Educational Game Accessible to All, Including Screen Reading Users on a Touch-Screen Device}}
+
+O estudo realizado por \citeonline{Oliveira2018} teve o objetivo levantar informações e possíveis soluções para as dificuldades levantadas por um grupo composto por 6 pessoas cegas ao responder questões de tarefas interativas. E investigou, através de tarefas interativas como exercícios e questionários, a acessibilidade e usabilidade de gestos e leitores de tela em dispositivos móveis com \emph{touch-screen}.
+
+No artigo é apresentado um \emph{game mobile} que envolveu duas pessoas cegas com experiência na utilização de \emph{smartphones} na fase inicial do planejamento do protótipo. O \emph{game} funciona como se fosse um "sistema solar" com oito planetas, onde cada planeta representa um conjunto de questões e exercícios. O jogador recebe determinada pontuação cada vez que joga de acordo com os acertos e erros durante o game. As principais funcionalidades do \emph{app} relativas à acessibilidade identificadas foram:
+
+\begin{enumerate}
+\item Contraste de cor para garantir diferentes níveis de acessibilidade;
+\item Apresentações de conteúdos de forma auditiva e visual;
+\item Interação via gestos ou toques;
+\item Suporte auditivo com descrições dos elementos.
+\end{enumerate}
+
+Através da avaliação desse protótipo, por cegos, o estudo investigou o suporte de acessibilidade \emph{mobile} multiplataforma do conjunto de especificações técnicas, \emph{WAI-Aria}\footnote{\url{https://www.w3.org/WAI/standards-guidelines/aria/}}, observando problemas na detecção de elementos, devido às suas posições na tela e conteúdos difíceis de identificar na interação com leitores de tela. Notando também que houve alguma dificuldade por conta de gestos implementados no \emph{app} diferirem dos habituais utilizados pelos usuários no \emph{VoiceOver} do \emph{iOS}.
+
+Apesar dos problemas encontrados, o artigo aponta que o \emph{feedback} foi positivo e os resultados mostraram que os exercícios puderam ser realizados facilmente, por pessoas cegas, através de simples gestos com auxilio dos leitores de tela.
+
+\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Cordova Framework}.
+
+\textbf{Plataforma alvo do \emph{app} desenvolvido:} multiplataforma (\emph{Android} e \emph{iOS}).
+
+\textbf{Público alvo da aplicação:} PDV.
+
+\subsection{\emph{A Model-Driven Approach to Cross-Platform Development of Accessible Business Apps}}
+
+Um procedimento comum no processo de desenvolvimento de \emph{software} é considerar a acessibilidade para PDV apenas na etapa final. Além disso, muitos desenvolvedores não estão cientes de técnicas de software para atender esse grupo, pois o domínio de apps móveis multiplataforma tem recebido uma atenção limitada por pesquisadores. Foi nesse sentido, que o estudo de \citeonline{Christoph2020} buscou identificar desafios, requisitos e soluções técnicas de acessibilidade, selecionando 28 requisitos a respeito de acessibilidade para aplicações móveis através de uma RSL.
+
+O artigo apresenta uma abordagem orientada a modelos que integra conceitos de acessibilidade no desenvolvimento de aplicações móveis multiplataforma em conjunto com protótipos acessíveis à PDV, construídos com base nessa abordagem. Uma aplicação com foco nos cidadãos que desejam obter informações sobre chuvas fortes e inundações foi desenvolvida, nela os usuários podem ter uma visão de eventos de inundações próximos e compartilhar novos incidentes.
+
+O estudo comparou uma versão da aplicação desenvolvida nativamente que necessitou de 3,400 linhas de código \emph{Java} e 3,200 linhas de código \emph{XML} (gerado de forma semiautomática) com outra versão, com um conjunto similar de funcionalidades, onde o \emph{app} consistiu em 445 linhas de código \emph{MD²}, \emph{framework} baseado na abordagem orientada a modelos para desenvolvimento móvel multiplataforma através da linguagem de alto nível \emph{Xtend}\footnote{\url{https://www.eclipse.org/xtend/}}. Principais funcionalidades sobre acessibilidade identificadas:
+
+\begin{enumerate}
+\item Adaptação da \emph{interface} de acordo com as necessidades do usuário;
+\item Integração com os leitores de tela através do fornecimento de descrições em texto para elementos não textuais;
+\item Personalização do contorno de foco do \emph{TalkBack}.
+\end{enumerate}
+
+Segundo o artigo, o estudo de caso mostrou que \emph{apps} acessíveis podem ser gerados a partir do modelo de alto nível \emph{MD²}, implementando as técnicas de integração adequadas em cada ponto. Embora o autor afirme isso, o estudo também deixa claro que ainda havia uma pendência de validação centrada no usuário, visto que o trabalho não implementou todas as técnicas e a solução proposta não foi testada com PDV.
+
+\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Xtend, Java} e \emph{Eclipse}.
+
+\textbf{Plataforma alvo do \emph{app} desenvolvido:} multiplataforma (\emph{Android} e \emph{iOS}).
+
+\textbf{Público alvo da aplicação:} PDV interessadas em saber sobre eventos climáticos locais como chuvas fortes e inundações.
+
+\subsection{\emph{An Accessible Roller Coaster Simulator for Touchscreen Devices: An Educational Game for the Visually Impaired}}
+
+O trabalho de \citeonline{Biase2018} apresenta um \emph{app} simulador de montanha russa, baseado em simuladores educacionais já existentes e adaptado para \emph{smartphones}, para ser utilizado em disciplinas Educação Física por pessoas com e sem DV. A aplicação foi desenvolvida para auxiliar no estudo de Energia Mecânica e trás as interações por áudio e tátil como alternativas à visual. As principais funcionalidades sobre acessibilidade identificadas no \emph{app} foram:
+
+\begin{enumerate}
+\item Os elementos visuais possuem descrições textuais para integração com leitores de tela;
+\item \emph{Feedback} através de "texto para voz" (TTS, do inglês \emph{text-to-speech}) e vibração ao clicar em determinados elementos na tela, mesmo com o modo de acessibilidade desativado;
+\item Efeitos sonoros característicos que ilustram os resultados da simulação ao longo do percurso.
+\end{enumerate}
+
+Com taxas de 73\% eficácia, 77\% de eficiência e 66\% satisfação do usuário com relação a aplicação desenvolvida, os testes de usabilidade demonstraram que as estratégias de interação propostas são viáveis, com grande potencial para serem utilizadas em propósitos educacionais.
+
+Alguns problemas de acessibilidade afetaram a taxa de satisfação dos usuários, a mantendo em 66\%, tais como dificuldades em seguir a trilha da montanha com apenas um dedo, não ser possível detectar quando o carro está voltando no trilho e falha no comando que altera o foco dos elementos, alterando para o elemento errado.
+
+\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Unity 3D engine}.
+
+\textbf{Plataforma alvo do \emph{app} desenvolvido:} \emph{Android}.
+
+\textbf{Público alvo da aplicação:} Pessoas com e sem DV.
+
+\subsection{\emph{Application for the Configuration and Adaptation of the Android Operating System for the Visually Impaired}}
+
+Apesar das vantagens dos dispositivos móveis, alguns desafios da interação de PDV com os sistemas operacionais (SOs) desses dispositivos precisam ser superados, para que a tecnologia alcance um número significativo nesse grupo. Assim, o estudo visou planejar e desenvolver uma aplicação que automatize as configurações do SO \emph{Android} de acordo com as preferências de acessibilidade de cada PDV, através de comandos de voz. O artigo apresenta algumas funcionalidades e técnicas que são listadas a seguir:
+
+\begin{enumerate}
+\item Escala de Usabilidade do Sistema (SUS, do inglês \emph{System Usability Scale}) para avaliação de usabilidade da aplicação;
+\item \emph{SpeechRecognizer} do \emph{Android} para reconhecimento de voz;
+\item Eurísticas de Usabilidade de Nielsen (do inglês, \emph{Nielsen Usability Heuristics}) para evitar problemas de acessibilidade já mapeados.
+\end{enumerate}
+
+Um protótipo foi desenvolvido e mostrou potencial para ser utilizado como ferramenta para PDV, trazendo benefícios com a possibilidade do uso de comando de voz. Os testes foram realizados com seis voluntárias com DV, sendo duas parcial e quatro total. Onde três delas já possuíam experiência com comandos de voz e apenas duas das seis pessoas já haviam realizado a configuração do dispositivo alguma vez.
+
+As voluntárias expressaram avaliações positivas quanto a autonomia, satisfação e usabilidade da aplicação. E o tempo gasto para realizar as configurações de acessibilidade foi mais curto no \emph{app} desenvolvido que na aplicação padrão do \emph{Android}.
+
+\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Android Studio 2.0}.
+
+\textbf{Plataforma alvo do \emph{app} desenvolvido:} \emph{Android}.
+
+\textbf{Público alvo da aplicação:} PDV.
+
+\subsection{\emph{Blind and visually impaired user interface to solve accessibility problems}}
+
+\lipsum[31]
+
+\subsection{\emph{Design and development of a mobile app of drug information for people with visual impairment}}
+
+\lipsum[31]
+
+\subsection{\emph{Designing multimodal mobile interaction for a text messaging application for visually impaired users}}
+
+\lipsum[31]
+
+\subsection{\emph{Do You like My Outfit? Cromnia, a Mobile Assistant for Blind Users}}
+
+\lipsum[31]
+
+\subsection{\emph{Effect of UX Design Guideline on the information accessibility for the visually impaired in the mobile health apps}}
+
+\lipsum[31]
+
+\subsection{\emph{Improved and Accessible E-Book Reader Application for Visually Impaired People}}
+
+\lipsum[31]
+
+\subsection{\emph{MathMelodies 2: A Mobile Assistive Application for People with Visual Impairments Developed with React Native}}
+
+\lipsum[31]
+
+\subsection{\emph{Object Recognition and Hearing Assistive Technology Mobile Application Using Convolutional Neural Network}}
+
+\lipsum[31]
+
+\subsection{\emph{QUIMIVOX MOBILE 2.0: Application for Helping Visually Impaired People in Learning Periodic Table and Electron Configuration}}
+
+\lipsum[31]
+
+\subsection{\emph{"Talkin' about the weather": Incorporating TalkBack functionality and sonifications for accessible app design}}
+
+\lipsum[31]
+
+\subsection{\emph{Users’ perception on usability aspects of a braille learning mobile application ‘mBRAILLE’}}
+
+\lipsum[31]
+
+\subsection{\emph{WordMelodies: Supporting Children with Visual Impairment in Learning Literacy}}
+
+\lipsum[31]

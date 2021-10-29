@@ -19,6 +19,7 @@
 
 %Utilize aqui seu pacote preferido para algoritmos
 \usepackage[linesnumbered]{algorithm2e}
+\usepackage{tabularx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -39,11 +40,10 @@
 
 \pretextual
 
-\titulo{Modelo Canônico de Trabalho Acadêmico com abnTeX2: Customização para o Departamento de Computação} 
-\autor{Arnold Schwarzenegger da Silva}
-\orientador{Andrew S. Tanenbaum}
-\coorientador{Donald Knuth}
-\curso{Ciência da Computação}
+\titulo{Proposta de Aplicação Mobile para Autocuidado de Diabéticos com Acuidade Visual Prejudicada} 
+\autor{Jonathan Kelvin de Jesus Santos}
+\orientador{Profa. Dra. Adicinéia Aparecida de Oliveira}
+\curso{Sistemas de Informação}
 
 \inserirInformacoesPDF
 
@@ -51,20 +51,20 @@
 \imprimirfolhaderosto*
 
 \include{Pre_Textual/Dedicatoria}
-\include{Pre_Textual/Agradecimentos}
-\include{Pre_Textual/Epigrafe}
-\include{Pre_Textual/Resumo}
-\include{Pre_Textual/Abstract}
+%\include{Pre_Textual/Agradecimentos}
+%\include{Pre_Textual/Epigrafe}
+%\include{Pre_Textual/Resumo}
+%\include{Pre_Textual/Abstract}
 
 
 \mostrarlistadeILUSTRACOES
 \mostrarlistadeQUADROS
 \mostrarlistadeTABELAS
-\mostrarlistadeCODIGOS
-\mostrarlistadeALGORITMOS
+%\mostrarlistadeCODIGOS
+%\mostrarlistadeALGORITMOS
  
 \include{Pre_Textual/Abreviaturas}
-\include{Pre_Textual/Simbolos}
+%\include{Pre_Textual/Simbolos}
     
 \mostrarSUMARIO
 
@@ -74,10 +74,10 @@
 
 \textual
 \include{Conteudo/01_Introducao}
-\include{Conteudo/02_Comandos}
-\include{Conteudo/03_ConteudoEspecifico}
-\include{Conteudo/04_Outros}
-\include{Conteudo/05_Customizacao}
+\include{Conteudo/02_FundamentacaoTeorica}
+\include{Conteudo/03_ProtocoloMSL}
+\include{Conteudo/04_ResultadoMSL}
+\include{Conteudo/05_Proposta}
 \include{Conteudo/06_Conclusao}
 
 \phantompart
@@ -87,11 +87,11 @@
 % ELEMENTOS PÓS-TEXTUAIS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\postextual
+%\postextual
 
 \renewcommand{\chapnumfont}{\chaptitlefont}
 \renewcommand{\afterchapternum}{}
-\include{Pos_Textual/Apendices}
-\include{Pos_Textual/Anexos}
+%\include{Pos_Textual/Apendices}
+%\include{Pos_Textual/Anexos}
 
 \end{document}
