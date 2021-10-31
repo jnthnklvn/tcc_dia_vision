@@ -164,18 +164,23 @@ Na avaliação final, 100\% dos usuários disseram utilizariam o \emph{app} e o 
 \subsection{\emph{Designing multimodal mobile interaction for a text messaging application for visually impaired users}}
 
 Apesar da inclusão de opções de acessibilidade, os SOs móveis ainda enfrentam uma falta de suporte adequado para alguns tipos de atividades e contextos, como é o exemplo da escrita de textos para PDV, uma tarefa que acaba consumindo muito tempo.
-Além disso, os usuários geralmente necessitam utilizar as duas mãos para escrever mensagens, o que mostra ser um problema para cegos, visto que necessitam carregar bengala ou possuem cão guia, assim restando apenas uma mão livre.
-Nesse contexto, a abordagem proposta no estudo, através de uma aplicação protótipo para envio de mensagens, visa uma interação com o smartphone com as mãos livres, através de técnicas multimodais, especialmente o uso de gestos em combinação com comandos de voz.
+Além disso, os usuários geralmente necessitam utilizar as duas mãos para escrever mensagens, o que mostra ser um problema para cegos que necessitam carregar bengala ou possuem cão guia, assim restando apenas uma mão livre.
+
+Nesse contexto, a abordagem proposta no estudo de \citeonline{Duarte2017}, através do protótipo de um \emph{app} para envio de mensagens, visou uma interação com o \emph{smartphone} com as mãos livres, através de técnicas multimodais, especialmente o uso de gestos em combinação com comandos de voz.
 
 Os gestos são utilizados como gatilhos para ações.
-Assim, quando um gesto é reconhecido, ele ativa alguma função, que geralmente ativa o "reconhecedor de fala" ou o TTS.
-Por exemplo, existe um gesto para a ação de adicionar uma nova mensagem, ao reconhece-lo, o app ativa o reconhecedor de fala para que o usuário dite o que deve ser escrito na mensagem.
+Assim, quando um gesto é reconhecido, ele ativa alguma função, que geralmente ativa o ``reconhecedor de fala'' ou o TTS\@.
+Por exemplo, existe um gesto para a ação de adicionar uma nova mensagem, ao reconhece-lo, o \emph{app} ativa o reconhecedor de fala para que o usuário dite o que deve ser escrito na mensagem.
 Um outro gesto ativa a função para revisão da mensagem escrita, ao ser reconhecido, o TTS é ativado e a mensagem é lida palavra a palavra.
+As principais características relacionadas à acessibilidade identificadas nessa solução foram:
 
 \begin{enumerate}
-\item Interação por gestos;
-\item Text-to-speech;
-\item Comando de voz.
+\item Reconhecimento de voz;
+\item Reconhecimento de gestos;
+\item Sintese de fala.
+\item Possibilidade de revisar as mensagens escritas de maneira acessível;
+\item Possibilidade de parar a narração durante a revisão da mensagem e editar palavras especificas;
+\item Aplicação de questionário da Escala de Usabilidade do Sistema, SUS\@.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} \emph{Java, Android Studio, Accessibility Scanner App}, e o \emph{Test Lab do Firebase}.
@@ -184,28 +189,30 @@ Um outro gesto ativa a função para revisão da mensagem escrita, ao ser reconh
 
 \textbf{Público alvo da aplicação:} PDV\@.
 
-O artigo traz um caso de estudo inicial focado em um app para envio de mensagens, onde uma pesquisa foi realizada com 9 usuários com DV e resultou em feedbacks positivos, principalmente a respeito da interação por gestos.
-O estudo também trouxe comparativo de performance dos usuários na realização de tarefas em apps de envio de mensagem padrão com o app desenvolvido.
-Os resultados mostraram que na realização de tarefas fáceis, a performance do app era pouco inferior as alternativas padrões do sistema, porém, passa-se a notar grandes diferenças a favor do app em tarefas consideradas normal e difíceis, com cerca de 30\% e 50\% mais performance, respectivamente, para a solução desenvolvida em relação ao app padrão.
+Uma pesquisa foi realizada com 9 usuários com DV e resultou em \emph{feedbacks} positivos, principalmente a respeito da interação por gestos.
+Na avaliação da usabilidade das aplicações, através da escala SUS, ambas atingiram 74 pontos, considerada uma alta pontuação.
+
+O estudo também trouxe comparativo de performance dos usuários na realização de tarefas no \emph{app} de envio de mensagem padrão com o \emph{app} desenvolvido.
+Os resultados mostraram que na realização de tarefas fáceis, a performance do \emph{app} era pouco superior a alternativa padrão do sistema.
+Porém, passa-se a notar grandes diferenças a favor do \emph{app} desenvolvido em tarefas consideradas normais e difíceis, com cerca de 30\% e 50\% mais performance, respectivamente, para a solução desenvolvida em relação ao \emph{app} padrão.
 
 \subsection{\emph{Do You like My Outfit? Cromnia, a Mobile Assistant for Blind Users}}
 
-Apresentam uma aplicação mobile assistiva projetada para permitir a autonomia de PDV/cegas nas atividades diárias de se vestir.
-Uma pesquisa, em forma de questionário, com 10 pessoas foi realizada como parte de um projeto europeu que visa definir um roteiro de compras inovador para PDV\@.
+O objetivo do estudo de \citeonline{Giuliana2018} foi projetar uma solução assistiva que pudesse prover autonomia à pessoas cegas em suas atividades diárias.
 Especialistas na área de deficiência visual, de clínicos à profissionais de reabilitação vocacional e operadores do campo de cuidados sociais, participaram do estudo.
-O objetivo do estudo foi projetar uma solução assistiva que pudesse prover grande autonomia à pessoas cegas em suas atividades diárias.
-O processo de análise e projeto envolveu, desde o inciio, a participação de 4 pessoas cegas da Italian Blind Union, que se voluntariaram para colaborar com a equipe de design de usabilidade.
-Entre as tarefas diárias que mais se esperava autonomia a de se vestir com uma combinação de cores e roupas adequadas se mostrou ser o maior interesse para as PDV, essas que geralmente dependem de ajudantes para isso.
 
-Requisitos funcionais:
-Detecção de iluminação ambiente;
-Detecção de cor e textura;
-Combinação de cores apropriadas.
-Não funcionais:
-Total integração com a ferramenta de sintetização de voz dos dispositivos;
-Tamanho de fontes e labels adaptáveis de acordo com o tipo de deficiência.
-Resposta em tempo real;
-Sistema de notificações simples e imediato.
+%Uma pesquisa, em forma de questionário, com 10 pessoas foi realizada como parte de um projeto europeu que visa definir um roteiro de compras inovador para PDV\@.
+
+O processo de análise e projeto envolveu, desde o início, a participação de 4 pessoas cegas da \emph{Italian Blind Union}, que se voluntariaram para colaborar com a equipe de \emph{design} de usabilidade.
+Entre as tarefas diárias que mais se esperava autonomia a de se vestir com uma combinação de cores e roupas adequadas se mostrou ser o maior interesse para as PDV, essas que geralmente dependem de ajudantes para isso.
+Assim, uma aplicação \emph{mobile} foi projetada, visando a autonomia de PDV, total ou parcial, nesse ato cotidiano de se vestir.
+
+\begin{enumerate}
+\item Integração com leitores de tela;
+\item Tamanho de fontes e \emph{labels} adaptáveis de acordo com o tipo de deficiência;
+\item Sistema de notificações simples e imediato;
+\item Resposta em tempo real.
+\end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} Não informado.
 
@@ -213,12 +220,13 @@ Sistema de notificações simples e imediato.
 
 \textbf{Público alvo da aplicação:} PDV\@.
 
+Como resultado do estudo uma aplicação chamada de \emph{Cromnia}, que possibilita que os usuários reconheçam cores, padrões e combinações de cores, considerando a iluminação do ambiente foi desenvolvida.
+O \emph{app} é bem simples e consiste em uma única \emph{interface}, parecida com a padrão da câmera do sistema \emph{iOS}.
 O estudo levantou que já existiam soluções no mercado para esse problema, porém a ideia de uma ferramenta paga não foi bem aceita pelos entrevistados, que observaram que muitos nem poderiam pagar.
-Os testes envolveram 6 pessoas cegas e 6 com DV\@.
-O app é bem simples e consiste em uma única interface, parecida com a padrão da câmera do sistema iOS.
-Como resultado do estudo a aplicação chamada de Cromnia que possibilita que os usuários reconheçam cores, padrões e combinações de cores, considerando a iluminação do ambiente foi desenvolvida.
-Os participantes gostaram dos benefícios do app e se mostraram ansiosos para experimentar novas versões do app, visando em quando poderão utilizar o app de fato no dia a dia.
-O app está disponível na AppStore e conta com alto número de downloads.
+
+Os testes envolveram 6 PDV com parcial e 6 com DV total.
+Os participantes gostaram dos benefícios do \emph{app} e se mostraram ansiosos para experimentar novas versões, pensando em quando poderão utilizar o aplicativo de fato no dia-a-dia.
+O \emph{app} está disponível na \emph{AppStore} e conta com alto número de \emph{downloads}.
 
 \subsection{\emph{Effect of UX Design Guideline on the information accessibility for the visually impaired in the mobile health apps}}
 
@@ -226,14 +234,19 @@ O app está disponível na AppStore e conta com alto número de downloads.
 
 \subsection{\emph{Improved and Accessible E-Book Reader Application for Visually Impaired People}}
 
-Apresenta um estudo com um aplicativo leitor de e-book acessível para PDV para suprir as limitações dos atuais livros em áudio e Braille, tais como falta de novos livros, ausência de textos alternativos e navegação desconfortável.
-Embora livros digitais já estejam estabelecidos internacionalmente, não são satisfatórios em termos de acessibilidade e interface.
-O principal dispositivo utilizado para leitura foi mobile, sendo iOS a maioria com 22 usuários contra 5 para o Android.
+Embora livros digitais já estejam estabelecidos internacionalmente, não são satisfatórios em termos de acessibilidade e \emph{interface}.
+Por conta disso, o estudo de \citeonline{Heesook2017} apresenta um aplicativo leitor de \emph{e-book} acessível à PDV, que tem o objetivo de suprimir limitações como falta de novos livros, ausência de textos alternativos e navegação desconfortável dos atuais formatos acessíveis, em áudio e \emph{Braille}.
 
-- Searching, downloading and reading of EPUB3 contents
-- Play, Stop, Move controls in the reading mode
-- Function of bookmark, memo, search and sleep timer
-- Accessibility features such as high contrast settings, highlighting, and TTS voice attribute settings
+Um levantamento de requisitos de usuário foi realizado através de questionário e cerca 70\% dos requisitos foram implementados.
+O \emph{app} possibilita a realização de busca, \emph{download} e leitura de conteúdos no formato \emph{EPUB3} e possui controles para inciar, parar, avançar e retroceder a leitura.
+Quanto à acessibilidade, foram identificadas as seguintes soluções:
+
+\begin{enumerate}
+\item Suporte para comandos de voz;
+\item Configurações de alto contraste;
+\item Sintese de voz para leitura dos \emph{e-books};
+\item Tamanho dos botões e espaçamentos adequados à PDV\@.
+\end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} Não informado.
 
@@ -241,9 +254,9 @@ O principal dispositivo utilizado para leitura foi mobile, sendo iOS a maioria c
 
 \textbf{Público alvo da aplicação:} PDV que gostam de livros\@.
 
-Média de satisfação dos usuários maior que 75\% nos testes de usabilidade, realizados em 3 fases com usuários com e sem experiência;
-Tempo médio de execução das tarefas foi de 92 segundos para usuários não experientes e 82 segundos para experientes;
-Usuários experientes enfrentaram erros relacionados a login, configuração e busca por tentarem utilizar suas próprias abordagens baseadas em outras aplicações;
+Nos resultados dos testes, realizados com 12 PDV (7 experientes e 5 sem experiência), o estudo mostrou que a média de satisfação dos usuários foi de aproximadamente 75\% nos testes de usabilidade, realizados em 3 fases, com usuários com e sem experiência.
+Onde tempo médio de execução das tarefas foi de 92 segundos para usuários não experientes e 82 segundos para experientes.
+Usuários experientes enfrentaram erros relacionados a \emph{login}, configuração e busca por tentarem utilizar suas próprias abordagens baseadas em outras aplicações.
 
 \subsection{\emph{MathMelodies 2: A Mobile Assistive Application for People with Visual Impairments Developed with React Native}}
 
