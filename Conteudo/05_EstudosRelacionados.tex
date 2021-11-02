@@ -1,5 +1,251 @@
 \section{Estudos Relacionados}
 
-Durante o processo de seleção de artigos do MSL, foram encontrados estudos secundários que realizavam uma RSL dentro do tema estudado neste trabalho.
-Embora esses estudos tenham sido rejeitados, por se enquadrarem em algum dos critérios definidos na seção anterior, eles foram considerados como estudos relacionados.
-Assim, nesta seção são apresentados os principais problemas e, possíveis técnicas, métodos e padrões encontrados por esses estudos para soluções dos mesmos.
+Durante o processo de seleção de artigos do MSL, foram encontrados alguns estudos secundários, estudo que realiza uma revisão de estudos primários relacionados a um tema especifico \cite{Kitchenham2007}.
+Embora tenham sido rejeitados no MSL, por se enquadrarem em algum dos critérios definidos na seção anterior, os estudos que realizaram revisões dentro do tema estudado neste trabalho foram considerados como estudos relacionados.
+
+Assim, esta seção apresenta os principais problemas e propostas de soluções relacionados à acessibilidade de aplicações para dispositivos móveis identificados por esses estudos.
+No \autoref{qua-art-rev-sis} estão listadas as informações de cada um desses estudos secundários.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-art-rev-sis}Estudos relacionados identificados no processo de MSL.}
+  \begin{tabular}{|m{0.8cm} | m{8.2cm} | m{2.7cm} | m{2.5cm}|}
+    %\hline
+    \hline
+    \textbf{Sigla} & \textbf{Título}                                                                                                             & \textbf{Referência}      & \textbf{Base de dados}     \\
+    \hline
+    AR1             & \emph{Accessibility of Mobile Applications: Evaluation by Users with Visual Impairment and by Automated Tools}              & \cite{Mateus2020}        & \emph{ACM Digital Library} \\
+    \hline
+    AR2             & \emph{Can Everyone use my app? An Empirical Study on Accessibility in Android Apps}                                         & \cite{Vendome201941}     & \emph{Scopus}              \\
+    \hline
+    AR3             & \emph{Effect of UX Design Guideline on the information accessibility for the visually impaired in the mobile health apps}   & \cite{Kim20191103}       & \emph{Scopus}              \\
+    \hline
+    AR4             & \emph{Mobile Device Accessibility for the Visually Impaired: Problems Mapping and Empirical Study of Touch Screen Gestures} & \cite{Damaceno2016}      & \emph{ACM Digital Library} \\
+    \hline
+    AR5             & \emph{Observation Based Analysis on the Use of Mobile Applications for Visually Impaired Users}                             & \cite{Siebra2016}        & \emph{ACM Digital Library} \\
+    \hline
+    AR6             & \emph{Prioritization of mobile accessibility guidelines for visual impaired users}                                          & \cite{Quispe2020563}     & \emph{Scopus}              \\
+    \hline
+    AR7             & \emph{The Making of Accessible Android Applications: An Empirical Study on the State of the Practice}                       & \cite{DiGregorio2020857} & \emph{Scopus}              \\
+    \hline
+    AR8             & \emph{UX Design Guideline for Health Mobile Application to Improve Accessibility for the Visually Impaired}                 & \cite{Kim2016}           & \emph{Scopus}              \\
+    \hline
+    % \hline
+  \end{tabular}
+  \legend{Fonte: Autor}
+\end{quadro}
+
+% ---
+\subsection{\emph{Accessibility of Mobile Applications: Evaluation by Users with Visual Impairment and by Automated Tools}}
+% ---
+
+O artigo apresenta um estudo comparativo de problemas de acessibilidade encontrados pelas ferramentas automatizadas MATE (\emph{Mobile Accessibility Testing}) e \emph{Accessibility Scanner}, com os problemas encontrados em um estudo anterior envolvendo 11 usuários com DV\@.
+Além disso, o trabalho sumarizou e categorizou os problemas mais encontrados pelos usuários.
+As principais categorias são listadas na \autoref{tab-cat-pro-1}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Categorias dos problemas identificados.}
+    \label{tab-cat-pro-1}
+    \begin{tabular}{p{2.0cm}|p{7cm}}
+      %\hline
+      \textbf{Código} & \textbf{Categoria}                       \\
+      \hline
+      CP1             & Botões                                   \\
+      \hline
+      CP2             & Características do Sistema               \\
+      \hline
+      CP3             & Conteúdo e Significado                   \\
+      \hline
+      CP4             & Controles, formulários e funcionalidades \\
+      \hline
+      CP5             & Imagem                                   \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Christoph2020}}
+  \end{center}
+\end{table}
+
+Na \autoref{tab-pro-blind-1} são listados os principais tipos de problemas, que apresentaram um total de pelo menos 10 observações.
+As categorias, de acordo com a \autoref{tab-cat-pro-1}, e os números de observações totais e para cada cada tipo de DV\@ também são relacionados à cada tipo de problema.
+Como o artigo só menciona os tipos problemas encontrados com maior frequência por cada tipo de usuário, o número de observações de alguns não estão presentes na \autoref{tab-pro-blind-1}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas mais frequentes encontrados pelos usuários por tipo de DV.}
+    \label{tab-pro-blind-1}
+    \begin{tabular}{p{10.5cm}|p{1.4cm}|p{0.6cm}|p{0.6cm}|p{0.7cm}}
+      %\hline
+      \textbf{Problema}                                                       & \textbf{Categoria} & \textbf{DVT} & \textbf{DVP} & \textbf{Total} \\
+      \hline
+      \emph{Feedback} inapropriado                                            & CP4                & 34           & 15           & 49             \\
+      \hline
+      Falta de informações                                                    & CP1                & 22           & 8            & 30             \\
+      \hline
+      Usuários presumiram que era uma funcionalidade                          & CP4                & 18           & 9            & 27             \\
+      \hline
+      Funcionalidades confusas ou não claras                                  & CP4                & 25           & -            & 25             \\
+      \hline
+      Apresentação padrão de elementos de controle ou formulário não adequada & CP4                & 11           & 12           & 23             \\
+      \hline
+      Sequências de interação confusas ou não claras                          & CP4                & 15           & 6            & 21             \\
+      \hline
+      Usuários não entenderam sentido do conteúdo                             & CP3                & 15           & 5            & 20             \\
+      \hline
+      Organização do conteúdo inconsistente                                   & CP3                & 12           & 6            & 18             \\
+      \hline
+      Funcionalidade não funciona como esperado                               & CP4                & 6            & 10           & 16             \\
+      \hline
+      Funcionalidades dos botões confusas ou não claras                       & CP1                & 15           & -            & 15             \\
+      \hline
+      Expectativa de funcionalidade que não existe                            & CP4                & 10           & 5            & 15             \\
+      \hline
+      Sem alternativa textual                                                 & CP5                & 14           & -            & 14             \\
+      \hline
+      Sistema muito lento                                                     & CP2                & -            & 11           & 11             \\
+      \hline
+      Significado no conteúdo está perdido                                    & CP3                & 6            & 4            & 10             \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Christoph2020}}
+  \end{center}
+\end{table}
+
+Os resultados do estudo mostraram que 36 tipos de problemas foram encontrados somente pelos usuários, 11 somente pelas ferramentas e 3 por ambos os métodos.
+Evidenciando assim a necessidade de utilização de mais de um método para identificação dos problemas de acessibilidade.
+Além disso, o estudo mostrou a importância da utilização dessas ferramentas automatizadas, visto que parte significativa dos problemas podem ser identificados ainda no processo de desenvolvimento, reduzindo o esforço e, consequentemente, o custo para solucioná-los.
+
+% ---
+\subsection{\emph{Can Everyone use my app? An Empirical Study on Accessibility in Android Apps}}
+% ---
+
+Esse trabalho realizou um estudo piloto onde foi observado que desenvolvedores de aplicativos móveis raramente utilizam as APIs de Acessibilidade e que o uso de descrições alternativas para elementos de \emph{interface} também é limitado.
+Assim, visando entender a perspectiva desses desenvolvedores, o estudo também realizou uma investigação de postagens no \emph{Stack Overflow}, identificando os aspectos de acessibilidade que os desenvolvedores implementavam e os que experienciavam dificuldades.
+
+O estudo investigou aspectos de acessibilidade no geral, baseado em 336 discussões de desenvolvedores \emph{Android} no \emph{Stack Overflow}, sendo 159 dessas sobre acessibilidade à DV\@.
+Dessas 159 discussões, os principais aspectos discutidos foram sobre \emph{feedbacks} sonoros e legibilidade (114 e 24 postagens, respectivamente) como mostra a \autoref{tab-acc-asp-sta-flow}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Aspectos de acessibilidade à DV discutidos por \emph{devs Android} no \emph{Stack Overflow}.}
+    \label{tab-acc-asp-sta-flow}
+    \begin{tabular}{p{7.0cm}|p{3.5cm}}
+      %\hline
+      \textbf{Aspecto}                       & \textbf{Categoria}       \\
+      \hline
+      Alertas de acessibilidade              & \emph{Feedbacks} sonoros \\
+      \hline
+      Ampliação da tela                      & Legibilidade             \\
+      \hline
+      Aspectos não funcionais                & \emph{Feedbacks} sonoros \\
+      \hline
+      Consciência de contexto                & \emph{Feedbacks} sonoros \\
+      \hline
+      Conteúdos, ações e gestos customizados & \emph{Feedbacks} sonoros \\
+      \hline
+      \emph{Frameworks} de terceiros         & \emph{Feedbacks} sonoros \\
+      \hline
+      \emph{Mobile web apps}                 & \emph{Feedbacks} sonoros \\
+      \hline
+      Problemas com serviços                 & \emph{Feedbacks} sonoros \\
+      \hline
+      Sons e vibrações                       & \emph{Feedbacks} sonoros \\
+      \hline
+      Suporte à \emph{Braille}               & Teclados alternativos    \\
+      \hline
+      Tamanho de fonte                       & Legibilidade             \\
+      \hline
+      Teclado customizado                    & Teclados alternativos    \\
+      \hline
+      Transformações de cores                & Transformações de cores  \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Vendome201941}}
+  \end{center}
+\end{table}
+
+No estudo piloto, o trabalho de \citeonline{Vendome201941} analisou 13.817 \emph{apps Android} de código aberto, descobrindo que cerca de 50\% deles tinham descrições alternativas para todos os elementos, enquanto cerca de 37\% não tinha nenhuma.
+Além disso, o artigo apontou que apenas cerca de 2\% desses \emph{apps} utilizavam alguma API de acessibilidade no projeto.
+
+% ---
+\subsection{\emph{Effect of UX Design Guideline on the information accessibility for the visually impaired in the mobile health apps}}
+% ---
+
+Acessibilidade de informações visuais para DV raramente é considerada ao projetar aplicações móveis para saúde \cite{Kim20191103}.
+O artigo propõe um guia de diretrizes de acessibilidade à DV, chamado UXDG (\emph{UX Design Guideline}), para resolver esse problema.
+120 \emph{apps} na área de saúde foram analisados quanto à taxa de conformidade com o guia.
+
+A \autoref{tab-acc-dir-uxd-1} lista as diretrizes do UXDG de acordo com as categorias.
+Na análise dos 120 \emph{apps}, a média da taxa de conformidade com o guia foi de 39,24\%, com a diretriz XD7 apresentando a maior taxa, com 71,67\%, enquanto a XD9 apresentou a menor, com 5\%.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Diretrizes do UXDG por categoria.}
+    \label{tab-acc-dir-uxd-1}
+    \begin{tabular}{p{1.0cm}|p{9.0cm}|p{4.5cm}}
+      %\hline
+      \textbf{Código} & \textbf{Diretriz}                                            & \textbf{Categoria}             \\
+      \hline
+      XD1             & Destacar as mídias que disparam ação                         & Aquisição de informação        \\
+      \hline
+      XD2             & Destacar as principais imagens que o usuário pode acessar    & Aquisição de informação        \\
+      \hline
+      XD3             & Navegação intuitiva                                          & Acessibilidade dos dados       \\
+      \hline
+      XD4             & Posicionar a caixa de pesquisa sempre no local               & Busca de dados                 \\
+      \hline
+      XD5             & Posicionar resultados de buscas logo após a caixa de texto   & Busca de dados                 \\
+      \hline
+      XD6             & Reconhecimento de voz para entrada de texto                  & Busca de dados                 \\
+      \hline
+      XD7             & Resposta intuitiva do \emph{menu} de acordo com intenção do usuário & Acessibilidade dos dados       \\
+      \hline
+      XD8             & Suporte à esquemas de cores alternativos                     & Melhora na exposição dos dados \\
+      \hline
+      XD9             & Suporte de \emph{zoom in/out} para os principais conteúdos   & Melhora na exposição dos dados \\
+      \hline
+      XD10            & Suporte para outros métodos entrada além do toque            & Acessibilidade dos dados       \\
+      \hline
+      XD11            & Uso de fontes com alta legibilidade                          & Aquisição de informação        \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Kim20191103}}
+  \end{center}
+\end{table}
+
+O estudo realizou testes, conduzidos com 23 PDV e 23 sem DV, comparando \emph{apps} selecionados da área da saúde antes e depois da aplicação do UXDG\@.
+Os resultados apontam que houve um aumento na velocidade de reconhecimento das informações depois de aplicar as diretrizes.
+De acordo com o experimento, esse aumento aconteceu tanto para usuários com DV, aumento de 13,68\%, quanto para os sem, de 32,41\%.
+
+% ---
+\subsection{\emph{Mobile Device Accessibility for the Visually Impaired: Problems Mapping and Empirical Study of Touch Screen Gestures}}
+% ---
+
+\cite{Damaceno2016}
+
+% ---
+\subsection{\emph{Observation Based Analysis on the Use of Mobile Applications for Visually Impaired Users}}
+% ---
+
+\cite{Siebra2016}
+
+% ---
+\subsection{\emph{Prioritization of mobile accessibility guidelines for visual impaired users}}
+% ---
+
+\cite{Quispe2020}
+
+% ---
+\subsection{\emph{The Making of Accessible Android Applications: An Empirical Study on the State of the Practice}}
+% ---
+
+\cite{DiGregorio2020857}
+
+% ---
+\subsection{\emph{UX Design Guideline for Health Mobile Application to Improve Accessibility for the Visually Impaired}}
+% ---
+
+\cite{Kim2016}
