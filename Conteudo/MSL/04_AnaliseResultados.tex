@@ -1,3 +1,101 @@
 \newpage
 
 \section{Análise dos Resultados}
+
+Os resultados do MSL mostram que o \emph{Android} foi a principal plataforma dos \emph{apps} desenvolvidos pelos estudos.
+Tendo 9 aplicativos desenvolvidos somente para \emph{Android}, 4 multiplataforma (\emph{Android} e \emph{iOS}) e 2 apenas para \emph{iOS}, como mostra a \autoref{tab-tec-pla-des-1}.
+
+\begin{table}[htb]
+    \begin{center}
+        \ABNTEXfontereduzida
+        \caption{Tecnologias utilizadas no desenvolvimento e plataforma alvo das aplicações.}
+        \label{tab-tec-pla-des-1}
+        \begin{tabular}{p{1.0cm}|p{8.0cm}|p{3.0cm}}
+            %\hline
+            \textbf{Artigo} & \textbf{Tecnologias}                                             & \textbf{Plataforma}  \\
+            \hline
+            AM1             & \emph{Cordova Framework}                                         & \emph{Android e iOS} \\
+            \hline
+            AM2             & \emph{MD², Xtend, Java, Eclipse}                                 & \emph{Android e iOS} \\
+            \hline
+            AM3             & \emph{Unity 3D engine, Java}                                     & \emph{Android}       \\
+            \hline
+            AM4             & \emph{Android Studio 2.0}                                        & \emph{Android}       \\
+            \hline
+            AM5             & Não informado                                                    & \emph{Android}       \\
+            \hline
+            AM6             & \emph{Java, Android Studio, Accessibility Scanner App, Test Lab} & \emph{Android}       \\
+            \hline
+            AM7             & Não informado                                                    & \emph{Android}       \\
+            \hline
+            AM8             & Não informado                                                    & \emph{iOS}           \\
+            \hline
+            AM9             & Não informado                                                    & \emph{iOS}           \\
+            \hline
+            AM10            & \emph{React Native}                                              & \emph{Android e iOS} \\
+            \hline
+            AM11            & Não informado                                                    & \emph{Android}       \\
+            \hline
+            AM12            & \emph{Java, Android Studio, API Airy}                            & \emph{Android}       \\
+            \hline
+            AM13            & Não informado                                                    & \emph{Android}       \\
+            \hline
+            AM14            & Não informado                                                    & \emph{Android}       \\
+            \hline
+            AM15            & \emph{React Native}                                              & \emph{Android e iOS} \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: Autor}
+    \end{center}
+\end{table}
+
+Embora todos os estudos tenham mencionado a plataforma para qual o \emph{app} foi desenvolvido,
+como pode ser observado na \autoref{tab-tec-uti-des-1}, boa parte deles, 7 no total, não mencionam as tecnologias utilizadas.
+Com isso, \emph{Java} se destacou como a principal linguagem, utilizada em pelo menos 4 \emph{apps}, para o desenvolvimento das soluções.
+Enquanto o \emph{React Native} apareceu como principal o \emph{framework} para desenvolvimento multiplataforma, com duas aplicações.
+
+\begin{table}[htb]
+    \begin{center}
+        \ABNTEXfontereduzida
+        \caption{Técnicas utilizadas no desenvolvimento das soluções de acessibilidade do MSL.}
+        \label{tab-tec-uti-des-1}
+        \begin{tabular}{p{1.2cm}|p{8.3cm}|p{5.0cm}}
+            %\hline
+            \textbf{Código} & \textbf{Técnicas}                                                                                  & \textbf{Artigos}                                                     \\
+            \hline
+            TAM1            & Contraste de cor para garantir diferentes níveis de acessibilidade                                 & AM1, AM9, AM10, AM12, AM13                                           \\
+            \hline
+            TAM2            & Descrição textual dos elementos visuais                                                            & AM1, AM2, AM3, AM5, AM6, AM7, AM8, AM9, AM10, AM11, AM12, AM13, AM15 \\
+            \hline
+            TAM3            & Escala SUS para avaliação da usabilidade da aplicação                                              & AM4, AM5, AM7                                                        \\
+            \hline
+            TAM4            & Elementos chave de interação sempre posicionados na mesma parte da tela, em locais de fácil acesso & AM10, AM15                                                           \\
+            \hline
+            TAM5            & \emph{Feedback} por vibração                                                                       & AM3, AM14                                                            \\
+            \hline
+            TAM6            & \emph{Feedback} por voz através de TTS                                                             & AM3, AM5, AM6, AM7, AM9, AM11, AM12, AM13, AM14                      \\
+            \hline
+            TAM7            & Interação alternativa através de gestos                                                            & AM1, AM7, AM10, AM12, AM15                                           \\
+            \hline
+            TAM8            & Personalização de pontos da \emph{interface} que afetam a acessibilidade                           & AM2, AM12                                                            \\
+            \hline
+            TAM9            & Possibilidade de ativar e desativar o assistente de voz do \emph{app}                              & AM6                                                                  \\
+            \hline
+            TAM10           & Possibilidade de revisar as mensagens escritas através do TTS                                      & AM7                                                                  \\
+            \hline
+            TAM11           & Reconhecimento de voz                                                                              & AM4, AM6, AM7, AM9, AM12                                             \\
+            \hline
+            TAM12           & Tamanho da fonte das letras ampliado ou personalizável                                             & AM6, AM8, A12                                                        \\
+            \hline
+            TAM13           & Tamanho dos botões e espaçamentos adequados à PDV                                                  & AM9                                                                  \\
+            \hline
+            TAM14           & Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela                          & AM10                                                                 \\
+            \hline
+            TAM15           & Todos os elementos visíveis na tela sem necessidade de rolagem                                     & AM10                                                                 \\
+            \hline
+            TAM16           & Utilização de efeitos sonoros para contextualizar o usuário                                        & AM3, AM6, AM13                                                       \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: Autor}
+    \end{center}
+\end{table}

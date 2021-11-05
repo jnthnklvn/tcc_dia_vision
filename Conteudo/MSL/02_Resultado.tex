@@ -16,10 +16,10 @@ O jogador recebe determinada pontuação cada vez que joga de acordo com os acer
 As principais funcionalidades do \emph{app} relativas à acessibilidade identificadas foram:
 
 \begin{enumerate}
-\item Contraste de cor para garantir diferentes níveis de acessibilidade;
-\item Apresentações de conteúdos de forma auditiva e visual;
-\item Interação via gestos ou toques;
-\item Suporte auditivo com descrições dos elementos.
+    \item Contraste de cor para garantir diferentes níveis de acessibilidade;
+    \item Apresentações de conteúdos de forma auditiva e visual;
+    \item Interação via gestos ou toques;
+    \item Suporte auditivo com descrições dos elementos.
 \end{enumerate}
 
 Através da avaliação desse protótipo, por cegos, o estudo investigou o suporte de acessibilidade \emph{mobile} multiplataforma do conjunto de especificações técnicas, \emph{WAI-Aria}\footnote{\url{https://www.w3.org/WAI/standards-guidelines/aria/}}, observando problemas na detecção de elementos, devido às suas posições na tela e conteúdos difíceis de identificar na interação com leitores de tela.
@@ -47,9 +47,9 @@ A nova versão do \emph{app} consistiu em 445 linhas de código \emph{MD²}, \em
 Principais funcionalidades sobre acessibilidade identificadas:
 
 \begin{enumerate}
-\item Adaptação da \emph{interface} de acordo com as necessidades do usuário;
-\item Integração com os leitores de tela através do fornecimento de descrições em texto para elementos não textuais;
-\item Personalização do contorno de foco do \emph{TalkBack}.
+    \item Adaptação da \emph{interface} de acordo com as necessidades do usuário;
+    \item Integração com os leitores de tela através do fornecimento de descrições em texto para elementos não textuais;
+    \item Personalização do contorno de foco do \emph{TalkBack}.
 \end{enumerate}
 
 Segundo o artigo, o estudo de caso mostrou que \emph{apps} acessíveis podem ser gerados a partir do modelo de alto nível \emph{MD²}, implementando as técnicas de integração adequadas em cada ponto.
@@ -68,9 +68,9 @@ A aplicação foi desenvolvida para auxiliar no estudo de Energia Mecânica e tr
 As principais funcionalidades sobre acessibilidade identificadas no \emph{app} foram:
 
 \begin{enumerate}
-\item Os elementos visuais possuem descrições textuais para integração com leitores de tela;
-\item \emph{Feedback} através de ``texto para voz'' (TTS, do inglês \emph{text-to-speech}) e vibração ao clicar em determinados elementos na tela, mesmo com o modo de acessibilidade desativado;
-\item Efeitos sonoros característicos que ilustram os resultados da simulação ao longo do percurso.
+    \item Os elementos visuais possuem descrições textuais para integração com leitores de tela;
+    \item \emph{Feedback} através de ``texto para voz'' (TTS, do inglês \emph{text-to-speech}) e vibração ao clicar em determinados elementos na tela, mesmo com o modo de acessibilidade desativado;
+    \item Efeitos sonoros característicos que ilustram os resultados da simulação ao longo do percurso.
 \end{enumerate}
 
 Com taxas de 73\% eficácia, 77\% de eficiência e 66\% satisfação do usuário com relação a aplicação desenvolvida, os testes de usabilidade demonstraram que as estratégias de interação propostas são viáveis, com grande potencial para serem utilizadas em propósitos educacionais.
@@ -90,9 +90,9 @@ Assim, o estudo de \citeonline{Oliveira2018} visou planejar e desenvolver uma ap
 O artigo apresenta algumas funcionalidades e técnicas relacionadas a acessibilidade que são listadas a seguir:
 
 \begin{enumerate}
-\item Escala de Usabilidade do Sistema (SUS, do inglês \emph{System Usability Scale}) para avaliação de usabilidade da aplicação;
-\item \emph{SpeechRecognizer} do \emph{Android} para reconhecimento de voz;
-\item Eurísticas de Usabilidade de Nielsen (do inglês, \emph{Nielsen Usability Heuristics}) para evitar problemas de acessibilidade já mapeados.
+    \item Escala de Usabilidade do Sistema (SUS, do inglês \emph{System Usability Scale}) para avaliação de usabilidade da aplicação;
+    \item \emph{SpeechRecognizer} do \emph{Android} para reconhecimento de voz;
+    \item Eurísticas de Usabilidade de Nielsen (do inglês, \emph{Nielsen Usability Heuristics}) para evitar problemas de acessibilidade já mapeados.
 \end{enumerate}
 
 Um protótipo foi desenvolvido e mostrou potencial para ser utilizado como ferramenta para PDV, trazendo benefícios com a possibilidade do uso de comando de voz.
@@ -111,15 +111,72 @@ E o tempo gasto para realizar as configurações de acessibilidade foi mais curt
 \subsection{\emph{Blind and visually impaired user interface to solve accessibility problems}}
 
 Este estudo realizou uma RSL e testes em várias aplicações móveis para PDV, e dividiu os problemas encontrados em três categorias: organização, apresentação e comportamento (OAC).
-Uma aplicação móvel, chamada ``\emph{Read Master}'', também foi desenvolvida no trabalho de \citeonline{Shera2021285}, incorporando soluções para os principais problemas de OAC.
-Por fim, o artigo apresentou diretrizes de \emph{design} e desenvolvimento, baseadas na avaliação prática, para superar problemas na criação de aplicações móveis acessíveis à PDV\@.
+Uma aplicação móvel, chamada ``\emph{Read Master}'', também foi desenvolvida no trabalho de \citeonline{Shera2021285}, incorporando soluções para os principais problemas de OAC\@.
 
-O \emph{app} consiste em duas funcionalidades principais: fornecer informações cientificas e \emph{quizzes} de múltipla escolha.
+\begin{table}[htb]
+    \begin{center}
+        \ABNTEXfontereduzida
+        \caption{Categorias dos problemas identificados.}
+        \label{tab-cat-pro-enc-ar5}
+        \begin{tabular}{p{2.0cm}|p{5.0cm}}
+            %\hline
+            \textbf{Código} & \textbf{Categoria} \\
+            \hline
+            CRR1            & Apresentação       \\
+            \hline
+            CRR2            & Comportamento      \\
+            \hline
+            CRR3            & Organizacional     \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: \citeonline{Siebra2016}}
+    \end{center}
+\end{table}
+
+Na tabela \autoref{tab-pro-enc-ar5} estão listados os problemas identificados pelo estudo.
+Os códigos na coluna ``Categoria'' se referem as categorias da \autoref{tab-cat-pro-enc-ar5}.
+
+\begin{table}[htb]
+    \begin{center}
+        \ABNTEXfontereduzida
+        \caption{Problemas de acessibilidade encontrados por categoria.}
+        \label{tab-pro-enc-ar5}
+        \begin{tabular}{p{1.2cm}|p{11.5cm}|p{1.5cm}}
+            %\hline
+            \textbf{Código} & \textbf{Problema}                                                                                 & \textbf{Categoria} \\
+            \hline
+            AM11            & Falta de consistência no \emph{layout} e terminologias                                            & CRR1               \\
+            \hline
+            AM12            & Leitor de tela fornecendo \emph{feedbacks} confusos                                               & CRR1               \\
+            \hline
+            AM13            & Leitor de tela quebrando                                                                          & CRR2               \\
+            \hline
+            AM14            & Ouvir cabeçalhos e títulos das páginas de forma redundante antes de detectar o conteúdo das telas & CRR2               \\
+            \hline
+            AM15            & Conteúdos na tela da aplicação móvel                                                              & CRR3               \\
+            \hline
+            AM16            & Fluxo de tarefas                                                                                  & CRR3               \\
+            \hline
+            AM17            & Não entendimento da sequência natural de leitura                                                  & CRR3               \\
+            \hline
+            AM18            & Não entendimento do fluxo natural de tarefas                                                      & CRR3               \\
+            \hline
+            AM19            & Problemas de navegação                                                                            & CRR3               \\
+            \hline
+            AM110           & Sobrecarga de informações                                                                         & CRR3               \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: \citeonline{Shera2021285}}
+    \end{center}
+\end{table}
+
+O \emph{app} desenvolvido consistiu em duas funcionalidades principais: fornecer informações cientificas e \emph{quizzes} de múltipla escolha.
 As principais técnicas e funcionalidades identificadas no estudo para o suporte de acessibilidade foram:
 
 \begin{enumerate}
-\item \emph{SUS} para avaliação de usabilidade da aplicação;
-\item Levantamento e categorização dos principais problemas de acessibilidade em \emph{apps} móveis.
+    \item \emph{SUS} para avaliação de usabilidade da aplicação;
+    \item Leitor de tela embutido através de TTS\@.
+    \item Levantamento e categorização dos principais problemas de acessibilidade em \emph{apps} móveis.
 \end{enumerate}
 
 Uma avaliação de usabilidade do \emph{app}, com 56 PDV, foi conduzida e validada com foco na experiência de usuários com DV\@.
@@ -144,11 +201,11 @@ A principal funcionalidade do \emph{app} é a de buscar por informações de med
 As principais técnicas e funcionalidades identificadas, relacionadas à acessibilidade e utilizadas no desenvolvimento dessa solução, foram:
 
 \begin{enumerate}
-\item Tamanho da fonte das letras personalizável;
-\item Vibração e sons para alertar o usuário do resultado da busca;
-\item \emph{Tutorial} com possibilidade de ser visto novamente;
-\item Possibilidade de busca por \emph{barcode} e \emph{qrcode}, foto, comando de voz e texto;
-\item Possibilidade de ativar e desativar o assistente de voz do \emph{app}.
+    \item Tamanho da fonte das letras personalizável;
+    \item Vibração e sons para alertar o usuário do resultado da busca;
+    \item \emph{Tutorial} com possibilidade de ser visto novamente;
+    \item Possibilidade de busca por \emph{barcode} e \emph{qrcode}, foto, comando de voz e texto;
+    \item Possibilidade de ativar e desativar o assistente de voz do \emph{app}.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} \emph{Java, Android Studio, Accessibility Scanner App}, e o \emph{Test Lab do Firebase}.
@@ -175,12 +232,12 @@ Um outro gesto ativa a função para revisão da mensagem escrita, ao ser reconh
 As principais características relacionadas à acessibilidade identificadas nessa solução foram:
 
 \begin{enumerate}
-\item Reconhecimento de voz;
-\item Reconhecimento de gestos;
-\item Sintese de fala.
-\item Possibilidade de revisar as mensagens escritas de maneira acessível;
-\item Possibilidade de parar a narração durante a revisão da mensagem e editar palavras especificas;
-\item Aplicação de questionário da Escala de Usabilidade do Sistema, SUS\@.
+    \item Reconhecimento de voz;
+    \item Reconhecimento de gestos;
+    \item Sintese de fala.
+    \item Possibilidade de revisar as mensagens escritas de maneira acessível;
+    \item Possibilidade de parar a narração durante a revisão da mensagem e editar palavras especificas;
+    \item Aplicação de questionário da Escala de Usabilidade do Sistema, SUS\@.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} \emph{Java, Android Studio, Accessibility Scanner App}, e o \emph{Test Lab do Firebase}.
@@ -208,10 +265,10 @@ Entre as tarefas diárias que mais se esperava autonomia a de se vestir com uma 
 Assim, uma aplicação \emph{mobile} foi projetada, visando a autonomia de PDV, total ou parcial, nesse ato cotidiano de se vestir.
 
 \begin{enumerate}
-\item Integração com leitores de tela;
-\item Tamanho de fontes e \emph{labels} adaptáveis de acordo com o tipo de deficiência;
-\item Sistema de notificações simples e imediato;
-\item Resposta em tempo real.
+    \item Integração com leitores de tela;
+    \item Tamanho de fontes e \emph{labels} adaptáveis de acordo com o tipo de deficiência;
+    \item Sistema de notificações simples e imediato;
+    \item Resposta em tempo real.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} Não informado.
@@ -238,10 +295,10 @@ O \emph{app} possibilita a realização de busca, \emph{download} e leitura de c
 Quanto à acessibilidade, foram identificadas as seguintes soluções:
 
 \begin{enumerate}
-\item Suporte para comandos de voz;
-\item Configurações de alto contraste;
-\item Sintese de voz para leitura dos \emph{e-books};
-\item Tamanho dos botões e espaçamentos adequados à PDV\@.
+    \item Suporte para comandos de voz;
+    \item Configurações de alto contraste;
+    \item Sintese de voz para leitura dos \emph{e-books};
+    \item Tamanho dos botões e espaçamentos adequados à PDV\@.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada no desenvolvimento:} Não informado.
@@ -267,12 +324,12 @@ Assim, nesse trabalho, \citeonline{Ducci2018}, desenvolve essa nova versão como
 As principais técnicas e funcionalidades para acessibilidade, utilizadas nesse estudo, são listadas a seguir:
 
 \begin{enumerate}
-\item Implementação nativa para \emph{iOS} e \emph{Android} de componentes não acessíveis no \emph{React Native};
-\item Elementos chave de interação sempre posicionados na mesma parte da tela, em locais de fácil acesso;
-\item Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela;
-\item Todos os elementos visíveis na tela sem necessidade de rolagem;
-\item Cores de fundo uniformes e neutras;
-\item Interações por gestos simples.
+    \item Implementação nativa para \emph{iOS} e \emph{Android} de componentes não acessíveis no \emph{React Native};
+    \item Elementos chave de interação sempre posicionados na mesma parte da tela, em locais de fácil acesso;
+    \item Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela;
+    \item Todos os elementos visíveis na tela sem necessidade de rolagem;
+    \item Cores de fundo uniformes e neutras;
+    \item Interações por gestos simples.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada para desenvolvimento:} \emph{React Native}.
@@ -292,11 +349,11 @@ Assim, o estudo conclui que \emph{React Native} é uma escolha válida para o de
 A falta de aplicações móveis que atendam pelo menos as necessidades mais comuns de PDV motivou a realização do trabalho de \citeonline{Caballero2020}, que desenvolveu uma aplicação com objetivo de atender as necessidades desse grupo através de tecnologias de Reconhecimento de Objetos (RO) e TTS\@.
 
 O \emph{app} utiliza algoritmos de \emph{Convolutional Neural Network} (CNN), solução de aprendizado de máquina reconhecida como um poderoso método para reconhecimento de imagens, para identificar detalhes em imagens e narra-los para o usuário através do TTS\@.
-O artigo se concentra mais na apresentação da API utilizada para o RO, mostrando pouco sobre a aplicação \emph{mobile}, ainda assim, foram identificadas as seguintes características de acessibilidade no \emph{app}: 
+O artigo se concentra mais na apresentação da API utilizada para o RO, mostrando pouco sobre a aplicação \emph{mobile}, ainda assim, foram identificadas as seguintes características de acessibilidade no \emph{app}:
 
 \begin{enumerate}
-\item Reconhecimento de detalhes de imagens;
-\item Sintese dos resultados do RO por voz.
+    \item Reconhecimento de detalhes de imagens;
+    \item Sintese dos resultados do RO por voz.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
@@ -324,11 +381,11 @@ Esses gestos foram complementados com outros específicos para a realização de
 Segue abaixo as principais técnicas e funcionalidades para acessibilidade identificadas no estudo:
 
 \begin{enumerate}
-\item Interação por reconhecimento de voz e gestos;
-\item Tamanhos de fontes de letras ampliados;
-\item Alto contraste (fundos pretos e textos brancos);
-\item Possibilidade de escolha de cores do \emph{app} para melhorar a legibilidade para pessoas daltônicas;
-\item \emph{Feedback} sonoro mesmo com \emph{Talkback} desativado.
+    \item Interação por reconhecimento de voz e gestos;
+    \item Tamanhos de fontes de letras ampliados;
+    \item Alto contraste (fundos pretos e textos brancos);
+    \item Possibilidade de escolha de cores do \emph{app} para melhorar a legibilidade para pessoas daltônicas;
+    \item \emph{Feedback} sonoro mesmo com \emph{Talkback} desativado.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada para desenvolvimento:} \emph{Java, Android Studio} e \emph{API Airy}.
@@ -356,10 +413,10 @@ O estudo realizou uma análise das necessidades dos usuários com DV, levantando
 As principais soluções quanto à acessibilidade identificadas foram:
 
 \begin{enumerate}
-\item Alternativa aos ícones padrões utilizados para indicação através dos chamados ``Ícones auditivos'';
-\item Utilização constante do \emph{TalkBack} durante o processo de desenvolvimento;
-\item Interface com alto contraste (textos brancos em fundo preto), visando a experiência de usuário (UX) de PDV\@;
-\item Integração com \emph{Talkback} seguindo as Diretrizes de Acessibilidade do \emph{Google}.
+    \item Alternativa aos ícones padrões utilizados para indicação através dos chamados ``Ícones auditivos'';
+    \item Utilização constante do \emph{TalkBack} durante o processo de desenvolvimento;
+    \item Interface com alto contraste (textos brancos em fundo preto), visando a experiência de usuário (UX) de PDV\@;
+    \item Integração com \emph{Talkback} seguindo as Diretrizes de Acessibilidade do \emph{Google}.
 \end{enumerate}
 
 ``Ícones auditivos'' emitem sons breves, baseados nos sons reais do cotidiano, e servem alternativa para representação dos ícones visuais de clima, como o ícone de chuva, representado por sons que remetem ao evento.
@@ -379,8 +436,8 @@ Nesse artigo, \citeonline{Nahar2019100}, apresenta o \emph{mBRAILLE}, \emph{app}
 Embora a publicação não apresente muitos detalhes do processo de desenvolvimento, sequer mencionam leitores de tela, algumas características relacionadas à acessibilidade utilizadas na solução foram identificadas, seguem:
 
 \begin{enumerate}
-\item \emph{Tutorial} para auxiliar o usuário na utilização do \emph{app};
-\item \emph{Feedback} por vibração e áudio;
+    \item \emph{Tutorial} para auxiliar o usuário na utilização do \emph{app};
+    \item \emph{Feedback} por vibração e áudio;
 \end{enumerate}
 
 \textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
@@ -406,9 +463,9 @@ A aplicação foi projetada e avaliada por 3 especialistas no dominio de tecnolo
 As principais características relativas à acessibilidade encontradas no artigo foram:
 
 \begin{enumerate}
-\item Elementos chave de interação sempre posicionados na mesma parte da tela, priorizando os cantos da tela;
-\item Interações por gestos como ``arrastar e soltar'' com descrição auditiva;
-\item Descrição alternativa em texto dos elementos de tela para integração com leitores de tela.
+    \item Elementos chave de interação sempre posicionados na mesma parte da tela, priorizando os cantos da tela;
+    \item Interações por gestos como ``arrastar e soltar'' com descrição auditiva;
+    \item Descrição alternativa em texto dos elementos de tela para integração com leitores de tela.
 \end{enumerate}
 
 \textbf{Tecnologia utilizada para desenvolvimento:} \emph{React Native}.
