@@ -3,11 +3,11 @@
 \section{Análise dos Resultados}
 
 Os resultados do MSL mostram que o \emph{Android} foi a principal plataforma dos \emph{apps} desenvolvidos pelos estudos.
-Tendo 9 aplicativos desenvolvidos somente para \emph{Android}, 4 multiplataforma (\emph{Android} e \emph{iOS}) e 2 apenas para \emph{iOS}, como mostra a \autoref{tab-tec-pla-des-1}.
+Sendo 9 aplicativos desenvolvidos somente para \emph{Android}, 4 multiplataforma (\emph{Android} e \emph{iOS}) e 2
+apenas para \emph{iOS}, como mostra a \autoref{tab-tec-pla-des-1}.
 
 \begin{table}[htb]
     \begin{center}
-        \ABNTEXfontereduzida
         \caption{Tecnologias utilizadas no desenvolvimento e plataforma alvo das aplicações.}
         \label{tab-tec-pla-des-1}
         \begin{tabular}{p{1.0cm}|p{8.0cm}|p{3.0cm}}
@@ -50,16 +50,22 @@ Tendo 9 aplicativos desenvolvidos somente para \emph{Android}, 4 multiplataforma
 \end{table}
 
 Embora todos os estudos tenham mencionado a plataforma para qual o \emph{app} foi desenvolvido,
-como pode ser observado na \autoref{tab-tec-uti-des-1}, boa parte deles, 7 no total, não mencionam as tecnologias utilizadas.
-Com isso, \emph{Java} se destacou como a principal linguagem, utilizada em pelo menos 4 \emph{apps}, para o desenvolvimento das soluções.
+como pode ser observado na \autoref{tab-tec-pla-des-1}, boa parte deles, 7 no total, não mencionam as tecnologias utilizadas.
+Com isso, \emph{Java} se destacou como a principal linguagem, utilizada em pelo menos 4 estudos, para o desenvolvimento das soluções.
 Enquanto o \emph{React Native} apareceu como principal o \emph{framework} para desenvolvimento multiplataforma, com duas aplicações.
+
+\newpage
+
+Quanto às técnicas relacionadas à acessibilidade utilizadas no desenvolvimento das soluções apresentadas nos artigos, são listadas
+na \autoref{tab-tec-uti-des-1} as principais identificadas no MSL\@.
+Nessa tabela foi atribuído um código de referência para cada técnica listada.
+
 
 \begin{table}[htb]
     \begin{center}
-        \ABNTEXfontereduzida
         \caption{Técnicas utilizadas no desenvolvimento das soluções de acessibilidade do MSL.}
         \label{tab-tec-uti-des-1}
-        \begin{tabular}{p{1.2cm}|p{8.3cm}|p{5.0cm}}
+        \begin{tabular}{p{1.2cm}|p{9.2cm}|p{4.1cm}}
             %\hline
             \textbf{Código} & \textbf{Técnicas}                                                                                  & \textbf{Artigos}                                                     \\
             \hline
@@ -77,25 +83,27 @@ Enquanto o \emph{React Native} apareceu como principal o \emph{framework} para d
             \hline
             TAM7            & Interação alternativa através de gestos                                                            & AM1, AM7, AM10, AM12, AM15                                           \\
             \hline
-            TAM8            & Personalização de pontos da \emph{interface} que afetam a acessibilidade                           & AM2, AM12                                                            \\
+            TAM8            & Personalização de pontos da \emph{interface} que afetam a acessibilidade                           & AM2, AM6, AM8, AM9, AM12                                             \\
             \hline
-            TAM9            & Possibilidade de ativar e desativar o assistente de voz do \emph{app}                              & AM6                                                                  \\
+            TAM9            & Possibilidade de revisar as mensagens escritas através do TTS                                      & AM7                                                                  \\
             \hline
-            TAM10           & Possibilidade de revisar as mensagens escritas através do TTS                                      & AM7                                                                  \\
+            TAM10           & Reconhecimento de voz                                                                              & AM4, AM6, AM7, AM9, AM12                                             \\
             \hline
-            TAM11           & Reconhecimento de voz                                                                              & AM4, AM6, AM7, AM9, AM12                                             \\
+            TAM11           & Tamanho da fonte das letras ampliado ou personalizável                                             & AM6, AM8, A12                                                        \\
             \hline
-            TAM12           & Tamanho da fonte das letras ampliado ou personalizável                                             & AM6, AM8, A12                                                        \\
+            TAM12           & Tamanho dos botões e espaçamentos adequados à PDV                                                  & AM9                                                                  \\
             \hline
-            TAM13           & Tamanho dos botões e espaçamentos adequados à PDV                                                  & AM9                                                                  \\
+            TAM13           & Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela                          & AM10                                                                 \\
             \hline
-            TAM14           & Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela                          & AM10                                                                 \\
+            TAM14           & Todos os elementos visíveis na tela sem necessidade de rolagem                                     & AM10                                                                 \\
             \hline
-            TAM15           & Todos os elementos visíveis na tela sem necessidade de rolagem                                     & AM10                                                                 \\
-            \hline
-            TAM16           & Utilização de efeitos sonoros para contextualizar o usuário                                        & AM3, AM6, AM13                                                       \\
+            TAM15           & Utilização de efeitos sonoros para contextualizar o usuário                                        & AM3, AM6, AM13                                                       \\
             % \hline
         \end{tabular}
         \legend{Fonte: Autor}
     \end{center}
 \end{table}
+
+A coluna ``Artigos'' na \autoref{tab-tec-uti-des-1} indica em quais artigos (representados por código) cada técnica foi identificada.
+Como as descrições das técnicas identificadas variaram de acordo com os artigos, elas foram representadas nessa tabela
+com uma descrição genérica, possibilitando a identificação dos artigos que utilizaram as mesmas técnicas.
