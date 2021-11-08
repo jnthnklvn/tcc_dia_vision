@@ -60,7 +60,6 @@ Quanto às técnicas relacionadas à acessibilidade utilizadas no desenvolviment
 na \autoref{tab-tec-uti-des-1} as principais identificadas no MSL\@.
 Nessa tabela foi atribuído um código de referência para cada técnica listada.
 
-
 \begin{table}[htb]
     \begin{center}
         \caption{Técnicas utilizadas no desenvolvimento das soluções de acessibilidade do MSL.}
@@ -107,3 +106,180 @@ Nessa tabela foi atribuído um código de referência para cada técnica listada
 A coluna ``Artigos'' na \autoref{tab-tec-uti-des-1} indica em quais artigos (representados por código) cada técnica foi identificada.
 Como as descrições das técnicas identificadas variaram de acordo com os artigos, elas foram representadas nessa tabela
 com uma descrição genérica, possibilitando a identificação dos artigos que utilizaram as mesmas técnicas.
+
+Os problemas mapeados pelos estudos relacionados, apresentados na \autoref{tab-pro-est-rel-1}, foram generalizados e divididos de acordo com as categorias
+da \autoref{tab-cat-dir-acc-5}, definidas por \citeonline{Quispe2020}. O autor utilizou o eMAG como base,
+alterando apenas a primeira categoria chamada ``Marcação'', que se refere à linguagens de marcação da \emph{Web},
+para ``Estrutura'', ainda mantendo o mesmo sentido de organização e estrutura dos elementos de \emph{interface}.
+
+\begin{table}[htb]
+    \begin{center}
+        \ABNTEXfontereduzida
+        \caption{Principais problemas identificados pelos estudos relacionados.}
+        \label{tab-pro-est-rel-1}
+        \begin{tabular}{p{1.1cm}|p{4.0cm}|p{2.4cm}|p{6.7cm}}
+            %\hline
+            \textbf{Código} & \textbf{Problema}                                              & \textbf{Categoria}           & \textbf{Códigos de referência dos problemas}                                                                                                           \\
+            \hline
+            CPER1           & \emph{Feedback} auditivo não é suficiente para a interação     & Conteúdo / Informação        & AR4P14, AR4P15, AR4P46, AR4P49, AR4P52, AM1P3                                                                                                          \\
+            \hline
+            CPER2           & Apresentação dos conteúdos                                     & Apresentação / \emph{Design} & AM1P1, AM1P5, AM1P7, AM1P10, AR1P5, AR1P6, AR1P7, AR1P8, AR1P9, AR1P11, AR1P14                                                                         \\
+            \hline
+            CPER3           & Descrição textual inadequada/inexistente dos elementos de tela & Conteúdo / Informação        & AR1P8, AM1P4, AR1P1, AR1P2, AR1P4, AR1P7, AR1P10, AR4P11, AR1P14, AR4P48, AR4P59, AM1P4                                                                \\
+            \hline
+            CPER4           & Dificuldades ao navegar pela aplicação                         & Estrutura                    & AM1P1, AM1P5, AM1P6, AM1P8, AM1P9, AR1P5, AR1P8, AR4P45                                                                                                \\
+            \hline
+            CPER5           & Dificuldades com a utilização do teclado virtual padrão        & Formulários                  & AR4P16, AR4P17, AR4P19, AR4P20, AR4P21, AR4P22, AR4P23, AR4P24, AR4P25, AR4P26                                                                         \\
+            \hline
+            CPER6           & Dificuldades relacionadas a botões virtuais                    & Apresentação / \emph{Design} & AR4P1, AR1P2, AR4P2, AR1P10                                                                                                                            \\
+            \hline
+            CPER7           & Dificuldades na utilização de gestos                           & Comportamento                & AR4P26, AR4P27, AR4P28, AR4P29, AR4P30, AR4P31, AR4P32, AR4P33, AR4P34, AR4P35, AR4P36, AR4P37, AR4P38, AR4P39, AR4P40, AR4P41, AR4P42, AR4P43, AR4P44 \\
+            \hline
+            CPER8           & Dificuldades com leitor de tela                                & Comportamento                & AM1P7, AM1P2, AR4P45, AR4P46, AR4P47, AR4P49, AR4P51, AR4P53, AR4P54, AR4P55, AR4P56, AR4P57, AR4P58, AM1P3                                            \\
+            \hline
+            CPER9           & Funcionalidades confusas ou não claras                         & Estrutura                    & AR1P3, AR1P4, AR1P6, AR1P9, AR1P10, AR1P11, AM1P6, AM1P8                                                                                               \\
+            \hline
+            CPER10          & Obstáculos relacionados ao reconhecimento de voz               & Comportamento                & AR4P3, AR4P4, AR4P5, AR4P6, AR4P7, AR4P8, AR4P9, AR4P10                                                                                                \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: Autor}
+    \end{center}
+\end{table}
+A \autoref{tab-tec-pro-1} relaciona os códigos de referência dos problemas listados na
+\autoref{tab-pro-est-rel-1} com os códigos das diretrizes definidas pelos estudos relacionados e das principais
+técnicas identificadas nos artigos do MSL, reunidas na \autoref{tab-tec-uti-des-1}.
+
+\begin{table}[htb]
+    \begin{center}
+        \caption{Diretrizes e técnicas relacionadas à cada tipo de problema.}
+        \label{tab-tec-pro-1}
+        \begin{tabular}{p{2.0cm}|p{12.5cm}}
+            %\hline
+            \textbf{Código do problema} & \textbf{Diretrizes/Técnicas}                                                                                                  \\
+            \hline
+            CPER1                       & AR3D8, AR3D9, AR3D11, AR5R10, AR6D22, AR6D24, TAM5, TAM11, TAM13, TAM14                                                       \\
+            \hline
+            CPER2                       & AR3D1, AR3D2, AR3D5, AR3D8, AR3D9, AR3D11, AR5R6, AR5R8, AR5R10, AR6D3, AR6D4, AR6D10, AR6D14, AR6D24, TAM1, TAM8, TAM11      \\
+            \hline
+            CPER3                       & AR5R2, AR5R9, AR6D5, AR6D7, AR6D12, AR6D13, AR6D14, AR6D16, AR6D17, AR6D19, AR6D20, AR6D21, AR6D23, AR6D27, TAM2, TAM14       \\
+            \hline
+            CPER4                       & AR3D3, AR3D4, AR3D5, AR3D7, AR3D9, AR5R4, AR5R5, AR6D1, AR6D2, AR6D3, AR6D5, AR6D8, AR6D15, AR6D32, TAM4                      \\
+            \hline
+            CPER5                       & AR3D6, AR5R1, TAM9, TAM10                                                                                                     \\
+            \hline
+            CPER6                       & AR3D11, AR6D30, TAM12, TAM13                                                                                                  \\
+            \hline
+            CPER7                       & AR3D6, AR3D10, TAM6, TAM7, TAM9                                                                                               \\
+            \hline
+            CPER8                       & AR5R1, AR5R2, AR5R3, AR5R4, AR5R6, AR5R8, AR5R9, AR6D1, AR6D2, AR6D3, AR6D12, AR6D13, AR6D14, AR6D17, TAM2, TAM4, TAM6, TAM14 \\
+            \hline
+            CPER9                       & AR3D4, AR3D5, AR3D7, AR5R9, AR6D1, AR6D2, AR6D3, AR6D4, AR6D16, TAM4                                            \\
+            \hline
+            CPER10                      & AR5R1, TAM10                                                                                                                  \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: Autor}
+    \end{center}
+\end{table}
+
+Como pode ser observado na \autoref{tab-tec-pro-1}, todos os tipos de problemas listados possuem alguma
+técnica da \autoref{tab-tec-uti-des-1}, das técnicas identificadas no MSL, relacionada.
+
+\newpage
+
+\subsection{CPER1: \emph{Feedback} auditivo não é suficiente para a interação}
+
+Embora o retorno auditivo tenha sido o principal recurso utilizado para acessibilidade de PDV, como pode
+ser visto na \autoref{tab-tec-uti-des-1}, existem várias limitações quanto à essa solução, mesmo considerando
+que todos os elementos de tela tenham as descrições adequadas para que possam ser narradas pelos leitores de
+telas.
+
+Tais limitações se referem a: entendimento da orientação e organização da \emph{interface}, utilização
+em ambientes ruidosos, falta privacidade e pronúncia das palavras \cite{Damaceno2016}.
+Assim, o suporte à outras forma de retorno acessível para o usuário, através da solução de outros problemas
+listados, em destaque o CPER2 relacionado à \emph{interface}, se faz necessário.
+
+\subsection{CPER2: Apresentação dos conteúdos}
+
+Problemas como a falta de consistência no \emph{layout}, a má organização dos conteúdos das telas e
+funcionalidades e sequências de interação confusas podem levar a um não entendimento
+da sequência de leitura e gerar sobrecarga de informações para o usuário \cite{Shera2021285, Christoph2020}.
+
+Assim, para sanar esses problemas, técnicas como posicionar os elementos chave de interação sempre na mesma posição,
+adaptar o tamanho dos componentes de acordo com o tamanho da tela e evitar colocar muito conteúdo na tela para evitar
+a rolagem podem ser bastante úteis \cite{Mascetti2019,Ducci2018}. Suporte ao alto contraste,
+esquemas alternativos de cores, ampliação da tela e fontes maiores e mais legíveis também podem ajudar nesse sentido
+\cite{Kim20191103,Oliveira2019}.
+
+\subsection{CPER3 e CPER8: Problemas relacionados às descrições dos elementos e leitores de tela}
+
+Problemas relacionados a leitores de tela e descrições textuais dos elementos apareceram com alta frequência na \autoref{tab-pro-est-rel-1},
+justificando a técnica TAM2, da \autoref{tab-tec-uti-des-1}, ter sido a mais utilizada nos estudos e a mais discutida por
+desenvolvedores no \emph{Stack Overflow} \cite{Vendome201941}.
+
+A técnica TAM2 se refere à descrição textual dos elementos de tela e sua utilização foi mencionada explicitamente em 13 dos
+15 artigos selecionados no MSL\@. Além dela, a técnica TAM6 que fornece o \emph{feedback} auditivo nativamente nas aplicações,
+através de TTS também foi uma das técnicas mais utilizadas, como pôde ser visto na \autoref{tab-tec-uti-des-1}. Assim, se mostrando
+uma possível alternativa para o problema com \emph{crash} do leitor de telas citado por \citeonline{Shera2021285}.
+
+\subsection{CPER4: Dificuldades ao navegar pela aplicação}
+
+Vários problemas de navegação relacionados também ao CPER2, de apresentação dos conteúdos, foram encontrados, particularmente:
+o não entendimento do fluxo de tarefas e a falta de consistência na organização dos conteúdos/\emph{layout}
+\cite{Shera2021285,Christoph2020,Quispe2020}. Outro problema se dá pela forma de navegação entre os elementos dos leitores de tela,
+que é linear, demorando para se ter uma noção geral da \emph{interface} \cite{Damaceno2016}.
+
+Portanto, a preocupação com uma navegação intuitiva, posicionando elementos chave como caixas de pesquisa sempre no mesmo
+local se mostra fundamental para resolver alguns desses problemas \cite{Kim20191103,Mascetti2019,Ducci2018}.
+A utilização de estratégias para o uso de leitores de tela, como atalhos atalhos para facilitar a navegação do usuário com DV
+pela aplicação, principalmente um para que possibilite que o usuário retorne a um lugar conhecido, como tela inicial do \emph{app}
+foi definida como essencial por \citeonline{Siebra2018172}, a partir de uma análise realizada com envolvimento de 5 PDV\@.
+
+\subsection{CPER5: Dificuldades com a utilização do teclado virtual padrão}
+
+Vários problemas relacionados à utilização do teclado virtual padrão foram identificados, como pode ser visto na
+\autoref{tab-pro-est-rel-1}. Tornando ainda mais evidente a necessidade de possibilitar várias alternativas de interação
+com as aplicações para usuários com DV\@, tanto de entrada de dados quanto de saída.
+
+Algumas soluções como a possibilidade de \emph{feedback} auditivo dos caracteres que estão sendo digitados e
+a de revisar o conteúdo escrito ao finalizar a digitação foram identificadas e validadas \cite{Siebra2016, Duarte2017}.
+Além disso, o reconhecimento de voz, definido como diretriz por \citeonline{Kim20191103}, também foi
+utilizado como alternativa ao uso de teclados virtuais por um terço dos estudos do MSL\@, como pode ser visto na \autoref{tab-tec-uti-des-1}.
+
+\subsection{CPER6: Dificuldades relacionadas a botões virtuais}
+
+Na relação de problemas relacionados a botões levantados por \citeonline{Christoph2020}, são mencionados a falta de informações
+e as funcionalidades confusas dos mesmos, porém, esses problemas estão relacionados ao CPER3, de descrições textuais
+inadequadas/inexistentes, onde são mencionadas outras soluções. Outros problemas com relação esses botões são:
+a grande proximidade entre eles e a menor sensibilidade tátil, com relação aos botões físicos \cite{Damaceno2016}.
+
+O uso de fontes legíveis com tamanho ampliado ou personalizável e o tamanho e espaçamento adequado para os botões virtuais
+são essenciais, visto que, podem dificultar a visualização para PDV parcial quando não estão utilizando leitores
+de tela \cite{Heesook2017,Kim20191103}.
+
+\subsection{CPER7: Dificuldades na utilização de gestos}
+
+Como foi mostrada na \autoref{tab-pro-est-rel-1}, problemas relacionados a gestos foram os mais frequentes, onde a maioria dos usuários
+que participaram do estudo de \citeonline{Oliveira2019} relataram ter tido dificuldade, fazendo algum comentário negativo.
+Outro motivo para a dificuldade está na diferença entre os gestos das aplicações desenvolvidas e os habituais de cada plataforma \cite{Leporini2017}.
+Contudo, resultados de outros estudos indicam que a utilização de gestos simples gerou \emph{feedbacks} positivos \cite{Duarte2017,Ducci2018}.
+
+\subsection{CPER9: Funcionalidades confusas ou não claras}
+
+Funcionalidades com apresentações não claras ou confusas, tanto pela descrição textual audível quanto pela visual, acabam
+causando confusão nos usuários, os fazendo pensar que uma funcionalidade faz uma coisa quando na verdade faz outra \cite{Christoph2020}.
+
+Esses problemas ressaltam ainda mais a importância de fornecer descrições textuais audíveis claras dos elementos de tela
+e funcionalidades da aplicação, como é apontado no tópico específico do CPER3. Ao mesmo tempo, reforça também a importância
+da apresentação visual dos conteúdos mencionada no tópico do CPER2.
+
+\subsection{CPER10: Obstáculos relacionados ao reconhecimento de voz}
+
+Diversas limitações com relação ao reconhecimento de voz foram levantadas por \citeonline{Damaceno2016}, algumas delas
+são as mesmas citadas no tópico CPER1, sobre o \emph{feedback} auditivo não ser suficiente, por questões de privacidade,
+ruídos de ambientes e pronúncia das palavras. Assim como no caso do CPER1, faz-se necessário oferecer outros métodos
+de entrada alternativos para os usuários, como resolver os problemas do tópico CPER5, relacionados a teclados virtuais.
+
+Os outros problemas citados pelo autor, no mesmo estudo, foram o de apenas um comando ser reconhecido por vez, a necessidade
+de mentalizar as instruções por voz, aumentando a carga de memória dos usuários, e o uso desses comandos ser computacionalmente
+custoso. Para esses problemas não foram identificadas soluções nos estudos do MSL ou nos estudos relacionados.
