@@ -1,12 +1,15 @@
 \chapter{Fundamentação Teórica}
 
-Neste capítulo...
+Este capítulo apresenta os conceitos básicos relevantes para compreensão deste trabalho,
+com o objetivo de contextualizar e situar o leitor no tema abordado.
+As seções seguintes trazem elucidações sobre o Diabetes Mellitus (DM) e a relação com deficiências visuais (DV),
+acessibilidade, diretrizes e ferramentas relacionadas, e, por fim, sobre o desenvolvimento de aplicativos móveis multiplataforma.
 
 % ---
 \section{Diabetes Mellitus}
 % ---
 
-De acordo com a Associação Americana de Diabetes (ADA), o Diabetes Mellitus (DM) é um grupo de doenças endocrinológicas crônicas
+De acordo com a Associação Americana de Diabetes (ADA), o DM é um grupo de doenças endocrinológicas crônicas
 caracterizado pela elevação da glicose no sangue, devido à deficiência de ação do hormônio insulina, que requer cuidados médicos
 contínuos para redução de risco e controle glicêmico \cite{ADA2019}.
 
@@ -15,7 +18,8 @@ ilhotas do pâncreas e o tipo 2 afeta o processamento do açúcar no sangue e é
 secreção prejudicada de insulina, resistência à insulina e fatores ambientais, como obesidade, alimentação excessiva, falta de
 exercício, estresse e o envelhecimento \cite{Ozougwu_2013}.
 
-A diabetes vem se tornando um desafio global de saúde pública cada vez maior por conta do rápido aumento no número de casos.
+O diabetes vem se tornando um desafio global de saúde pública cada vez maior por conta do rápido aumento no número de casos nos últimos
+20 anos \cite{ADA2019}.
 Estimativas da Federação Internacional de Diabetes (IDF), através do Atlas da Diabetes\footnote{\url{https://diabetesatlas.org/}}
 de 2019, apontaram que 463 milhões de pessoas no mundo viviam com DM, o que representa cerca de 9.3\% da população
 global adulta, e é esperado um aumento para 10,2\% (578 milhões) em 2030 e 10,9\% (700 milhões) em 2045 \cite{SAEEDI2019107843}.
@@ -29,12 +33,22 @@ do diabetes e ao controle do nível de glicemia \cite{Solomon412}. Essa complica
 em adultos, na faixa etária de 20 à 74 anos, em países desenvolvidos \cite{ADA2019}. Além disso, outros distúrbios oculares
 como o glaucoma e a catarata ocorrem mais cedo e com maior frequência em diabéticos \cite{ADA2019}.
 
-Os resultados de uma metanálise realizada no estudo de \citeonline{AMINUDDIN2021103286} apontaram que as intervenções
-de autogerenciamento baseadas em \emph{smartphones} pareceram ter efeitos benéficos sobre atividades de autocuidado para
+Serviços de educação e apoio para o autogerenciamento do diabetes
+(DSMES, do inglês \emph{diabetes self-management education and support}) facilitam na aquisição de conhecimento e habilidades
+necessárias para o autocuidado, incorporando as necessidades, objetivos e experiências de diabéticos \cite{ADA2019}. Assim, DSMES
+visam auxiliar o empoderamento dos pacientes com diabetes na tomada de decisões informadas de autogerenciamento \cite{Marrero2013}.
+
+
+De acordo com a \citeonline{ADA2019}, estudos mostraram que DSMES estão associados a aumento no conhecimento e comportamentos de
+autocuidado sobre o diabetes, auto-relatos de redução de peso, melhoria de qualidade de vida, redução de risco de mortalidade
+em todas as causas e redução nos custos de cuidados com a saúde.
+
+Resultados mais recentes, de uma metanálise realizada no estudo de \citeonline{AMINUDDIN2021103286}, também apontaram que as intervenções
+de autogerenciamento baseadas em \emph{smartphones} teriam efeitos benéficos sobre atividades de autocuidado, principalmente para
 pacientes com DM tipo 2.
 
 % ---
-\section{Deficiência visual}
+\section{Deficiência Visual}
 % ---
 
 De acordo com a Classificação Internacional de Funcionalidade, Incapacidade e Saúde (ICF),
@@ -45,11 +59,11 @@ que sofrem cotidianamente, como em ir para o trabalho ou escola, e o acesso a cu
 e serviços oftalmológicos \cite{WHO2019}.
 
 Assim, atualmente o mundo enfrenta um sério problema com relação a saúde da visão. Segundo a Organização Mundial da Saúde (OMS),
-pelo menos 2,2 bilhões de pessoas no mundo vivem com deficiência visual (DV) em algum grau, com isso
+pelo menos 2,2 bilhões de pessoas no mundo vivem com deficiência visual (DV) em algum grau, com isso,
 a necessidade de cuidados com os olhos tende a crescer drasticamente nas próximas décadas \cite{WHO2019}.
 
-O estudo da \citeonline{WHO2019} aponta que mais de 1 bilhão dos casos de pessoas com DV poderiam ser prevenidos ou
-tratados. Ainda segundo esse estudo, os principais motivos para esses casos são:
+Segundo a \citeonline{WHO2019}, mais de 1 bilhão dos casos de pessoas com DV poderiam ser prevenidos ou
+tratados. Ainda de acordo essa publicação, os principais motivos para esses casos são:
 
 \begin{itemize}
     \item O tempo despendido em ambientes fechados e aumento das atividades \textit{"near work"} (ler, escrever, assistir TV, jogar videogames, etc);
@@ -64,58 +78,238 @@ foi realizada pelo Ministério da Saúde em 2019, a Pesquisa Nacional de Saúde 
 com 2 ou mais anos de idade, possui muita dificuldade ou não enxerga \cite{stopa2020pesquisa}.
 
 % ---
-\section{Acessibilidade e Leitores de tela}
+\section{Acessibilidade e Tecnologia Assistiva}
 % ---
 
-Segundo o Art. 3º da Lei Brasileira de Inclusão da Pessoa com Deficiência, acessibilidade se refere à:
+Segundo o Art. 3º da Lei Brasileira de Inclusão da Pessoa com Deficiência\footnote{\url{http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm}},
+acessibilidade se refere à:
 
 \begin{citacao}
     possibilidade e condição de alcance para utilização, com segurança e autonomia, de espaços, mobiliários, equipamentos urbanos,
     edificações, transportes, informação e comunicação, \textbf{inclusive seus sistemas e tecnologias}, bem como de outros serviços e
     instalações abertos ao público, de uso público ou privados de uso coletivo, tanto na zona urbana como na rural, por pessoa com
-    deficiência ou com mobilidade reduzida.
+    deficiência ou com mobilidade reduzida \cite{Brasil2015}.
 \end{citacao}
 
-Acesso a Tecnologias Assistivas (AT) adequadas e de qualidade por um preço acessível melhora o funcionamento individual e
-a independência, ao mesmo tempo que facilita a participação e integração na sociedade \cite{world2019global}.
-
-Visando a inclusão das pessoas com DV, tecnologias conhecidas como Tecnologias Assistivas (TA) se tornam cada vez mais presentes.
-\citeonline{Cook2014} utilizam em seu livro, uma definição de TA mundialmente utilizada que foi definida por uma \textit{Public Law}
+Assim, visando essa inclusão, tecnologias conhecidas como Tecnologias Assistivas (TA) se tornam cada vez mais presentes.
+\citeonline{Cook2014} adotam uma definição de TA mundialmente utilizada em seu livro, esta que foi definida por uma \textit{Public Law}
 dos Estados Unidos da América (EUA). Os autores justificam a utilização dessa definição por a mesma contemplar os pontos mais
 importantes a respeito de TA, como diz a seguir:
 
 \begin{citacao}
-    Qualquer item, parte de equipamento ou sistema adquirido comercialmente, modificado ou customizado que é utilizado para aumentar, manter ou melhorar as capacidades
+    Qualquer item, parte de equipamento ou \textbf{sistema} adquirido comercialmente, modificado ou customizado que é utilizado para aumentar, manter ou melhorar as capacidades
     funcionais de pessoas com deficiência \cite{Cook2014}.
 \end{citacao}
 
-Para que essas TAs funcionassem adequadamente, organizações como a \textit{World Wide Web Consortium} (W3C) definiram diretrizes que deveriam ser seguidas no desenvolvimento
-de aplicações \textit{web} \cite{W3C2019}. Já para aplicações \textit{mobile}, como a implementação da tecnologia varia de acordo com o Sistema Operacional (SO), essa
-definição se deu pelas próprias proprietárias dos SOs, tais como Google e Apple.
+De acordo com a OMS, o acesso à TAs adequadas e de qualidade por um preço acessível melhora
+no desenvolvimento das funções e na independência de indivíduos com deficiências, ao mesmo tempo que facilita
+a participação e integração dos mesmos na sociedade \cite{world2019global}.
 
 % ---
-\section{Diretrizes de acessibilidade}
+\section{Diretrizes de Acessibilidade}
 % ---
+
+Para que as TAs funcionassem adequadamente na \textit{Web}, a \textit{World Wide Web Consortium} (W3C) definiu, através da
+\emph{Web Accessibility Initiative} (WAI), um conjunto de diretrizes e recomendações de acessibilidade, chamado
+\emph{Web Content Accessibility Guidelines} (WCAG) que deveriam ser seguidas no desenvolvimento de aplicações \emph{Web}
+\cite{W3C2019}. Com o advento da navegação na \emph{Web} em dispositivos móveis, a W3C lançou, em novembro
+de 2006, o Guia de Melhores Práticas \emph{Mobile Web}(MWBP)\footnote{\url{http://www.w3.org/TR/mobile-bp/}}, com o objetivo de
+melhorar a experiência do usuário ao acessar à \emph{Web} nesses dispositivos.
+
+Além da W3C, órgãos de governos também desenvolveram diretrizes e recomendações de acessibilidade, baseados no WCAG e
+em suas próprias legislações, como foi o caso dos EUA com a Seção 508\footnote{\url{https://www.section508.gov/}}
+da Lei de Reabilitação de 1973, que exige acessibilidade de todas as agências federais quando desenvolvem,
+adquirem, mantêm ou usam tecnologia eletrônica e de informação \cite{JAEGER2006169}. Contudo, estudos apontam que diversos
+sites governamentais não estão em total conformidade com a Seção 508 \cite{KING2016715,YI201575}.
+
+No Brasil não foi diferente, o Decreto 5.296/04\footnote{\url{http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm}}
+estabeleceu o cumprimento dos requisitos de acessibilidade pelos órgãos da administração pública direta, indireta e fundacional,
+pelas empresas prestadoras de serviços públicos e instituições financeiras, resultando na criação do Modelo de Acessibilidade
+em Governo eletrônico (eMAG) \cite{EMAG_2007}.
+
+Lançado em 2005, o eMAG também foi baseado no WCAG 1.0, onde estudos avaliaram as diferenças entre as diretrizes do eMAG
+(versões 1.0 e 3.0) e as do WCAG (versões 1.0 e 2.0), observando-se que as versões possuiam poucas
+diferenças nas recomendações, sendo as maiores diferenças estruturais, demonstrando vantagens na adoção do eMAG para o
+contexto brasileiro \cite{Bach_2009,Rocha_2013}.
+
+Já para aplicações nativas \textit{mobile}, não existe uma entidade como a W3C para definir essas diretrizes, e embora
+ela tenha proposto o MWBP, ele se refere à criação de aplicações \emph{web} para o \emph{mobile}, não contemplando todas
+as necessidades das aplicações nativas \cite{W3C_2008}.
+
+Assim, as próprias empresas responsáveis pelos Sistemas Operacionais (SO) \emph{mobile}, Google (Android)\footnote{\url{https://developer.android.com/guide/topics/ui/accessibility/apps}}
+e Apple (iOS)\footnote{\url{https://developer.apple.com/design/human-interface-guidelines/accessibility}},
+criaram suas diretrizes e recomendações para o desenvolvimento de aplicativos acessíveis para suas plataformas.
+Apesar disso, muitos desenvolvedores não tem conhecimento sobre essas técnicas e recomendações, ou sobre a necessidade delas
+para o suporte das aplicações à pessoas com deficiências \cite{Quispe2020,Bi2021}.
 
 Um estudo realizado por \citeonline{Ballantyne2018}, compila um conjunto de diretrizes para acessibilidade \textit{mobile} e realiza
 testes em 25 dos \textit{apps} mais populares da \emph{Google Play}. Os resultados do estudo revelaram que apenas 8 dos 25 selecionados
-possuiam taxa de conformidade com as diretrizes acima de 75\%. O estudo ainda revela que 63\% das violações encontradas são
+possuiam taxa de conformidade com as diretrizes acima de 75\%. O estudo ainda revela que 63\% das violações encontradas estavam
 relacionadas ao \textit{design} (componentes de tela).
 
 Já \citeonline{Yan2019} elaboram um estudo mais abrangente, realizado com 479
 \textit{apps} de 23 categorias da \emph{Google Play}. Os autores utilizaram uma ferramenta automatizada, o IBM
 \textit{Mobile Accessibility Checker} (MAC), para encontrar possíveis problemas com acessibilidade nesses \textit{apps},
-categorizando-os em V (Violação), PV (Potêncial Violação) e A (Alerta). Os resultados mostraram
-que 94.8\%, 97.5\% e 66.4\% dos apps continham problemas realacionados a V, PV e A, respectivamente \cite{Yan2019}.
+categorizando-os em V (Violação), PV (Potencial Violação) e A (Alerta). Os resultados mostraram
+que 94.8\%, 97.5\% e 66.4\% dos apps continham problemas relacionados a V, PV e A, respectivamente \cite{Yan2019}.
 
 Para \citeonline{Quispe2020} os principais fatores para a baixa priorização da acessibilidade de aplicações \textit{mobile}
 são o desconhecimento, a alta demanda e a falta de tempo das equipes de desenvolvimento, fazendo com que se concentrem nos
 requisitos funcionais em detrimento de requisitos não funcionais de usabilidade como o de acessibilidade.
 
 % ---
-\section{Desenvolvimento de aplicações multiplataforma}
+\section{Ferramentas Relacionadas à Acessibilidade}
+% ---
+Nesta seção são apresentadas ferramentas que podem ser utilizadas durante o desenvolvimento do projeto, com o objetivo de melhorar e validar a usabilidade
+da aplicação quanto à acessibilidade.
+
+% ---
+\subsection{Leitores de tela}
 % ---
 
-Segundo  as estimativas, mais de 5 bilhões de pessoas possuem dispositivos móveis no mundo, sendo mais da metade destes, \textit{smartphones}.
-No Brasil, a taxa de adultos que dizem possuir dispositivos móveis é de 83\% no total e 60\% para \textit{smartphones}. Na faixa etária entre 18
-e 34 anos, houve um aumento no número de proprietários de \textit{smartphones} de 61\% em 2015 para 85\% em 2018 \cite{Taylor2019}. //CETIC.br, NIC-BR, ITU (ONU)
+Com o objetivo de possibilitar a utilização dos \emph{smartphones} por usuários cegos e auxiliar os com DV parcial, os principais SOs móveis, Android e iOS,
+fornecem nativamente os leitores de tela chamados TalkBack\footnote{\url{https://support.google.com/accessibility/android/answer/6007100?hl=pt-BR&ref_topic=10601570}}
+e VoiceOver\footnote{\url{https://support.apple.com/pt-br/guide/iphone/iph3e2e415f/ios}}, respectivamente.
+
+A descrição do VoiceOver pela Apple:
+
+\begin{citacao}
+    Com o VoiceOver – um leitor de tela baseado em gestos – você pode usar o iPhone mesmo que você não possa ver a tela.
+    O VoiceOver fornece descrições audíveis do que está na tela — desde o nível da bateria até quem está ligando e em qual
+    app o seu dedo está. Você também pode ajustar a velocidade da fala e o tom de voz conforme as suas necessidades \cite{VoiceOver2021}.
+\end{citacao}
+
+Descrição do TalkBack pelo Google:
+
+\begin{citacao}
+    O TalkBack é o leitor de tela do Google incluído em dispositivos Android.
+    Ele permite que você controle o dispositivo sem usar os olhos \cite{TalkBak2021}.
+\end{citacao}
+
+Diferente da Apple onde apenas ela fabrica os \emph{smartphones} que utilizam seu SO, o Google mantém o SO mas, cada fabricante pode escolher se
+deseja personalizá-lo com as características da marca ou se mantém o sistema fiel as definições padrões. Assim, a documentação ressalta:
+
+\begin{citacao}
+    A configuração depende do fabricante do dispositivo, da versão do Android e da versão do TalkBack.
+    Estas páginas de ajuda se aplicam à maioria dos dispositivos, mas pode haver algumas diferenças \cite{TalkBak2021}.
+\end{citacao}
+
+Esses leitores de tela utilizam uma técnica conhecida como \emph{text-to-speech} (``texto para discurso'' em tradução livre) para narrar as descrições para
+os usuários. Assim, tanto o Android quanto o iOS disponibilizam Interfaces de Programação de Aplicações
+(APIs, do inglês ``\emph{Application Programming Interface}'') para que os desenvolvedores possam integrar essa tecnologia diretamente aos
+próprios \emph{apps}, não sendo necessário habilitar os leitores nos dispositivos para funcionar nessas aplicações específicas
+\cite{Heesook2017,Biase2018,Oliveira2019,Caballero2020}.
+
+Para que esses leitores de tela funcionem de maneira adequada em aplicações desenvolvidas, é necessário que haja um tratamento
+com relação aos componentes de \emph{interface}, fornecendo descrições desses componentes para que possam ser narrados pelos leitores. Assim,
+problemas relacionados à falta de descrições desses componentes costumam ser os mais frequentes enfrentados pelos usuários com DV
+\cite{Vendome201941,Christoph2020,Shera2021285}.
+
+Uma boa prática para mitigação desses problemas pode ser a utilização constante dos leitores de tela para validação do fluxo das aplicações durante
+o processo de desenvolvimento, visando diminuir a quantidade, visto que podem ser identificados e corrigidos mais cedo \cite{Tomlinson2016377}.
+
+% ---
+\subsection{Testes Automatizados}
+% ---
+
+A utilização de ferramentas automatizadas para realização de testes de usabilidade e acessibilidade pode reduzir o esforço
+e o retrabalho, pois identifica diversos problemas de acessibilidade ainda em tempo de desenvolvimento, diminuindo os esforços e custos para
+realização das correções \cite{Christoph2020}.
+
+Uma dessas ferramentas é a \emph{Mobile Accessibility Testing} (MATE), desenvolvida por brasileiros, que automaticamente explora os \emph{apps}
+aplicando diferentes tipos de checagem por problemas de acessibilidade relacionadas à DV, gerando um relatório detalhado como resultado, auxiliando
+os desenvolvedores na resolução desses problemas \cite{Eler2018AutomatedAT}.
+
+O Google também possui duas ferramentas que permitem a realização desses testes, o \emph{Accessibility Scanner}, uma aplicação instalável no dispositivo,
+disponível na Google Play\footnote{\url{https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor}}, que sobrepõe o
+\emph{app} a ser testado e faz sugestões de melhorias de acessibilidade, e o \emph{Test Lab}, onde é possível realizar o \emph{upload} do \emph{app} para 
+realização dos testes pela ferramenta, disponível no Firebase\footnote{\url{https://firebase.google.com/}}.
+
+A ferramenta \textit{Mobile Accessibility Checker} da IBM\footnote{\url{https://www.ibm.com/}} possibilita a realização de testes automatizados em aplicações
+móveis nativas e em conteúdos \emph{web mobile}, gerando alertas sobre problemas de acessibilidade com recomendações de
+correções baseadas em diretrizes padrões da industria e regulamentações governamentais \cite{patil2016enhanced,Yan2019}.
+
+% ---
+\section{Desenvolvimento de aplicações móveis multiplataforma}
+% ---
+
+Segundo estimativas de 2019, mais de 5 bilhões de pessoas no mundo possuem dispositivos móveis, sendo mais da metade destes, \textit{smartphones}
+\cite{Taylor2019}. Embora, segundo \citeonline{morris2017smartphone}, cerca de 84\% da população estadunidense com DV possua ou utilize telefone celular,
+a taxa média de indivíduos que possuem nos países menos desenvolvidos é de apenas 61\% \cite{ITU_2021}.
+
+No Brasil, a taxa de adultos que relataram possuir dispositivos móveis foi de 83\% no total e 60\% para \textit{smartphones},
+sendo que, na faixa etária entre 18 e 34 anos, houve um aumento no número de proprietários de \textit{smartphones} de
+61\% em 2015 para 85\% em 2018 \cite{Taylor2019}.
+
+De acordo com o \citeonline{CETIC_2021}, pesquisa realizada pelo Centro de Estudos sobre
+as Tecnologias da Informação e da Comunicação (CETIC), 98\% dos usuários de \emph{internet} brasileiros, com 16 anos ou mais,
+utilizavam telefone celular para acessar a \emph{internet} em 2020, essa taxa foi de 97\% em 2018 e 99\% em 2019.
+A pesquisa ainda mostrou que 40\% desses usuários buscaram por informações ou realizaram serviços públicos \emph{online} relacionados
+a direitos do trabalhador ou previdência social em 2019, e esse número aumentou para 72\% em
+2020, durante a pandemia de COVID-19\footnote{\url{https://www.paho.org/pt/covid19}} \cite{CETIC_2021}.
+
+Quanto a realização de atividades remotas, 87\% dos usuários que declararam frequentar escola ou universidade, no momento da coleta
+dos dados dessa pesquisa, afirmaram que a instituição em que estudaram ofereceu atividades educacionais remotas, onde o telefone
+celular foi o dispositivo mais utilizado para o acompanhamento dessas atividades pelas classes D e E \cite{CETIC_2021}. Os resultado dessa pesquisa
+ainda mostraram que, para atividades profissionais, 84\% desses usuários, das classes D e E, que realizaram trabalho remoto durante a pandemia,
+utilizaram principalmente o celular.
+
+Embora aplicativos móveis possam ser desenvolvidas até por desenvolvedores amadores, plataformas móveis são muito complexas, tanto o
+SO Android quanto iOS, os principais para \emph{smartphones} da atualidade, contém mais de 12 milhões de linhas de código
+(LOC, do inglês ``\emph{lines of code}'') \cite{pressman2014software}.
+
+O alto número de \emph{apps} disponíveis faz com que o processo de desenvolvimento de \emph{software} para esses dispositivos pareça
+ter sido bem compreendido, porém ainda existe um grande número de questões que precisam ser resolvidas \cite{pressman2014software,Wasserman2010}.
+
+Os requisitos não funcionais de aplicações móveis como a usabilidade, por exemplo, são diferentes de aplicações \emph{web} ou \emph{desktop} \cite{pressman2014software}. 
+Existe um ``ângulo'' \emph{mobile} para praticamente todo aspecto de engenharia de \emph{software}, onde as caracteristicas
+das aplicações e seus SOs apresentam um novo ou diferente conjunto de questões que precisam ser consideradas \cite{Wasserman2010}.
+
+Como mencionado por \citeonline{pressman2014software}, diferentes dispositivos móveis utilizam diferentes SOs e, consequentemente, diferentes
+ambientes e ferramentas de desenvolvimento para cada plataforma, destacando a importância de se considerar portabilidade ao desenvolver para
+esses dispositivos.
+
+Devido à tais questões, o tempo e esforço necessários no desenvolvimento para oferecer suporte à multiplas plataformas, acaba sendo
+significativamente maior, elevando os custos do projeto \cite{Henning2013,Wasserman2010}. Foi nesse sentido que diversos kits de ferramentas de
+desenvolvimento (mais conhecidos pelo termo em inglês: \emph{framework}), foram propostos, visando simplificar esse processo, diminuindo os custos
+de desenvolvimento e manutenção \cite{Martinez2017,Francese2015}.
+
+\subsection{\emph{Flutter}}
+
+Com a primeira versão estável sendo lançada em dezembro de 2018, o Flutter\footnote{\url{https://flutter.dev/}} é um kit de ferramentas de Interface
+de Usuário (UI, do inglês \emph{User Interface}) de código aberto criado pelo Google para construção de aplicações compiladas nativamente
+para multiplas plataformas, tais como \emph{mobile} (Android e iOS), \emph{web} e \emph{desktop} (Linux, MacOS e Windows) \cite{kuzmin2020experience}.
+
+O \emph{framework} foi construído com base na linguagem de programação Dart, também criado pelo Google e de código aberto.
+O Dart foi lançada em 2011 com o objetivo inicial de ``substituir'' o JavaScript no desenvolvimento \emph{web},
+com mecanismos de abstrações e semantica mais clara como diferencias, visando a coesão e elegância de código e
+rodando tanto no lado do cliente (navegadores) quanto no lado servidor\footnote{\url{https://en.wikipedia.org/wiki/Server_(computing)}}
+(\emph{backend}) \cite{walrath2012dart}.
+
+Um dos diferencias do Flutter com relação a maioria dos \emph{frameworks} para desenvolvimento multiplataforma é que ele renderiza os próprios
+componentes de \emph{interface}, sem utilizar os componentes nativos de cada plataforma como os demais, ou seja, quando você constroi um botão com Flutter,
+ele mesmo renderiza, sem a necessidade de uma ``ponte'' com os SOs para solicitar a renderização do componente nativo \cite{zammetti2019practical,boukhary2019clean}.
+
+O motor (do inglês, \emph{engine}) do Flutter é baseado, em sua maior parte, em C++, linguagem nativa utilizada pelos SOs (Android, iOS, Windows etc),
+assim, possibilitando alcançar desempenho próximo ao de aplicações nativas \cite{zammetti2019practical,kuzmin2020experience}. Já o motor gráfico utilizado
+por essa base de código é o Skia\footnote{\url{https://skia.org}}, uma compacta biblioteca gráfica de código aberto que apresenta excelente desempenho
+em todas as plataformas suportadas \cite{zammetti2019practical,boukhary2019clean}.
+
+O Flutter também fornece uma \emph{interface} sobre os kits de desenvolvimento de \emph{software} (SDKs, do inglês ``\emph{Software Development Kit}'')
+nativos de ambas as plataformas (Android e iOS), esta que tem como objetivo eliminar as diferenças entre as APIs nativas de cada plataforma \cite{zammetti2019practical}.
+
+Assim, não é necessário que os desenvolvedores se preocupem com como funciona, nativamente, as APIs como a de câmera de cada plataforma, podendo utilizar
+a do Flutter diretamente que ela abstrairá toda essa parte, ficando responsável por fazer a chamada à API adequada \cite{zammetti2019practical}.
+
+Na teste de mestrado de \citeonline{gonsalves2019evaluating}, um protótipo de aplicação móvel foi desenvolvido para Android e iOS nativamente, e com os
+\emph{framework} de desenvolvimento multiplataforma Flutter e Cordova\footnote{\url{https://cordova.apache.org/}}, visando realizar um comparativo de
+aspectos do processo de desenvolvimento e dos resultados das aplicações. 
+
+Os resultados do estudo mostraram que, no geral, o Flutter oferece uma melhor experiência de desenvolvimento que o Cordova e que as plataformas nativas
+(considerando desenvolver para iOS e Android). Ambos os \emph{frameworks} multiplataforma apresentaram menos LOC que os \emph{apps} nativos separados,
+sendo pouco mais de 1/3 do total de LOC dos \emph{apps} nativos \cite{gonsalves2019evaluating}.
+
+Um ponto negativo do Flutter foi o tamanho significativamente maior do \emph{app} em \emph{megabytes} (MB) e maior consumo de RAM\footnote{\url{https://pt.wikipedia.org/wiki/Mem\%C3\%B3ria_de_acesso_aleat\%C3\%B3rio}}
+que os \emph{apps} em Cordova e nativos, porém o Flutter também mostrou maior velocidade na inicialização do \emph{app} e na navegação entre as telas
+que os demais \cite{gonsalves2019evaluating}. O maior tamanho e consumo de RAM no \emph{app} desenvolvido com Flutter se da por conta da inclusão de seu
+motor, bibliotecas utilizadas e outros recursos no \emph{app} \cite{gonsalves2019evaluating,zammetti2019practical}.
