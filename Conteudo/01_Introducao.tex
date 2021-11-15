@@ -1,43 +1,97 @@
 \chapter{Introdução}
 
 % ---
-\section{Motivação e Justificativa}
+\section{Contextualização e Motivação}
 % ---
+
+O Diebetes Mellitus (DM) vem se tornando um desafio global de saúde pública cada vez maior por conta do rápido aumento no número de casos nos últimos
+20 anos \cite{ADA2019}.
+Estimativas da Federação Internacional de Diabetes (IDF), através do Atlas da Diabetes\footnote{\url{https://diabetesatlas.org/}}
+de 2019, apontaram que 463 milhões de pessoas no mundo viviam com DM, o que representa cerca de 9.3\% da população
+global adulta, e é esperado um aumento para 10,2\% (578 milhões) em 2030 e 10,9\% (700 milhões) em 2045 \cite{SAEEDI2019107843}.
+
+O Brasil é o 5º país com mais diabéticos no mundo com 16,8 milhões em 2019, na faixa etária de 20 à 79 anos, e estimativas
+de 21,5 e 26 milhões de casos para 2030 e 2045, respectivamente \cite{SAEEDI2019107843}. Os custos totais de hipertensão, diabetes
+e obesidade no Sistema Único de Saúde (SUS) alcançaram 3,45 bilhões de reais em 2018, sendo 30\% desse custo relacionado ao DM \cite{Nilson2020}.
+
+Já a retinopatia diabética é uma complicação vascular do diabetes, cuja prevalência está diretamente relacionada à duração
+do diabetes e ao controle do nível de glicemia \cite{Solomon412}. Essa complicação é a maior causa de novos casos de cegueira
+em adultos, na faixa etária de 20 à 74 anos, em países desenvolvidos \cite{ADA2019}. Além disso, outros distúrbios oculares
+como o glaucoma e a catarata ocorrem mais cedo e com maior frequência em diabéticos \cite{ADA2019}.
+
+Assim, atualmente o mundo enfrenta um sério problema com relação a saúde da visão. Segundo a Organização Mundial da Saúde (OMS),
+pelo menos 2,2 bilhões de pessoas no mundo vivem com deficiência visual (DV) em algum grau, com isso,
+a necessidade de cuidados com os olhos tende a crescer drasticamente nas próximas décadas \cite{WHO2019}.
+
+Segundo a Associação Americana de Diabetes (ADA), serviços de educação e apoio para o autogerenciamento do diabetes
+(DSMES, do inglês \emph{diabetes self-management education and support}) facilitam na aquisição de conhecimento e habilidades
+necessárias para o autocuidado, incorporando as necessidades, objetivos e experiências de diabéticos \cite{ADA2019}. Portanto, DSMES
+visam auxiliar o empoderamento dos pacientes com diabetes na tomada de decisões informadas de autogerenciamento \cite{Marrero2013}.
+
+De acordo com estimativas de 2019, mais de 5 bilhões de pessoas no mundo possuem dispositivos móveis, sendo mais da metade destes, \textit{smartphones}
+\cite{Taylor2019}. Embora, segundo \citeonline{morris2017smartphone}, cerca de 84\% da população estadunidense com DV possua ou utilize telefone celular,
+a taxa média de indivíduos que possuem nos países menos desenvolvidos é de apenas 61\% \cite{ITU_2021}.
+
+No Brasil, a taxa de adultos que relataram possuir dispositivos móveis foi de 83\% no total e 60\% para \textit{smartphones},
+sendo que, na faixa etária entre 18 e 34 anos, houve um aumento no número de proprietários de \textit{smartphones} de
+61\% em 2015 para 85\% em 2018 \cite{Taylor2019}.
+
+\citeonline{Yan2019} elaboram um estudo abrangente, realizado com 479 \textit{apps} de 23 categorias da
+\emph{Google Play}, utilizando uma ferramenta automatizada, o IBM \textit{Mobile Accessibility Checker}
+(MAC), para encontrar possíveis problemas com acessibilidade relacionadas à DV nesses \textit{apps},
+categorizando-os em V (Violação), PV (Potencial Violação) e A (Alerta). Os resultados mostraram que 94.8\%, 97.5\% e 66.4\% dos apps continham problemas
+relacionados à V, PV e A, respectivamente \cite{Yan2019}.
+
+Diante da popularização dos \emph{smartphones} e das problemáticas mencionadas, o presente trabalho visa desenvolver uma aplicação móvel
+com DSMES, para ao autocuidado de diabéticos, considerando a resolução dos principais problemas de acessibilidade para pessoas com
+deficiência visual (PDV).
 
 % ---
 \section{Objetivos}
 % ---
 
-% ---
-\subsection{Objetivo Geral}
-% ---
-
-O presente trabalho tem o objetivo de desenvolver uma aplicação de assistência voltada a pessoas com diabetes e acuidade visual prejudicada, seguindo as
-diretrizes de acessibilidade (DA) do Google e Apple para Android e iOS, respectivamente. Bem como, trazer soluções alternativas baseadas nessas diretrizes.
+Nesta seção são apresentados os objetivos, divididos em geral e específicos. Onde o objetivo geral dá uma visão mais ampla sobre o objeto
+de estudo e os específicos visam aprofundar as intenções expressas no geral \cite{cervo2006metodologia}.
 
 % ---
-\subsection{Objetivos Específicos}
+\subsection{Geral}
 % ---
 
-A fim de atingir o objetivo geral, os objetivos específicos listados a seguir foram definidos:
+O objetivo deste trabalho é desenvolver uma aplicação móvel multiplataforma e assistiva voltada ao autocuidado de pessoas com diabetes
+e acuidade visual prejudicada. Implementando soluções para os principais problemas de acessibilidade à PDV na utilização de aplicativos móveis.
+
+% ---
+\subsection{Específicos}
+% ---
+
+Para atingir objetivo deste trabalho, os seguintes objetivos específicos foram definidos:
+
 \begin{itemize}
-    \item Avaliar aplicações móveis que utilizam os conceitos das DA, em busca de soluções que possam ser aplicadas ao \textit{app} a ser desenvolvido;
-    \item Realizar revisão sistemática de aplicações médicas com foco acessibilidade, para conhecer o estado atual;
-    \item Pesquisar quais são os maiores problemas enfrentados pelos usuários com relação a acessibilidade em aplicações \textit{mobile};
-    \item Pesquisar quais são as funcionalidades que pacientes diabéticos mais usam e/ou necessitam;
-    \item Desenvolver a aplicação móvel;
+    \item Identificar os principais problemas enfrentados por PDV na utilização de aplicações móveis;
+    \item Identificar as principais técnicas e soluções de acessibilidade à PDV para aplicações móveis;
+    \item Relacionar as principais técnicas e soluções identificadas aos principais problemas identificados;
+    \item Realizar o desenvolvimento do aplicativo móvel com os principais requisitos levantados;
+    \item Aplicar as soluções identificadas para os principais problemas de acessibilidade ao aplicativo.
 \end{itemize}
 
 % ---
-\section{Metodologia de Pesquisa}
+\section{Metodologia}
 % ---
 
-Metodologia quantitativa exploratória
+A metodologia adotada neste estudo foi a quantitativa exploratória, visando responder as questões de pesquisa apresentadas
+no início do capítulo 3, assim, obtendo maior familiaridade com o problema e possíveis soluções.
 
+Além disso, foi realizado um levantamento bibliográfico através de um Mapeamento Sistemático da Literatura (MSL), onde foi possível
+realizar uma análise dos resultados dos estudos selecionados (de acordo com o protocolo) e dos relacionados (estudos de mapeamento).
 
 % ---
 \section{Organização do Documento}
 % ---
+Neste capítulo foram apresentados a contextualização, a motivação e os objetivos deste trabalho. Bem como, a metodologia adotada.
 
-Organização
-
+Para facilitar a navegação e melhor entendimento, este documento está organizado em capítulos, cujas descrições são listadas a seguir:
+\begin{itemize}
+    \item Capítulo 2 - Fundamentação Teórica: aborda os principais conceitos relacionados ao trabalho realizado;
+    \item Capítulo 3 - Mapeamento Sistemático da Literatura: descreve os estudos selecionados e os relacionados, e apresenta uma análise dos resultados;
+    \item Capítulo 4 - Plano de continuidade: descreve o que será realizado e apresenta o cronograma das próximas etapas deste trabalho.
+\end{itemize}
