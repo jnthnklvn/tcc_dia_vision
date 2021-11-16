@@ -20,7 +20,7 @@ Dra. Adicinéia Aparecida de Oliveira. E tem como objetivo
 o desenvolvimento de uma aplicação móvel como ferramenta de auxilio à educação e ao autocuidado de pacientes diabéticos
 com acuidade visual prejudica, acessível à PDV\@.
 
-Para tanto, Débora buscou, em seu trabalho, realizar um levantamento de referencial teórico e tecnológico sobre o DM,
+Para tanto, em \citeonline{Sobral2021} foi realizado um levantamento de referencial teórico e tecnológico sobre o DM,
 aplicativos móveis e deficiência visual. Assim, reunindo as principais funcionalidades e soluções que o aplicativo a ser
 desenvolvido deveria adotar como requisitos para que atendesse às necessidades desse público-alvo.
 
@@ -28,7 +28,7 @@ desenvolvido deveria adotar como requisitos para que atendesse às necessidades 
 
 \section{Busca de Anterioridade}
 
-Em seu trabalho, Débora realizou uma busca de anterioridade, na base do Instituto Nacional de Propriedade Industrial (INPI)
+Em \citeonline{Sobral2021}, realizou-se uma busca de anterioridade, na base do Instituto Nacional de Propriedade Industrial (INPI)
 e nas lojas de aplicativos Google Play (Android) e Apple Store (iOS), visando identificar os \emph{softwares} e funcionalidades
 já existentes sobre DM e DV no mercado.
 
@@ -40,24 +40,31 @@ nas lojas de aplicativos às principais funcionalidades propostas em seu trabalh
     \begin{center}
         \includegraphics[scale=0.8]{Imagens/proposta/busca_anterioridade.png}
     \end{center}
-    \legend{Fonte: Débora Sobral}
+    \legend{Fonte: \cite{Sobral2021}.}
 \end{figure}
 
 \newpage
 
 \section{Visão e Análise}
 
-Esta seção resume as necessidades e características esperadas do produto de \emph{software} a ser desenvolvido, identificadas a partir de
-reuniões com a \emph{product owner}, Débora Sobral, que identificou a problemática abordada neste trabalho e realizou o levantamento de
-funcionalidades e problemas das soluções já existentes no mercado em seu trabalho de mestrado.
+Nesta seção são descritas as necessidades e características esperadas do produto de \emph{software} a ser desenvolvido, identificadas a partir de
+reuniões com a \emph{product owner} (dona do produto), esta que identificou a problemática abordada neste trabalho e
+realizou o levantamento de funcionalidades e problemas das soluções já existentes no mercado em \citeonline{Sobral2021}.
 
-Assim, a partir dessas reuniões, o problema que deveria ser resolvido pela aplicação ficou
-definido como: a dificuldade de acesso à informações de autocuidado com relação ao DM por deficientes visuais.
-Com o objetivo de fornecer conteúdos que auxiliem os diabéticos portadores de deficiências visuais no gerenciamento
-do autocuidado com DM\@.
+\subsection{Problema}
 
-Sendo a acessibilidade ao deficiente visual o principal diferencial da aplicação, já que, como pode ser visto na \autoref{fig_tab_cor_func},
-apenas um \emph{app} demonstrou possuir essa característica.
+O problema que o produto busca resolver ficou definido como: a dificuldade de acesso à informações de autocuidado com relação
+ao DM por deficientes visuais.
+
+\subsection{Objetivo}
+
+O objetivo do produto é fornecer, por meio de uma aplicação móvel, conteúdos e funcionalidades que auxiliem os diabéticos portadores de deficiências
+visuais no gerenciamento do autocuidado com o DM\@.
+
+\subsection{Diferenciais}
+
+A acessibilidade ao deficiente visual é o principal diferencial do produto, como pode ser visto na \autoref{fig_tab_cor_func},
+onde apenas um \emph{app} demonstrou possuir essa característica.
 
 \subsection{Riscos e Impedimentos}
 
@@ -76,7 +83,7 @@ Os seguintes riscos e possíveis impedimentos com relação ao produto foram ide
 
 \subsection{Estórias dos usuários}
 
-Também a partir das reuniões com a \emph{product owner}, para o processo de definição e levantamento de requisitos, foram identificadas
+No processo de definição e levantamento de requisitos, foram identificadas
 as estórias dos usuários que são listadas na \autoref{tab-est-usr}.
 
 \begin{table}[htb]
@@ -86,110 +93,106 @@ as estórias dos usuários que são listadas na \autoref{tab-est-usr}.
         \label{tab-est-usr}
         \begin{tabular}{p{2.0cm}|p{5.0cm}|p{7.0cm}}
             %\hline
-            \textbf{Eu, enquanto}                             & \textbf{Quero} & \textbf{Para}           \\
+            \textbf{Eu, enquanto}                                          & \textbf{Quero} & \textbf{Para}                     \\
             \hline
-            Usuário                                           &
-            Encontrar o \emph{app} nas lojas virtuais         &
-            Baixar o \emph{app} no meu celular                                                           \\
+            Paciente                                                       &
+            Encontrar o \emph{app} nas lojas virtuais                      &
+            Baixar o \emph{app} no meu celular.                                                                                 \\
             \hline
-            Usuário                                           &
-            Realizar cadastro no aplicativo                   &
-            Ter acesso às funcionalidades do \emph{app}                                                  \\
+            Paciente                                                       &
+            Realizar cadastro no aplicativo                                &
+            Ter acesso às funcionalidades do \emph{app}.                                                                        \\
             \hline
-            Usuário                                           &
-            Realizar login de forma prática                   &
-            Para entrar no \emph{app}                                                                    \\
+            Paciente                                                       &
+            Realizar login de forma prática                                &
+            Para acessar as funcionalidades do \emph{app}.                                                                      \\
             \hline
-            Usuário                                           &
-            Poder resetar minha senha                         &
-            Caso esqueça, possa altera-la e recuperar acesso ao \emph{app}                               \\
+            Paciente                                                       &
+            Poder alterar minha senha                                      &
+            Poder alterá\@-la e recuperar acesso ao \emph{app}.                                                                 \\
             \hline
-            Usuário                                           &
-            Ter acesso ao menu principal                      &
-            Para escolher qual funcionalidade irei utilizar                                              \\
+            Paciente                                                       &
+            Registrar informações das refeições                            &
+            Acompanhar a quantidade de calorias consumidas por refeição.                                                        \\
             \hline
-            Usuário                                           &
-            Registrar informações das refeições               &
-            Acompanhar a quantidade de calorias consumidas por refeição                                  \\
+            Paciente                                                       &
+            Ter acesso a aplicativos acessíveis para deficientes visuais   &
+            Ajudar a realizar atividades do dia a dia.                                                                          \\
             \hline
-            Usuário                                           &
-            Ter acesso a aplicativos para deficientes visuais &
-            Ajudar a realizar atividades do dia a dia                                                    \\
+            Paciente                                                       &
+            Sugerir aplicativos acessíveis para deficientes visuais        &
+            Compartilhar aplicativos que possam ajudar outros usuários com DV\@.                                                \\
             \hline
-            Usuário                                           &
-            Sugerir aplicativos para deficientes visuais      &
-            Ajudar a realizar atividades do dia a dia                                                    \\
+            Paciente                                                       &
+            Registrar práticas de atividade física                         &
+            Acompanhar a evolução da rotina de atividade física.                                                                \\
             \hline
-            Usuário                                           &
-            Registrar práticas de atividade física            &
-            Acompanhar a evolução da rotina de atividade física                                          \\
+            Paciente                                                       &
+            Ter acesso à dicas de autocuidado                              &
+            Melhorar a qualidade de vida e prevenir complicações do DM\@.                                                       \\
             \hline
-            Usuário                                           &
-            Ter acesso a dicas de autocuidado                 &
-            Melhorar a qualidade de vida e prevenir complicação do diabetes mellitus                     \\
+            Paciente                                                       &
+            Filtrar as dicas por categorias                                &
+            Facilitar a busca das dicas sobre assuntos específicos.                                                             \\
             \hline
-            Usuário                                           &
-            Filtrar as dicas por categorias                   &
-            Facilitar a busca das dicas sobre assuntos específicos                                       \\
+            Paciente                                                       &
+            Consultar locais para acesso à serviços de saúde               &
+            Facilitar o acesso e contato com as principais clínicas, hospitais e consultórios da cidade.                        \\
             \hline
-            Usuário                                           &
-            Consultar locais para acesso à serviços de saúde  &
-            Facilitar o acesso e contato com as principais clínicas, hospitais e consultórios da cidade  \\
+            Paciente                                                       &
+            Registrar glicemia                                             &
+            Acompanhamento dos valores de glicemia e ser alertado quando estiver fora do limite.                                \\
             \hline
-            Usuário                                           &
-            Registrar glicemia                                &
-            Acompanhamento dos valores de glicemia e ser alertado quando estiver fora do limite desejado \\
+            Paciente                                                       &
+            Registrar medicações que faço uso                              &
+            Ter uma lista atualizada com todas as informações das medicações e ser alertado dos horários de uso das medicações. \\
             \hline
-            Usuário                                           &
-            Registrar medicações que faço uso                 &
-            Receber alertas com horários para uso da medicação                                           \\
+            Paciente                                                       &
+            Realizar avaliação dos pés                                     &
+            Acompanhar a evolução dos pés e detectar quando surgir alterações.                                                  \\
             \hline
-            Usuário                                           &
-            Registrar medicações que faço uso                 &
-            Ter uma lista atualizada com todas as informações das medicações de uso frequente            \\
+            Paciente                                                       &
+            Registrar diurese diária                                       &
+            Acompanhar quando surgir alterações.                                                                                \\
             \hline
-            Usuário                                           &
-            Realizar avaliação dos pés                        &
-            Acompanhar a evolução dos pés e detectar quando surgir alterações                            \\
+            Paciente                                                       &
+            Ter acesso a relatórios dos dados registrados                  &
+            Visualizar e compartilhar esses dados registrados.                                                                  \\
             \hline
-            Usuário                                           &
-            Registrar diurese diária                          &
-            Acompanhar a evolução e característica da diurese e detectar quando surgir alterações        \\
+            Paciente                                                       &
+            Ter acesso aos dados pessoais                                  &
+            Editar ou acrescentar dados pessoais durante o uso do aplicativo.                                                   \\
             \hline
-            Usuário                                           &
-            Ter acesso a relatórios dos registros feitos      &
-            Visualizar e compartilhar esses dados registrados                                            \\
+            Paciente                                                       &
+            Configurar notificações                                        &
+            Definir horários e quais ativar ou desativar.                                                                       \\
             \hline
-            Usuário                                           &
-            Ter acesso aos dados pessoais                     &
-            Editar ou acrescentar dados pessoais durante o uso do aplicativo                             \\
+            Paciente                                                       &
+            Configurar preferências                                        &
+            Personalizar os limites da glicemia.                                                                                \\
             \hline
-            Usuário                                           &
-            Configurar preferências                           &
-            Definir quais notificações ativar ou desativar                                               \\
+            Paciente                                                       &
+            Realizar \emph{logout}                                         &
+            Para desvincular minha conta do \emph{app}.                                                                         \\
             \hline
-            Usuário                                           &
-            Configurar preferências                           &
-            Personalizar os limites da glicemia                                                          \\
+            Administrador do sistema                                       &
+            Adicionar dicas de autocuidado para os pacientes               &
+            Fornecer informações acerca de cuidados com a saúde.                                                                \\
             \hline
-            Usuário                                           &
-            Realizar logout                                   &
-            Para desvincular minha conta do \emph{app}                                                   \\
+            Administrador do sistema                                       &
+            Cadastrar centros de saúde no sistema                          &
+            Que o paciente possa conhecer os centros de saúde que atendem suas demandas.                                        \\
             \hline
-            Administrador do sistema                          &
-            Adicionar dicas de autocuidado para os pacientes  &
-            Fornecer conhecimento para o paciente acerca de cuidados com a saúde.                        \\
+            Administrador do sistema                                       &
+            Cadastrar sugestões de aplicativos acessíveis no sistema       &
+            Que o paciente possa conhecer outros \emph{apps} acessíveis que possam ajudá\@-lo no cotiano.                       \\
             \hline
-            Administrador do sistema                          &
-            Cadastrar centros de saúde no sistema.            &
-            Que o paciente possa conhecer os centros de saúde que atendem suas demandas.                 \\
-            \hline
-            Administrador do sistema                          &
-            Avaliar as sugestões os centros de saúde          &
-            Assegurar credibilidade ao aplicativo                                                        \\
+            Administrador do sistema                                       &
+            Aprovar/recusar as sugestões de centros de saúde e aplicativos &
+            Assegurar credibilidade ao aplicativo.                                                                              \\
             % \hline
         \end{tabular}
-        \legend{Fonte: Autores}
+        \legend{Fonte: Autores.}
     \end{center}
 \end{table}
 
@@ -204,7 +207,7 @@ A partir dos requisitos e estórias dos usuários identificados, o diagrama de c
     \begin{center}
         \includegraphics[scale=0.65]{Imagens/proposta/use_case.jpg}
     \end{center}
-    \legend{Fonte: Autor}
+    \legend{Fonte: Autor.}
 \end{figure}
 
 \newpage
@@ -219,5 +222,5 @@ na segunda parte desse trabalho.
     \begin{center}
         \includegraphics[scale=0.65]{Imagens/proposta/cronograma_continuidade.png}
     \end{center}
-    \legend{Fonte: Autor}
+    \legend{Fonte: Autor.}
 \end{figure}
