@@ -1,118 +1,222 @@
-\chapter{Proposta}
+\chapter{Proposta e Plano de Continuidade}
 
-\section{Lista de códigos}
-Teste.
-Usado para criar a lista de códigos, adicionar sintaxe highlight, enumerar as linhas e colorir o fundo, para dar destaque a implementação.
+Neste capítulo é apresentada a proposta deste trabalho, com os requisitos, estórias de usuário, casos de uso e demais artefatos
+que fazem parte do levantamento de requisitos e análise, oferecendo uma visão ampla da aplicação que será desenvolvida.
+Além disso, também é apresentado o plano de continuidade com o cronograma para realização das etapas da segunda parte deste
+trabalho.
 
-Sintaxe básica:
-\begin{verbatim}
-\begin{codigo}[!htb]
-    \caption{Espaço para o título do código}
-    \label{Espaço para o label do código, para ser usado na referência}  
-    \begin{lstlisting}[language = Linguagem de programação a ser usada]
-        <CÓDIGO>
-    \end{lstlisting}
-\end{codigo}
-\end{verbatim}
+Para o desenvolvimento completo desse projeto é previsto a realização de 4 etapas, ao longo dos meses referentes ao primeiro
+período letivo de 2021 da Universidade Federal de Sergipe (UFS), estas são listadas a seguir:
+\begin{itemize}
+    \item Desenvolvimento do aplicativo com a implementação dos requisitos mais essenciais e viáveis;
+    \item Revisão e testes da acessibilidade da aplicação;
+    \item Descrição do processo metodológico e análise dos resultados;
+    \item Revisão, correção e entrega do trabalho.
+\end{itemize}
 
-\begin{codigo}[htb]
-  \caption{Código PHP}
-  \label{codigophp}
-  \begin{lstlisting}[language = php]
-       <?php
+Este projeto está sendo desenvolvido em parceria com a mestranda, Débora Almeida Silveira Sobral, do
+Programa de Pós-graduação Profissional em Gestão e Inovação Tecnológica em Saúde (PPGITS), também orientanda da Profa.
+Dra. Adicinéia Aparecida de Oliveira. E tem como objetivo
+o desenvolvimento de uma aplicação móvel como ferramenta de auxilio à educação e ao autocuidado de pacientes diabéticos
+com acuidade visual prejudica, acessível à PDV\@.
 
-       echo '%*Olá mundo*)!';
-       print '%*Olá mundo*)!';
-  \end{lstlisting}
-\end{codigo}
+Para tanto, Débora buscou, em seu trabalho, realizar um levantamento de referencial teórico e tecnológico sobre o DM,
+aplicativos móveis e deficiência visual. Assim, reunindo as principais funcionalidades e soluções que o aplicativo a ser
+desenvolvido deveria adotar como requisitos para que atendesse às necessidades do público-alvo.
 
-\begin{codigo}
-  \caption{Código python}
-  \label{codigopython}
-  \begin{lstlisting}[language = python]
-    import numpy as np
- 
-    def incmatrix(genl1, genl2):
-        m = len(genl1)
-        n = len(genl2)
-        M = None #to become the incidence matrix
-        VT = np.zeros((n*m,1), int)  #dummy variable
- 
-        #compute the bitwise xor matrix
-        M1 = bitxormatrix(genl1)
-        M2 = np.triu(bitxormatrix(genl2),1) 
- 
-        for i in range(m-1):
-            for j in range(i+1, m):
-                [r,c] = np.where(M2 == M1[i,j])
-                for k in range(len(r)):
-                    VT[(i)*n + r[k]] = 1;
-                    VT[(i)*n + c[k]] = 1; 
-                    VT[(j)*n + r[k]] = 1;
-                    VT[(j)*n + c[k]] = 1;
- 
-                    if M is None:
-                        M = np.copy(VT)
-                    else:
-                        M = np.concatenate((M, VT), 1)
- 
-                    VT = np.zeros((n*m,1), int)
- 
-        return M
-\end{lstlisting}
-\end{codigo}
+\newpage
 
-\begin{codigo}
-  \caption{Codigo Java}
-  \begin{lstlisting}[language = Java]
-    public class Factorial{
-        public static void main(String[] args){   
-            final int NUM_FACTS = 100;
-            for(int i = 0; i < NUM_FACTS; i++)
-                System.out.println( i + "! is " + factorial(i) + factorial(i) factorial(i) factorial(i));
-        }
+\section{Busca de Anterioridade}
 
-        public static int factorial(int n){
-            int result = 1;
-            for(int i = 2; i <= n; i++)
-                result *= i;
-            return result;
-        }
-    }
-\end{lstlisting}
-\end{codigo}
+Em seu trabalho, Débora realizou uma busca de anterioridade, na base do Instituto Nacional de Propriedade Industrial (INPI)
+e nas lojas de aplicativos Google Play (Android) e Apple Store (iOS), visando identificar os \emph{softwares} e funcionalidades
+já existentes sobre DM e DV no mercado.
 
+A \autoref{fig_tab_cor_func} exibe uma tabela onde a autora buscou relacionar os \emph{apps} encontrados
+nas lojas de aplicativos às principais funcionalidades propostas em seu trabalho para o DiaVision.
 
+\begin{figure}[htb]
+    \caption{\label{fig_tab_cor_func}Relação de funcionalidades dos \emph{apps} encontrados nas lojas de aplicativos.}
+    \begin{center}
+        \includegraphics[scale=0.8]{Imagens/proposta/busca_anterioridade.png}
+    \end{center}
+    \legend{Fonte: Débora Sobral}
+\end{figure}
 
-\section{Lista de Algoritmos}
+\newpage
 
-Usado para criar a lista de algoritmos ou pseudocodigos.
+\section{Visão e Análise}
 
-Sintaxe básica:
-\begin{verbatim}
-\begin{algoritmo}[!htb]
-    \caption{Espaço para o título do algoritmo ou pseudocodigo}
-    \label{label do do algoritmo ou pseudocodigo, para ser usado na referência}  
-    <ESPAÇO RESERVADO PARA USAR SEU PACOTE FAVORITO DE CÓDIGOS>
-\end{algoritmo}
-\end{verbatim}
+Esta seção resume as necessidades e características esperadas do produto de \emph{software} a ser desenvolvido, identificadas a partir de
+reuniões com a \emph{product owner}, Débora Sobral, que identificou a problemática abordada neste trabalho e realizou o levantamento de
+funcionalidades e problemas das soluções já existentes no mercado em seu trabalho de mestrado.
 
+Assim, a partir de reuniões com a \emph{product owner}, o problema que deveria ser resolvido pela aplicação ficou
+definido como: a dificuldade de acesso à informações de autocuidado com relação ao DM por deficientes visuais.
+Com o objetivo de fornecer conteúdos que auxiliem os diabéticos portadores de deficiências visuais a gerir o autocuidado com DM\@.
 
-\begin{algoritmo}[htb]
-	\caption{Algoritmo exemplo}
-	\label{alg1}
-	\begin{algorithm}[H]
- 	\KwData{this text}
- 	\KwResult{how to write algorithm with \LaTeX2e }
- 	initialization\;
- 	\While{not at end of this document}{
-  		read current\;
-  		\eIf{understand}{
-   			go to next section\;
-   			current section becomes this one\;
-   		}{
-   			go back to the beginning of current section\;
-  		}
- 	}
-	\end{algorithm}
-\end{algoritmo}
+Sendo a acessibilidade ao deficiente visual o principal diferencial da aplicação, já que, como pode ser visto na \autoref{fig_tab_cor_func},
+apenas um \emph{app} demonstrou possuir essa característica.
+
+\subsection{Riscos e Impedimentos}
+
+Os seguintes riscos e possíveis impedimentos com relação ao produto foram identificados:
+
+\begin{itemize}
+    \item Não adesão por parte do público alvo;
+    \item Dificuldades no manuseio do smartphone pelo público alvo;
+    \item Dificuldade de localizar os possíveis participantes da pesquisa;
+    \item Utilização incorreta do aplicativo ou não assimilação das informações adquiridas;
+    \item Afastamento do paciente da assistência continuada na rede primária;
+    \item Constrangimento do usuário por falta de entendimento das funcionalidades.
+\end{itemize}
+
+\newpage
+
+\subsection{Estórias dos usuários}
+
+Também a partir das reuniões com a \emph{product owner}, para o processo de definição e levantamento de requisitos, foram identificadas
+as estórias dos usuários que são listadas na \autoref{tab-est-usr}.
+
+\begin{table}[htb]
+    \begin{center}
+        \ABNTEXfontereduzida
+        \caption{Relação de estórias dos usuários.}
+        \label{tab-est-usr}
+        \begin{tabular}{p{2.0cm}|p{5.0cm}|p{7.0cm}}
+            %\hline
+            \textbf{Eu, enquanto}                             & \textbf{Quero} & \textbf{Para}           \\
+            \hline
+            Usuário                                           &
+            Encontrar o \emph{app} nas lojas virtuais         &
+            Baixar o \emph{app} no meu celular                                                           \\
+            \hline
+            Usuário                                           &
+            Realizar cadastro no aplicativo                   &
+            Ter acesso às funcionalidades do \emph{app}                                                  \\
+            \hline
+            Usuário                                           &
+            Realizar login de forma prática                   &
+            Para entrar no \emph{app}                                                                    \\
+            \hline
+            Usuário                                           &
+            Poder resetar minha senha                         &
+            Caso esqueça, possa altera-la e recuperar acesso ao \emph{app}                               \\
+            \hline
+            Usuário                                           &
+            Ter acesso ao menu principal                      &
+            Para escolher qual funcionalidade irei utilizar                                              \\
+            \hline
+            Usuário                                           &
+            Registrar informações das refeições               &
+            Acompanhar a quantidade de calorias consumidas por refeição                                  \\
+            \hline
+            Usuário                                           &
+            Ter acesso a aplicativos para deficientes visuais &
+            Ajudar a realizar atividades do dia a dia                                                    \\
+            \hline
+            Usuário                                           &
+            Sugerir aplicativos para deficientes visuais      &
+            Ajudar a realizar atividades do dia a dia                                                    \\
+            \hline
+            Usuário                                           &
+            Registrar práticas de atividade física            &
+            Acompanhar a evolução da rotina de atividade física                                          \\
+            \hline
+            Usuário                                           &
+            Ter acesso a dicas de autocuidado                 &
+            Melhorar a qualidade de vida e prevenir complicação do diabetes mellitus                     \\
+            \hline
+            Usuário                                           &
+            Filtrar as dicas por categorias                   &
+            Facilitar a busca das dicas sobre assuntos específicos                                       \\
+            \hline
+            Usuário                                           &
+            Consultar locais para acesso à serviços de saúde  &
+            Facilitar o acesso e contato com as principais clínicas, hospitais e consultórios da cidade  \\
+            \hline
+            Usuário                                           &
+            Registrar glicemia                                &
+            Acompanhamento dos valores de glicemia e ser alertado quando estiver fora do limite desejado \\
+            \hline
+            Usuário                                           &
+            Registrar medicações que faço uso                 &
+            Receber alertas com horários para uso da medicação                                           \\
+            \hline
+            Usuário                                           &
+            Registrar medicações que faço uso                 &
+            Ter uma lista atualizada com todas as informações das medicações de uso frequente            \\
+            \hline
+            Usuário                                           &
+            Realizar avaliação dos pés                        &
+            Acompanhar a evolução dos pés e detectar quando surgir alterações                            \\
+            \hline
+            Usuário                                           &
+            Registrar diurese diária                          &
+            Acompanhar a evolução e característica da diurese e detectar quando surgir alterações        \\
+            \hline
+            Usuário                                           &
+            Ter acesso a relatórios dos registros feitos      &
+            Visualizar e compartilhar esses dados registrados                                            \\
+            \hline
+            Usuário                                           &
+            Ter acesso aos dados pessoais                     &
+            Editar ou acrescentar dados pessoais durante o uso do aplicativo                             \\
+            \hline
+            Usuário                                           &
+            Configurar preferências                           &
+            Definir quais notificações ativar ou desativar                                               \\
+            \hline
+            Usuário                                           &
+            Configurar preferências                           &
+            Personalizar os limites da glicemia                                                          \\
+            \hline
+            Usuário                                           &
+            Realizar logout                                   &
+            Para desvincular minha conta do \emph{app}                                                   \\
+            \hline
+            Administrador do sistema                          &
+            Adicionar dicas de autocuidado para os pacientes  &
+            Fornecer conhecimento para o paciente acerca de cuidados com a saúde.                        \\
+            \hline
+            Administrador do sistema                          &
+            Cadastrar centros de saúde no sistema.            &
+            Que o paciente possa conhecer os centros de saúde que atendem suas demandas.                 \\
+            \hline
+            Administrador do sistema                          &
+            Avaliar as sugestões os centros de saúde          &
+            Assegurar credibilidade ao aplicativo                                                        \\
+            % \hline
+        \end{tabular}
+        \legend{Fonte: Autores}
+    \end{center}
+\end{table}
+
+\newpage
+
+\subsection{Casos de Uso}
+
+A partir dos requisitos e estórias dos usuários identificados, o diagrama de casos de usos da \autoref{fig_use_cas} foi elaborado.
+
+\begin{figure}[htb]
+    \caption{\label{fig_use_cas}Diagrama de casos de uso.}
+    \begin{center}
+        \includegraphics[scale=0.65]{Imagens/proposta/use_case.jpg}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\newpage
+
+\section{Cronograma}
+
+Por fim, o cronograma na \autoref{fig_cro_con} foi definido visando a organização e planejamento das atividades que serão realizadas
+na segunda parte desse trabalho.
+
+\begin{figure}[htb]
+    \caption{\label{fig_cro_con}Cronograma de continuidade do Projeto.}
+    \begin{center}
+        \includegraphics[scale=0.65]{Imagens/proposta/cronograma_continuidade.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
