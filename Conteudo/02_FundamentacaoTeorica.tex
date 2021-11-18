@@ -1,15 +1,14 @@
 \chapter{Fundamentação Teórica}
+\label{ch:fundament}
 
 Este capítulo apresenta os conceitos básicos relevantes para compreensão deste trabalho,
 com o objetivo de contextualizar e situar o leitor no tema abordado.
-As seções seguintes trazem elucidações sobre o Diabetes Mellitus (DM) e a relação com deficiências visuais (DV),
-acessibilidade, diretrizes e ferramentas relacionadas, e, por fim, sobre o desenvolvimento de aplicativos móveis multiplataforma.
 
 % ---
 \section{Diabetes Mellitus}
 % ---
 
-De acordo com a Associação Americana de Diabetes (ADA), o DM é um grupo de doenças endocrinológicas crônicas
+De acordo com a Associação Americana de Diabetes (ADA), o \emph{Diabetes Mellitus} (DM) é um grupo de doenças endocrinológicas crônicas
 caracterizado pela elevação da glicose no sangue, devido à deficiência de ação do hormônio insulina, que requer cuidados médicos
 contínuos para redução de risco e controle glicêmico \cite{ADA2019}.
 
@@ -37,7 +36,7 @@ as dificuldades que pode enfrentar para realização de atividades como autocuid
 que sofrem cotidianamente, como em ir para o trabalho ou escola, e o acesso a cuidados, produtos
 e serviços oftalmológicos \cite{WHO2019}.
 
-Segundo a \citeonline{WHO2019}, mais de 1 bilhão dos casos de pessoas com DV poderiam ser prevenidos ou
+Segundo a \citeonline{WHO2019}, mais de 1 bilhão dos casos de pessoas com deficiência visual (DV) poderiam ser prevenidos ou
 tratados. Ainda de acordo essa publicação, os principais motivos para esses casos são:
 
 \begin{itemize}
@@ -86,10 +85,10 @@ a participação e integração dos mesmos na sociedade \cite{world2019global}.
 
 Para que as TAs funcionassem adequadamente na \textit{Web}, a \textit{World Wide Web Consortium} (W3C) definiu, por meio da
 \emph{Web Accessibility Initiative} (WAI), um conjunto de diretrizes e recomendações de acessibilidade, chamado
-\emph{Web Content Accessibility Guidelines} (WCAG) que deveriam ser seguidas no desenvolvimento de aplicações \emph{Web}
-\cite{W3C2019}. Com o advento da navegação na \emph{Web} em dispositivos móveis, a W3C lançou, em novembro
+\emph{Web Content Accessibility Guidelines} (WCAG) que deveriam ser seguidas no desenvolvimento de aplicações Web
+\cite{W3C2019}. Com o advento da navegação na Web em dispositivos móveis, a W3C lançou, em novembro
 de 2006, o Guia de Melhores Práticas \emph{Mobile Web}(MWBP)\footnote{\url{http://www.w3.org/TR/mobile-bp/}}, com o objetivo de
-melhorar a experiência do usuário ao acessar à \emph{Web} nesses dispositivos.
+melhorar a experiência do usuário ao acessar à Web nesses dispositivos.
 
 Além da W3C, órgãos de governos também desenvolveram diretrizes e recomendações de acessibilidade, baseados no WCAG e
 em suas próprias legislações, como foi o caso dos EUA com a Seção 508\footnote{\url{https://www.section508.gov/}}
@@ -108,7 +107,7 @@ diferenças nas recomendações, sendo as maiores diferenças estruturais, demon
 contexto brasileiro \cite{Bach_2009,Rocha_2013}.
 
 Já para aplicações nativas \textit{mobile}, não existe uma entidade como a W3C para definir essas diretrizes, e embora
-ela tenha proposto o MWBP, ele se refere à criação de aplicações \emph{web} para o \emph{mobile}, não contemplando todas
+ela tenha proposto o MWBP, ele se refere à criação de aplicações Web para o \emph{mobile}, não contemplando todas
 as necessidades das aplicações nativas \cite{W3C_2008}.
 
 Assim, as próprias empresas responsáveis pelos Sistemas Operacionais (SO) \emph{mobile}, Google (Android)\footnote{\url{https://developer.android.com/guide/topics/ui/accessibility/apps}}
@@ -118,7 +117,7 @@ Apesar disso, muitos desenvolvedores não tem conhecimento sobre essas técnicas
 para o suporte das aplicações à pessoas com deficiências \cite{Quispe2020,Bi2021}.
 
 Um estudo realizado por \citeonline{Ballantyne2018}, compila um conjunto de diretrizes para acessibilidade \textit{mobile} e realiza
-testes em 25 dos \textit{apps} mais populares da \emph{Google Play}. Os resultados do estudo revelaram que apenas 8 dos 25 selecionados
+testes em 25 dos \textit{apps} mais populares da Google Play. Os resultados do estudo revelaram que apenas 8 dos 25 selecionados
 possuiam taxa de conformidade com as diretrizes acima de 75\%. O estudo ainda revela que 63\% das violações encontradas estavam
 relacionadas ao \textit{design} (componentes de tela).
 
@@ -191,7 +190,7 @@ os desenvolvedores na resolução desses problemas \cite{Eler2018AutomatedAT}.
 
 O Google também possui duas ferramentas que permitem a realização desses testes, o \emph{Accessibility Scanner}, uma aplicação instalável no dispositivo,
 disponível na Google Play\footnote{\url{https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor}}, que sobrepõe o
-\emph{app} a ser testado e faz sugestões de melhorias de acessibilidade, e o \emph{Test Lab}, onde é possível realizar o \emph{upload} do \emph{app} para 
+\emph{app} a ser testado e faz sugestões de melhorias de acessibilidade, e o Test Lab, onde é possível realizar o \emph{upload} do \emph{app} para 
 realização dos testes pela ferramenta, disponível no Firebase\footnote{\url{https://firebase.google.com/}}.
 
 A ferramenta MAC da IBM\footnote{\url{https://www.ibm.com/}} possibilita a realização de testes automatizados em aplicações
@@ -203,8 +202,8 @@ correções baseadas em diretrizes padrões da industria e regulamentações gov
 % ---
 
 De acordo com o \citeonline{CETIC_2021}, pesquisa realizada pelo Centro de Estudos sobre
-as Tecnologias da Informação e da Comunicação (CETIC), 98\% dos usuários de \emph{internet} brasileiros, com 16 anos ou mais,
-utilizavam telefone celular para acessar a \emph{internet} em 2020, essa taxa foi de 97\% em 2018 e 99\% em 2019.
+as Tecnologias da Informação e da Comunicação (CETIC), 98\% dos usuários de Internet brasileiros, com 16 anos ou mais,
+utilizavam telefone celular para acessar a Internet em 2020, essa taxa foi de 97\% em 2018 e 99\% em 2019.
 A pesquisa ainda mostrou que 40\% desses usuários buscaram por informações ou realizaram serviços públicos \emph{online} relacionados
 a direitos do trabalhador ou previdência social em 2019, e esse número aumentou para 72\% em
 2020, durante a pandemia de COVID-19\footnote{\url{https://www.paho.org/pt/covid19}} \cite{CETIC_2021}.
@@ -222,7 +221,7 @@ SO Android quanto iOS, os principais para \emph{smartphones} da atualidade, cont
 O alto número de \emph{apps} disponíveis faz com que o processo de desenvolvimento de \emph{software} para esses dispositivos pareça
 ter sido bem compreendido, porém ainda existe um grande número de questões que precisam ser resolvidas \cite{pressman2014software,Wasserman2010}.
 
-Os requisitos não funcionais de aplicações móveis como a usabilidade, por exemplo, são diferentes de aplicações \emph{web} ou \emph{desktop} \cite{pressman2014software}. 
+Os requisitos não funcionais de aplicações móveis como a usabilidade, por exemplo, são diferentes de aplicações Web ou \emph{desktop} \cite{pressman2014software}. 
 Existe um ``ângulo'' \emph{mobile} para praticamente todo aspecto de engenharia de \emph{software}, onde as caracteristicas
 das aplicações e seus SOs apresentam um novo ou diferente conjunto de questões que precisam ser consideradas \cite{Wasserman2010}.
 
@@ -239,10 +238,10 @@ de desenvolvimento e manutenção \cite{Martinez2017,Francese2015}.
 
 Com a primeira versão estável sendo lançada em dezembro de 2018, o Flutter\footnote{\url{https://flutter.dev/}} é um kit de ferramentas de Interface
 de Usuário (UI, do inglês \emph{User Interface}) de código aberto criado pelo Google para construção de aplicações compiladas nativamente
-para multiplas plataformas, tais como \emph{mobile} (Android e iOS), \emph{web} e \emph{desktop} (Linux, MacOS e Windows) \cite{kuzmin2020experience}.
+para multiplas plataformas, tais como \emph{mobile} (Android e iOS), Web e \emph{desktop} (Linux, MacOS e Windows) \cite{kuzmin2020experience}.
 
 O \emph{framework} foi construído com base na linguagem de programação Dart, também criado pelo Google e de código aberto.
-O Dart foi lançada em 2011 com o objetivo inicial de ``substituir'' o JavaScript no desenvolvimento \emph{web},
+O Dart foi lançada em 2011 com o objetivo inicial de ``substituir'' o JavaScript no desenvolvimento Web,
 com mecanismos de abstrações e semantica mais clara como diferencias, visando a coesão e elegância de código e
 rodando tanto no lado do cliente (navegadores) quanto no lado servidor\footnote{\url{https://en.wikipedia.org/wiki/Server_(computing)}}
 (\emph{backend}) \cite{walrath2012dart}.
@@ -274,3 +273,10 @@ Um ponto negativo do Flutter foi o tamanho significativamente maior do \emph{app
 que os \emph{apps} em Cordova e nativos, porém o Flutter também mostrou maior velocidade na inicialização do \emph{app} e na navegação entre as telas
 que os demais \cite{gonsalves2019evaluating}. O maior tamanho e consumo de RAM no \emph{app} desenvolvido com Flutter se da por conta da inclusão de seu
 motor, bibliotecas utilizadas e outros recursos no \emph{app} \cite{gonsalves2019evaluating,zammetti2019practical}.
+
+\section{Considerações Finais}
+
+Este capítulo buscou trazer elucidações sobre o DM e a relação com DV, acessibilidade, diretrizes e ferramentas,
+finalizando sobre o desenvolvimento de aplicativos móveis multiplataforma.
+O próximo capítulo abordará a realização de uma revisão da literatura, que teve o objetivo de levantar soluções
+utilizadas na implementação de acessibilidade em aplicações móveis.
