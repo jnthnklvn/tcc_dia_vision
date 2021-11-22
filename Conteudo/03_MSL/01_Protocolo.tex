@@ -19,13 +19,13 @@ O \emph{Parfisal}\footnote{\url{https://parsif.al/}}, ferramenta \emph{online} q
 Com ele foi possível importar os resultados das buscas nas bases, identificar os artigos duplicados, definir os critérios para inclusão e exclusão, realizar a seleção dos estudos e, por fim, obter os relatórios para construção dos artefatos que apresentam o processo e os resultados desse MSL.
 
 \subsection{Bases de Dados}
-Cinco bases de dados científicos foram escolhidas neste trabalho, a \emph{IEEE Xplore}\footnote{\url{https://ieeexplore.ieee.org}}, onde estão disponíveis conteúdos técnicos e científicos publicados pelo \emph{Institute of Electrical and Electronics Engineers (IEEE)} e seus parceiros,
+Cinco bases de dados científicos foram escolhidas neste trabalho, a \emph{IEEE Xplore}\footnote{\url{https://ieeexplore.ieee.org}}, na qual estão disponíveis conteúdos técnicos e científicos publicados pelo \emph{Institute of Electrical and Electronics Engineers (IEEE)} e seus parceiros,
 a \emph{Scopus}\footnote{\url{https://www.scopus.com}}, que é mantida pela \emph{Elsevier} e combina um abrangente banco de dados de resumos e citações de literatura acadêmica em diversas áreas, a \emph{ScienceDirect}\footnote{\url{https://www.sciencedirect.com}}, principal plataforma da \emph{Elsevier} de literatura revisada por pares,
 a \emph{ACM Digital Library}\footnote{\url{https://dl.acm.org}}, uma plataforma de pesquisa que conta com textos completos de todas as publicações da \emph{Association for Computing Machinery (ACM)} e de uma curada coleção de publicações de editoras selecionadas e a \emph{PubMed}\footnote{\url{https://pubmed.ncbi.nlm.nih.gov}},
 plataforma gratuita que conta com uma base de dados com mais de 33 milhões de citações e resumos da literatura biomédica.
 
 \subsection{\emph{String} de Busca}
-Para realização da busca dos artigos, um conjunto de palavras-chave e sinônimos foi definido de acordo com o tema deste trabalho, como é mostrado no \autoref{qua-pal-sin}.
+Para realização da busca pelos artigos, um conjunto de palavras-chave e sinônimos foi definido de acordo com o tema deste trabalho, como é mostrado no \autoref{qua-pal-sin}.
 
 \begin{quadro}[htb]
   \caption{\label{qua-pal-sin}Palavras-chave e Sinônimos.}
@@ -42,7 +42,7 @@ Para realização da busca dos artigos, um conjunto de palavras-chave e sinônim
   \legend{Fonte: Autor.}
 \end{quadro}
 
-Com o objetivo de manter a consistência da busca nas diferentes bases, foi gerada, a partir das palavras-chave, a \emph{string} de busca genérica indicada no \autoref{qua-str-gen}.
+Uma \emph{string} genérica de busca foi definida a partir das palavras-chave, com o objetivo de manter a consistência da busca nas diferentes bases e pode ser vista no \autoref{qua-str-gen}.
 As palavras-chave que possuem sinônimos aparecem na \emph{string} entre parêntesis com o operador \emph{OR}, visando incluir os resultados que contenham um dos termos, para indicar que esses termos são sinônimos no contexto do tema abordado neste trabalho.
 
 \begin{quadro}[htb]
@@ -59,7 +59,7 @@ As palavras-chave que possuem sinônimos aparecem na \emph{string} entre parênt
 \end{quadro}
 
 A \emph{string} genérica serviu de modelo para criação das \emph{strings} específicas, indicadas no \autoref{qua-str-esp}, de acordo com as particularidades de cada base de busca.
-As \emph{strings} específicas buscam pelas palavras-chave nos títulos e resumos dos artigos, afim de encontrar os que focam no tema proposto neste estudo, não considerando os que apenas citam as palavras-chave ao longo texto.
+As \emph{strings} específicas buscam pelas palavras-chave nos títulos e resumos dos artigos, afim de encontrar os que focam no tema proposto neste estudo, desconsiderando os que apenas citam as palavras-chave ao longo texto.
 
 \begin{quadro}[htb]
   \caption{\label{qua-str-esp}\emph{Strings} específicas para busca em cada base.}
@@ -90,13 +90,13 @@ Por fim, com as menores quantidades, a \emph{ScienceDirect}, com publicações n
 
 \subsection{Critérios de Inclusão e Exclusão}
 
-Critérios de inclusão e exclusão foram definidos visando a coerência dos artigos selecionados com o tema deste trabalho, bem como a remoção de artigos incompletos ou indisponíveis.
+Critérios de inclusão e exclusão foram definidos visando a coerência dos artigos selecionados com o tema deste trabalho e a remoção de artigos incompletos ou indisponíveis.
 Os critérios são:
 
 \textbf{Critérios de Inclusão}
 \begin{itemize}
   \item O artigo deve propor método, técnica ou padrão para o desenvolvimento de aplicações móveis com acessibilidade para deficientes visuais;
-  \item O artigo deve estar disponível na Web;
+  \item O artigo deve estar disponível na \emph{web};
   \item O artigo deve apresentar texto completo em formato eletrônico;
   \item O artigo deve estar escrito em português ou inglês.
 \end{itemize}
@@ -112,6 +112,7 @@ Os critérios são:
 
 No processo de seleção dos estudos, inicialmente, foi aplicado o critério de exclusão de artigos duplicados e, em seguida, o de artigos publicados antes de 2016, rejeitando 48 e 65 artigos, respectivamente.
 Esses critérios foram priorizados por não haver a necessidade da leitura dos títulos e resumos dos artigos para serem aplicados.
+
 Por fim, após a leitura dos títulos e resumos, mais 112 artigos foram rejeitados, totalizando 225 artigos.
 Assim, sendo aceitos 33 artigos para leitura completa e análise.
 A \autoref{fig_res_sel} apresenta o resultado dessa seleção.
@@ -126,7 +127,7 @@ A \autoref{fig_res_sel} apresenta o resultado dessa seleção.
 
 A \autoref{fig_res_sel_base} mostra o resultado da seleção para cada base de busca.
 Não houve priorização de bases ao rejeitar artigos duplicados, visto que a ferramenta utilizada possui uma funcionalidade que indica esses artigos, sendo necessário apenas a confirmação.
-Com isso, algumas bases como a \emph{PubMed}, cujo resultado da busca retornou apenas 3 artigos sendo 1 duplicado, acabou apresentando poucos ou nenhum artigo aceito.
+Com isso, algumas bases como a \emph{PubMed}, cujo resultado da busca retornou apenas 3 artigos, sendo 1 duplicado, acabou apresentando poucos ou nenhum artigo aceito.
 
 \begin{figure}[htb]
   \caption{\label{fig_res_sel_base}Quantidade de artigos aceitos e rejeitados por base.}
@@ -138,7 +139,7 @@ Com isso, algumas bases como a \emph{PubMed}, cujo resultado da busca retornou a
 
 \newpage
 
-A frequência dos artigos rejeitados, de acordo com os critérios de exclusão, sendo que, para rejeição, o artigo deveria atender a pelo menos um desses critérios, pode ser observada no gráfico da \autoref{fig_art_rej}, onde é listada para cada critério.
+A frequência dos artigos rejeitados, de acordo com os critérios de exclusão, sendo que para rejeição o artigo deveria atender a pelo menos um desses critérios, pode ser observada no gráfico da \autoref{fig_art_rej}, na qual é listada para cada critério.
 
 \begin{figure}[htb]
   \caption{\label{fig_art_rej}Quantidade de artigos rejeitados por critério de exclusão.}
@@ -149,7 +150,7 @@ A frequência dos artigos rejeitados, de acordo com os critérios de exclusão, 
 \end{figure}
 
 Os critérios de exclusão levaram em consideração, principalmente, aspectos como divergência com o tema deste trabalho e não apresentação de aplicação desenvolvida para dispositivos móveis.
-Os critérios D e E aparecem com grande frequência na \autoref{fig_art_rej}, valendo ressaltar a ordem na avaliação dos critérios (E, D, A, B e C), onde os artigos que se enquadraram em um dos critérios foram rejeitados, não sendo considerados para avaliação nos demais.
+Os critérios D e E aparecem com grande frequência na \autoref{fig_art_rej}, valendo ressaltar a ordem na avaliação dos critérios (E, D, A, B e C) na qual os artigos que se enquadraram em um dos critérios foram rejeitados, não sendo considerados para avaliação nos demais.
 É comum que o critério D seja utilizado no próprio processo de busca dos artigos, filtrando apenas os anos de interesse, porém, como não foi possível adicionar esse filtro às \emph{strings} de busca para todas as bases, foi optado por não utiliza-lo, para manter a consistência nos resultados das buscas.
 
 Após a aplicação dos critérios de exclusão, mediante a leitura e análise dos títulos e resumos, os artigos restantes, a priori, mostraram se enquadrar em todos os critérios de inclusão.
@@ -187,8 +188,8 @@ Assim, com a análise mais aprofundada e leitura completa dos textos, foi possí
 
 A \autoref{fig_art_rej_fas_ext} mostra a frequência de artigos que foram rejeitados por cada critério de exclusão.
 Apenas os critérios com frequência maior que 0 foram considerados na figura.
-O principal motivo para rejeição foi o B, onde os trabalhos apresentavam aplicações móveis que não haviam sido desenvolvidas com foco na acessibilidade da aplicação em si.
-O segundo foi o A, onde os estudos não apresentavam uma aplicação móvel com acessibilidade à PDV como solução.
+O principal motivo para rejeição foi o B, no qual os trabalhos apresentavam aplicações móveis que não haviam sido desenvolvidas com foco na acessibilidade da aplicação em si.
+O segundo foi o A, este que se refere aos estudos que não apresentavam uma aplicação móvel com acessibilidade à PDV como solução.
 
 \begin{figure}[htb]
   \caption{\label{fig_art_rej_fas_ext}Artigos rejeitados na fase de extração por critério exclusão.}
