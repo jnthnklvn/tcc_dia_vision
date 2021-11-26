@@ -4,7 +4,7 @@
 Este capítulo abordará o processo de Mapeamento Sistemático adotado neste estudo, bem como os resultados e a análise dos mesmos.
 
 \section{Protocolo de Mapeamento Sistemático}
-O termo Mapeamento Sistemático da Literatura (MSL) se refere a um estudo secundário que realiza uma revisão ampla
+O termo Mapeamento Sistemático da Literatura (MSL) refere-se a um estudo secundário que realiza uma revisão ampla
 de estudos primários existentes em um tema específico e visa identificar as evidências disponíveis nessa área \cite{Kitchenham2007}.
 O método de Mapeamento Sistemático adotado foi o de Kitchenham, descrito por \citeonline{Silva2009}.
 Seguindo o método, foi desenvolvido um protocolo de revisão com intuito de responder as seguintes questões:
@@ -43,7 +43,7 @@ Para realização da busca pelos artigos, um conjunto de palavras-chave e sinôn
 \end{quadro}
 
 Uma \emph{string} genérica de busca foi definida a partir das palavras-chave, com o objetivo de manter a consistência da busca nas diferentes bases e pode ser vista no \autoref{qua-str-gen}.
-As palavras-chave que possuem sinônimos aparecem na \emph{string} entre parêntesis com o operador \emph{OR}, visando incluir os resultados que contenham um dos termos, para indicar que esses termos são sinônimos no contexto do tema abordado neste trabalho.
+As palavras-chave que possuem sinônimos aparecem na \emph{string} entre parêntesis com o operador \emph{OR}, visando incluir os resultados que contenham pelo menos um dos termos, para indicar que são sinônimos no contexto do tema abordado neste trabalho.
 
 \begin{quadro}[htb]
   \caption{\label{qua-str-gen}\emph{String} genérica.}
@@ -77,7 +77,7 @@ As \emph{strings} específicas buscam pelas palavras-chave nos títulos e resumo
 
 A busca nas bases de dados selecionadas foi realizada no dia 04 de outubro de 2021 e retornou um total de 258 resultados.
 Como mostra a \autoref{fig_art_enc}, a maior quantidade de resultados foi encontrada na \emph{Scopus}, isso acontece porque ela possui, de acordo com seu site\footnote{\url{https://www.elsevier.com/pt-br/solutions/scopus}}, o maior banco de dados de resumos e citações da literatura com revisão por pares.
-Em seguida aparecem a \emph{ACM Digital Library} e a \emph{IEEE Xplore} cujas principais publicações são na área de computação, e elétrica no caso da IEEE\@.
+Em seguida, aparecem a \emph{ACM Digital Library} e a \emph{IEEE Xplore} cujas principais publicações são na área de computação, e elétrica no caso da IEEE\@.
 Por fim, com as menores quantidades, a \emph{ScienceDirect}, com publicações nas mais diversas áreas da ciência e a \emph{PubMed} com publicações na área biomédica, justificando os menores resultados, visto que a busca foi realizada visando encontrar técnicas, métodos e padrões para o desenvolvimento de aplicações móveis acessíveis.
 
 \begin{figure}[htb]
@@ -112,14 +112,14 @@ Os critérios são:
 
 No processo de seleção dos estudos, inicialmente, foi aplicado o critério de exclusão de artigos duplicados e, em seguida, o de artigos
 publicados antes de 2016, rejeitando 48 e 65 artigos, respectivamente.
-Esses critérios foram priorizados por não haver a necessidade da leitura dos títulos e resumos dos artigos para serem aplicados.
+Esses critérios foram priorizados por não haver necessidade de leitura dos títulos e resumos dos artigos para serem aplicados.
 
 Por fim, após a leitura dos títulos e resumos, mais 112 artigos foram rejeitados, totalizando 225 artigos.
 Assim, sendo aceitos 33 artigos para leitura completa e análise.
 A \autoref{fig_res_sel} apresenta o resultado dessa seleção.
 
 \begin{figure}[htb]
-  \caption{\label{fig_res_sel}Quantidade de artigos aceitos, rejeitados e duplicados na seleção.}
+  \caption{\label{fig_res_sel}Quantidade de artigos aceitos, rejeitados ou duplicados na seleção.}
   \begin{center}
     \includegraphics[scale=0.7]{Imagens/msl/resultado_selecao.png}
   \end{center}
@@ -131,7 +131,7 @@ Não houve priorização de bases ao rejeitar artigos duplicados, visto que a fe
 Com isso, algumas bases como a \emph{PubMed}, cujo resultado da busca retornou apenas 3 artigos, sendo 1 duplicado, acabou apresentando poucos ou nenhum artigo aceito.
 
 \begin{figure}[htb]
-  \caption{\label{fig_res_sel_base}Quantidade de artigos aceitos e rejeitados por base.}
+  \caption{\label{fig_res_sel_base}Quantidade de artigos aceitos ou rejeitados por base.}
   \begin{center}
     \includegraphics[scale=0.6]{Imagens/msl/resultado_selecao_base.png}
   \end{center}
@@ -140,8 +140,8 @@ Com isso, algumas bases como a \emph{PubMed}, cujo resultado da busca retornou a
 
 \newpage
 
-A frequência dos artigos rejeitados, de acordo com os critérios de exclusão, sendo que para rejeição o artigo deveria atender a
-pelo menos um desses critérios, pode ser observada no gráfico da \autoref{fig_art_rej}, na qual é listada para cada critério.
+A frequência dos artigos rejeitados para cada critério de exclusão, sendo que para rejeição o artigo deveria atender a
+pelo menos um desses critérios, pode ser observada no gráfico da \autoref{fig_art_rej}.
 
 \begin{figure}[htb]
   \caption{\label{fig_art_rej}Quantidade de artigos rejeitados por critério de exclusão.}
@@ -152,11 +152,11 @@ pelo menos um desses critérios, pode ser observada no gráfico da \autoref{fig_
 \end{figure}
 
 Os critérios de exclusão levaram em consideração, principalmente, aspectos como divergência com o tema deste trabalho e não apresentação de aplicação desenvolvida para dispositivos móveis.
-Os critérios D e E aparecem com grande frequência na \autoref{fig_art_rej}, valendo ressaltar a ordem na avaliação dos critérios (E, D, A, B e C) na qual os artigos que se enquadraram em um dos critérios foram rejeitados, não sendo considerados para avaliação nos demais.
+Os critérios D e E aparecem com grande frequência na \autoref{fig_art_rej}, valendo ressaltar a ordem na avaliação dos critérios (E, D, A, B e C), na qual os artigos que se enquadraram em um dos critérios foram rejeitados, não sendo considerados para avaliação nos demais.
 É comum que o critério D seja utilizado no próprio processo de busca dos artigos, filtrando apenas os anos de interesse, porém, como não foi possível adicionar esse filtro às \emph{strings} de busca para todas as bases, foi optado por não utiliza-lo, para manter a consistência nos resultados das buscas.
 
 Após a aplicação dos critérios de exclusão, mediante a leitura e análise dos títulos e resumos, os artigos restantes, a priori, mostraram se enquadrar em todos os critérios de inclusão.
-Assim, a \autoref{fig_art_act_ano} exibe a distribuição desses artigos por ano de publicação e base de busca, mostrando uma clara
+Desse modo, a \autoref{fig_art_act_ano} exibe a distribuição desses artigos por ano de publicação e base de busca, mostrando uma clara
 tendência de alta anual na quantidade de artigos que abordam o tema deste trabalho nos últimos 5 anos.
 A base \emph{PubMed} foi desconsiderada nessa figura, visto que nenhum artigo dela foi selecionado como mostrou a \autoref{fig_art_rej}.
 
@@ -192,7 +192,7 @@ Assim, com a análise mais aprofundada e leitura completa dos textos, foi possí
 A \autoref{fig_art_rej_fas_ext} mostra a frequência de artigos que foram rejeitados por cada critério de exclusão.
 Apenas os critérios com frequência maior que 0 foram considerados na figura.
 O principal motivo para rejeição foi o B, no qual os trabalhos apresentavam aplicações móveis que não haviam sido desenvolvidas com foco na acessibilidade da aplicação em si.
-O segundo foi o A, este que se refere aos estudos que não apresentavam uma aplicação móvel com acessibilidade à PDV como solução.
+O segundo foi o A, este que refere-se aos estudos que não apresentavam uma aplicação móvel com acessibilidade à PDV como solução.
 
 \begin{figure}[htb]
   \caption{\label{fig_art_rej_fas_ext}Artigos rejeitados na fase de extração por critério exclusão.}

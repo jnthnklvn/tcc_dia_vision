@@ -24,7 +24,7 @@ As principais funcionalidades do \emph{app} relativas à acessibilidade identifi
 \end{enumerate}
 
 Por meio da avaliação desse protótipo, por cegos, o estudo investigou o suporte de acessibilidade \emph{mobile} multiplataforma do conjunto de especificações
-técnicas \emph{WAI-Aria}\footnote{\url{https://www.w3.org/WAI/standards-guidelines/aria/}}, observando problemas na detecção de elementos, devido às suas posições
+técnicas \emph{WAI-Aria}\footnote{\url{https://www.w3.org/WAI/standards-guidelines/aria/}}, observando problemas na detecção de elementos devido às suas posições
 na tela e conteúdos difíceis de identificar na interação com leitores de tela.
 Notando também que houve alguma dificuldade por conta de gestos implementados no \emph{app} diferirem dos habituais utilizados pelos usuários no \emph{VoiceOver} do iOS.
 
@@ -46,7 +46,7 @@ buscou identificar desafios, requisitos e soluções técnicas de acessibilidade
 aplicações móveis por meio de uma RSL\@.
 
 O artigo apresenta uma abordagem orientada a modelos que integra conceitos de acessibilidade no desenvolvimento de aplicações móveis multiplataforma em conjunto com protótipos
-acessíveis à PDV, construídos com base nessa abordagem. Uma aplicação com foco nos cidadãos que desejam obter informações sobre chuvas fortes e inundações foi desenvolvida, nela
+acessíveis à PDV\@. Com isso, apresenta também uma aplicação com foco em fornecer informações sobre chuvas fortes e inundações, na qual
 os usuários podem ter uma visão de eventos de inundações próximos e compartilhar novos incidentes.
 
 O estudo comparou uma versão da aplicação desenvolvida nativamente que necessitou de 3,400 linhas de código \emph{Java} e 3,200 linhas de código \emph{XML}
@@ -148,7 +148,7 @@ Uma aplicação móvel, chamada ``\emph{Read Master}'', também foi desenvolvida
 \end{table}
 
 Na tabela \autoref{tab-pro-enc-ar5} estão listados os problemas identificados pelo estudo.
-Os códigos na coluna ``Categoria'' se referem às categorias da \autoref{tab-cat-pro-enc-ar5}.
+Os códigos na coluna ``Categoria'' referem-se às categorias da \autoref{tab-cat-pro-enc-ar5}.
 
 \begin{table}[htb]
     \begin{center}
@@ -194,11 +194,12 @@ As principais técnicas e funcionalidades identificadas no estudo para o suporte
 \end{enumerate}
 
 Uma avaliação de usabilidade do \emph{app}, com 56 PDV, foi conduzida e validada com foco na experiência de usuários com DV\@.
-Os resultados mostraram que a organização da aplicação estava 100\% efetiva tanto para usuários os cegos quanto para os com DV parcial.
-Já quanto a eficiência, a dos usuários com DV parcial se mostrou maior que a dos cegos.
+Os resultados mostraram que a organização da aplicação estava 100\% efetiva tanto para os usuários cegos quanto para os com DV parcial.
+Já com relação à eficiência dos usuários, a dos com DV parcial mostrou-se maior que a dos cegos.
 
-O nível mais alto de satisfação, quanto as 3 categorias de problemas avaliados, para usuários com DV total, estava na apresentação com
-87,62\%, enquanto para os com visão parcial estava tanto na organização quanto na apresentação com 89,21\%.
+O nível mais alto de satisfação quanto às 3 categorias de problemas avaliados estava na apresentação com
+87,62\% para usuários com DV total, enquanto para os com visão parcial estava tanto na organização quanto
+na apresentação com 89,21\%.
 No geral, o estudo indica que a aplicação reduziu a gravidade dos problemas de OPB, oferecendo alta usabilidade.
 
 \textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
@@ -213,9 +214,9 @@ Esse trabalho foi desenvolvido na Colombia, onde a falta de acesso à informaç�
 de rótulos de medicamentos como contraindicações, armazenamento, data de validade e dosagem foi identificada como uma
 das principais barreiras no uso de medicamentos por PDV \cite{Amariles2020}.
 
-Nesse contexto, uma aplicação \emph{mobile}, chamada \emph{FarmaceuticApp}, foi desenvolvida no estudo.
-A principal funcionalidade do \emph{app} é a de buscar por informações de medicamentos, na qual essas informações
-são apresentadas ao usuário de forma acessível e a busca pode ser realizada por vários meios, esses que serão listados adiante.
+Nesse contexto, uma aplicação \emph{mobile} chamada \emph{FarmaceuticApp} foi desenvolvida no estudo.
+A principal funcionalidade do \emph{app} é a de busca por informações de medicamentos, apresentando-as
+ao usuário de forma acessível e podendo ser realizada por vários meios.
 
 As principais técnicas e funcionalidades identificadas, relacionadas à acessibilidade e utilizadas no desenvolvimento dessa solução, foram:
 
@@ -245,8 +246,7 @@ Além disso, os usuários geralmente necessitam utilizar as duas mãos para escr
 Nesse contexto, a abordagem proposta no estudo de \citeonline{Duarte2017}, por meio do protótipo de um \emph{app} para envio de mensagens, visou uma interação com o \emph{smartphone}
 com as mãos livres, por meio de técnicas multimodais, especialmente o uso de gestos em combinação com comandos de voz.
 
-Os gestos são utilizados como gatilhos para ações.
-Assim, quando um gesto é reconhecido, alguma função como o ``reconhecedor de fala'' ou o TTS\@ é acionada.
+Os gestos são utilizados como gatilhos para ações, logo quando um gesto é reconhecido, alguma função como o ``reconhecedor de fala'' ou o TTS\@ é acionada.
 Por exemplo, existe um gesto para a ação de adicionar uma nova mensagem, ao reconhece-lo, o \emph{app} ativa o reconhecedor de fala para que o usuário dite o que deve ser escrito na mensagem.
 
 Um outro gesto aciona a função para revisão da mensagem escrita por meio do TTS, em que a mensagem é lida palavra a palavra.
@@ -271,7 +271,7 @@ Uma pesquisa foi realizada com 9 usuários com DV e resultou em \emph{feedbacks}
 O estudo também trouxe comparativo de performance dos usuários na realização de tarefas no \emph{app} de envio de mensagem padrão com o \emph{app} desenvolvido.
 Na avaliação da usabilidade das aplicações, fazendo uso da escala SUS, ambas atingiram 74 pontos, considerada uma alta pontuação.
 
-Os resultados mostraram que na realização de tarefas fáceis, a performance do \emph{app} era pouco superior a alternativa padrão do sistema.
+Os resultados mostraram que na realização de tarefas fáceis a performance do \emph{app} era pouco superior a alternativa padrão do sistema.
 Porém, passa-se a notar grandes diferenças a favor do \emph{app} desenvolvido em tarefas consideradas normais e difíceis, com cerca de 30\% e 50\% mais performance, respectivamente, para a solução desenvolvida em relação ao \emph{app} padrão.
 
 \subsection{\emph{Do You like My Outfit? Cromnia, a Mobile Assistant for Blind Users}}
@@ -280,12 +280,12 @@ O objetivo do estudo de \citeonline{Giuliana2018} foi projetar uma solução ass
 Especialistas na área de deficiência visual, de clínicos à profissionais de reabilitação vocacional e operadores do campo de cuidados sociais, participaram do estudo.
 
 O processo de análise e projeto envolveu, desde o início, a participação de 4 pessoas cegas da \emph{Italian Blind Union}, que se voluntariaram para colaborar com a equipe de \emph{design} de usabilidade.
-Entre as tarefas diárias que mais se esperava autonomia a de se vestir com uma combinação de cores e roupas adequadas se mostrou ser o maior interesse para as PDV, essas que geralmente dependem de ajudantes para isso.
-Assim, uma aplicação \emph{mobile} foi projetada, visando a autonomia de PDV total ou parcial, nesse ato cotidiano de se vestir.
+Entre as tarefas diárias que mais se esperava autonomia a de vestir-se com uma combinação de cores e roupas adequadas mostrou-se ser o maior interesse para as PDV, essas que geralmente dependem de ajudantes para isso.
 
-O \emph{app} é bem simples e consiste em uma única \emph{interface}, parecida com a padrão da câmera do sistema iOS.
 O estudo levantou que já existiam soluções no mercado para esse problema, porém a ideia de uma ferramenta paga não foi bem aceita
-pelos entrevistados, que observaram que muitos nem poderiam pagar.
+pelos entrevistados, observando que muitos não poderiam pagar.
+Diante disso, uma aplicação \emph{mobile} foi projetada visando a autonomia de PDV total ou parcial nesse ato cotidiano de vestir-se.
+O \emph{app} é bem simples e consiste em uma única \emph{interface}, parecida com a padrão da câmera do sistema iOS\@.
 
 As principais soluções de acessibilidade utilizadas no desenvolvimento foram: 
 
@@ -306,7 +306,7 @@ Como resultado do estudo uma aplicação chamada \emph{Cromnia} foi desenvolvida
 cores, padrões e combinações de cores, considerando a iluminação do ambiente.
 
 Os testes envolveram 6 PDV com parcial e 6 com DV total.
-Os participantes gostaram dos benefícios do \emph{app} e se mostraram ansiosos para experimentar novas versões, pensando em quando poderão utilizar o aplicativo de fato no dia-a-dia.
+Os participantes gostaram dos benefícios do \emph{app} e mostraram-se ansiosos para experimentar novas versões, pensando em quando poderão utilizar o aplicativo de fato no dia-a-dia.
 O \emph{app} está disponível na \emph{AppStore} e conta com alto número de \emph{downloads}.
 
 \subsection{\emph{Improved and Accessible E-Book Reader Application for Visually Impaired People}}
@@ -344,11 +344,11 @@ utilizar suas próprias abordagens baseadas nas interações com outras aplicaç
 
 Esse artigo apresenta a experiência do desenvolvimento do \emph{MathMelodies 2}, uma aplicação para ajudar crianças de 1 a 5 anos com DV no estudo de matemática.
 A aplicação apresenta 13 tipos de exercícios e diferentes níveis de dificuldade.
-Esses exercícios se passam dentro de contos de fantasia, os quais a criança tem que resolver para avançar na história.
+Esses exercícios passam-se dentro de contos de fantasia, os quais a criança tem que resolver para avançar na história.
 
-A primeira versão foi desenvolvida em 2013 por meio de uma campanha de \emph{crowdfunding} e lançada para \emph{iPad} de forma gratuita.
-O \emph{design} do novo \emph{app} seguiu princípios derivados da experiência e do \emph{feedback} dos usuários da versão anterior.
-Das quais uma das demandas mais frequentes foi a de disponibilização do \emph{app} para outras plataformas, Android e iOS\@.
+A primeira versão foi desenvolvida em 2013, financiada por uma campanha de \emph{crowdfunding} e lançada para \emph{iPad} de forma gratuita.
+O \emph{design} do novo \emph{app} seguiu princípios derivados da experiência e do \emph{feedback} dos usuários da versão anterior, dos quais
+uma das demandas mais frequentes foi a de disponibilização do \emph{app} para outras plataformas, Android e iOS\@.
 
 Assim, nesse trabalho, \citeonline{Ducci2018}, desenvolve essa nova versão como um protótipo, utilizando \emph{React Native} para reduzir o esforço de desenvolvimento.
 As principais técnicas e funcionalidades para acessibilidade, utilizadas nesse estudo, são listadas a seguir:
@@ -371,18 +371,18 @@ As principais técnicas e funcionalidades para acessibilidade, utilizadas nesse 
 Embora as funcionalidades básicas tenham sido contempladas pelo \emph{framework} utilizado, uma funcionalidade avançada que foi requerida não era suportada.
 Por conta disso, foi necessário desenvolver componentes adicionais nativamente, isto é, utilizando as tecnologias especificas para cada plataforma.
 
-Testes preliminares, realizados com duas pessoas (uma com DV parcial e outra total), sugeriram que a aplicação estava totalmente acessível.
-Assim, o estudo conclui que \emph{React Native} é uma escolha válida para o desenvolvimento de aplicações acessíveis.
+Por fim, o artigo conclui que \emph{React Native} é uma escolha válida para o desenvolvimento de aplicações acessíveis,
+com base nos resultados de testes preliminares, com participação de duas pessoas (uma com DV parcial e outra total), sugerindo que a aplicação estava totalmente acessível.
 
 \subsection{\emph{Object Recognition and Hearing Assistive Technology Mobile Application Using Convolutional Neural Network}}
 
 A falta de aplicações móveis que atendam pelo menos as necessidades mais comuns de PDV motivou a realização do trabalho de \citeonline{Caballero2020}, que desenvolveu
-uma aplicação com objetivo de atender as necessidades desse grupo por meio de tecnologias de Reconhecimento de Objetos (RO) e TTS\@.
+uma aplicação com objetivo de atender as necessidades desse grupo utilizando tecnologias de Reconhecimento de Objetos (RO) e TTS\@.
 
 O \emph{app} utiliza algoritmos de \emph{Convolutional Neural Network} (CNN), solução de aprendizado de máquina reconhecida como um poderoso método para reconhecimento de
 imagens, para identificar detalhes em imagens e narrá\@-los para o usuário por meio do TTS\@.
 
-O artigo se concentra mais na apresentação da API utilizada para o RO, mostrando pouco sobre a aplicação \emph{mobile},
+O artigo concentra-se mais na apresentação da API utilizada para o RO, mostrando pouco sobre a aplicação \emph{mobile},
 ainda assim, foram identificadas as seguintes características de acessibilidade no \emph{app}:
 
 \begin{enumerate}
@@ -402,8 +402,7 @@ de navegação inteligente que possibilita que robôs interajam e determinem o c
 Fazendo uso de informações identificadas nos trabalhos relacionados, o trabalho aplicou o RO direcionado à inclusão social de PDV\@.
 
 Os resultados mostraram que CNN tem potencial para classificar coisas vivas e objetos em ambientes interiores e exteriores com alta precisão, fazendo uso de imagens públicas
-como base de treinamento.
-Assim, possibilitando um desempenho funcional e confiável do sistema em benefício das PDV graças ao \emph{app} desenvolvido.
+como base de treinamento, possibilitando um desempenho funcional e confiável do sistema em benefício das PDV graças ao \emph{app} desenvolvido.
 
 \subsection{\emph{QUIMIVOX MOBILE 2.0: Application for Helping Visually Impaired People in Learning Periodic Table and Electron Configuration}}
 
@@ -447,13 +446,16 @@ Porém, o autor supõe que, com a prática no uso dos gestos, essa dificuldade p
 
 Informações a respeito do clima atual e previsões são especialmente importantes para PDV, visto que podem afetar suas as decisões
 do cotidiano, como escolhas de rotas, roupas e tecnologias assistivas que impactam significativamente seu trajeto.
-Porém, essas pessoas enfrentam péssimas experiencias tentando buscar informações sobre o clima nos dispositivos móveis,
-geralmente por conta dos erros entre as informações na tela e a ordem em que os leitores de tela as apresentam, além dos
-\emph{apps} serem cheios de imagens e ícones que costumam não apresentar descrição para o usuário, a menos que possa enxergá-las.
+Mesmo assim, essas pessoas enfrentam péssimas experiencias tentando buscar informações sobre o clima nos dispositivos móveis.
 
-Assim, em \citeonline{Tomlinson2016377} foi projetado um \emph{app} de clima para ser acessível à usuários que dependem
-de leitores de tela. O estudo realizou uma análise das necessidades dos usuários com DV, levantando quais eram as informações
-importantes e em qual ordem eles gostariam de consumi-las. As principais soluções quanto à acessibilidade identificadas foram:
+Esses problemas costumam ocorrer devido a erros entre as informações na tela e a ordem em que os leitores de tela as apresentam, além dos
+\emph{apps} serem cheios de imagens e ícones que não apresentam descrições para o usuário, a menos que possa enxergá-las.
+
+Diante disso, em \citeonline{Tomlinson2016377}, foi projetado um \emph{app} de clima para ser acessível a usuários que dependem
+de leitores de tela. No qual o estudo realizou uma análise das necessidades dos usuários com DV, levantando quais eram as informações
+importantes e em qual ordem eles gostariam de consumi-las.
+
+As principais soluções quanto à acessibilidade identificadas foram:
 
 \begin{enumerate}
     \item Alternativa aos ícones padrões utilizados com os chamados ``Ícones audíveis'';
@@ -494,22 +496,22 @@ mencionam leitores de tela, algumas características relacionadas à acessibilid
 
 \textbf{Público alvo da aplicação:} Estudantes de \emph{Bangladesh} com DV\@.
 
-O estudo avaliou 4 aspectos de usabilidade (aprendizagem, interface e funcionalidades, acessibilidade e auto descritividade)
+O trabalho avaliou 4 aspectos de usabilidade (aprendizagem, interface e funcionalidades, acessibilidade e auto descritividade)
 do \emph{app} por meio de testes com 5 usuários com DV, que realizaram a avaliação após utilizarem a aplicação por 2 semanas,
 mostrando resultados de avaliação média satisfatórios, de 6 ou acima, numa escala de 0 a 7.
 
 O estudo teve a uma limitação de apenas 5 participantes, sendo todos experientes em \emph{Braille}.
-Assim, o artigo menciona que trabalhos futuros concentrar-se-ão em avaliar e testar a efetividade do
+Contudo, o artigo menciona que trabalhos futuros irão concentrar-se na avaliação e testes da efetividade do
 aprendizado de \emph{Braille} por meio do \emph{app} com um grande número de participantes de diferentes escolas.
 
 \subsection{\emph{WordMelodies: Supporting Children with Visual Impairment in Learning Literacy}}
 
 As ferramentas educacionais de escolas primarias frequentemente não são acessíveis para crianças com DV\@.
 Além disso, os livros costumam ser ricos em conteúdos gráficos com o intuito de engajar os alunos, impactando na acessibilidade mesmo quando estão disponíveis no formato digital.
-Da mesma forma, \emph{apps} educacionais frequentemente possuem conteúdos gráficos interativos de maneira inacessível à PDV\@.
+Da mesma forma, \emph{apps} educacionais constantemente apresentam conteúdos gráficos interativos de maneira inacessível à PDV\@.
 
 Visando amenizar esses problemas, o artigo de \citeonline{Mascetti2019} apresenta o \emph{WordMelodies}, uma aplicação \emph{mobile}
-inclusiva e multiplataforma, esta que tem como objetivo ajudar crianças com DV na aquisição de habilidades básicas de literatura com 8
+inclusiva e multiplataforma que teve o objetivo de ajudar crianças com DV na aquisição de habilidades básicas de literatura com 8
 tipos de exercícios.
 
 A aplicação foi projetada e avaliada por 3 especialistas no domínio de tecnologias assistivas e educação
@@ -528,9 +530,10 @@ para crianças com DV\@. As principais características relativas à acessibilid
 \textbf{Público alvo da aplicação:} Crianças com DV\@.
 
 Exceto por um problema que afetou a utilização do usuário ao navegar entre os elementos utilizando leitores de tela, o \emph{app}
-se mostrou totalmente acessível na avaliação dos especialistas. Nessa navegação, a ordem dos elementos não corresponde com a ordem
+mostrou-se totalmente acessível na avaliação dos especialistas. Nessa navegação, a ordem dos elementos não corresponde com a ordem
 lógica apresentada na tela, problema que ocorreu por uma limitação do \emph{kit} de ferramentas da plataforma de desenvolvimento
 utilizada, o \emph{React Native}.
 
-Um dos principais desafios no desenvolvimento foi alcançar uma funcionalidade de ``arrastar e soltar'' acessível e fácil de utilizar.
-Pois, no \emph{React Native} esse componente não fornece suporte à acessibilidade, sendo necessário o desenvolvimento de um componente nativo tanto no iOS como no Android, para prover informações auditivas ao usuário enquanto ele utiliza o componente.
+Um dos principais desafios no desenvolvimento foi alcançar uma funcionalidade de ``arrastar e soltar'' acessível e fácil de utilizar,
+pois no \emph{React Native} esse componente não fornece suporte à acessibilidade, sendo necessário o desenvolvimento de um componente
+nativo tanto no iOS como no Android, para prover informações auditivas ao usuário durante o uso do componente.
