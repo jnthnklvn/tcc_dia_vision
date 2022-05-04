@@ -1,36 +1,24 @@
-\chapter{Proposta e Plano de Continuidade}
-\label{ch:propos}
+\chapter{Desenvolvimento do DiaVision}
+\label{ch:desenv}
 
-Neste capítulo é apresentada a proposta deste trabalho, com os requisitos, estórias de usuário, casos de uso e demais artefatos
-que fazem parte do levantamento de requisitos e análise, oferecendo uma visão ampla da aplicação que será desenvolvida.
-Além disso, também é apresentado o plano de continuidade com o cronograma para realização das etapas da segunda parte deste
-trabalho.
+Neste capítulo é apresentado o processo de desenvolvimento do DiaVision, com os requisitos, estórias de usuário, casos de uso
+e demais artefatos que fazem parte do levantamento de requisitos e análise, oferecendo uma visão ampla da aplicação desenvolvida.
+Bem como as tecnologias utilizadas para solução dos problemas de acessibilidade identificados no MSL.
 
 \section{Descrição do Projeto}
 
-Este projeto está sendo desenvolvido em parceria com a mestranda, Débora Almeida Silveira Sobral, do
+Este projeto foi desenvolvido em parceria com a mestranda, Débora Almeida Silveira Sobral, do
 Programa de Pós-graduação Profissional em Gestão e Inovação Tecnológica em Saúde (PPGITS), também orientanda da Profa.
 Dra. Adicinéia Aparecida de Oliveira. Com objetivo de desenvolver uma aplicação móvel como ferramenta de auxilio à educação
 e ao autocuidado de pacientes diabéticos com acuidade visual prejudicada, acessível à PDV\@.
 
 Para tanto, em \citeonline{Sobral2021} foi realizado um levantamento de referencial teórico e tecnológico sobre o DM,
-aplicativos móveis e deficiência visual. Assim, reunindo as principais funcionalidades e soluções que o aplicativo a ser
+aplicativos móveis e deficiência visual. Assim, reunindo as principais funcionalidades e soluções que o aplicativo
 desenvolvido deveria adotar como requisitos para que atendesse às necessidades desse público-alvo.
-
-\section{Descrição do Plano de Continuidade}
-
-Para o desenvolvimento completo desse projeto é previsto a realização de 4 etapas, ao longo dos meses referentes
-ao segundo período letivo de 2021 da Universidade Federal de Sergipe (UFS), estas que são listadas a seguir:
-\begin{itemize}
-    \item Desenvolvimento do aplicativo com a implementação dos requisitos mais essenciais e viáveis;
-    \item Revisão e testes da acessibilidade da aplicação;
-    \item Descrição do processo metodológico e análise dos resultados;
-    \item Revisão, correção e entrega do trabalho.
-\end{itemize}
 
 \section{Busca de Anterioridade}
 
-Em \citeonline{Sobral2021}, realizou-se uma busca de anterioridade, na base do Instituto Nacional de Propriedade Industrial (INPI)
+Em \citeonline{Sobral2021}, realizou-se uma busca de anterioridade na base do Instituto Nacional de Propriedade Industrial (INPI)
 e nas lojas de aplicativos Google Play (Android) e Apple Store (iOS), visando identificar os \emph{softwares} e funcionalidades
 já existentes sobre DM e DV no mercado.
 Conforme esse trabalho, a \autoref{tab_cor_func} relaciona os \emph{apps} encontrados
@@ -41,7 +29,7 @@ nas lojas de aplicativos às principais funcionalidades propostas para o DiaVisi
     \begin{center}
         \includegraphics[scale=0.75]{Imagens/proposta/busca_anterioridade.png}
     \end{center}
-    \legend{Fonte: \cite{Sobral2021}.}
+    \legend{Fonte: \citeonline{Sobral2021}.}
 \end{table}
 
 \newpage
@@ -54,11 +42,11 @@ realizou o levantamento de funcionalidades e problemas das soluções já existe
 
 \subsection{Descrição do Problema}
 
-A \autoref{tab-desc-pro} apresenta, de forma resumida, o problema, seus impactos e a proposta de solução com seu diferencial.
+O \autoref{qua-desc-pro} apresenta, de forma resumida, o problema, seus impactos e a proposta de solução com seu diferencial.
 
 \begin{quadro}[htb]
     \caption{Descrição do problema.}
-    \label{tab-desc-pro}
+    \label{qua-desc-pro}
     \begin{center}
         \begin{tabular}{p{4.0cm}|p{10.0cm}}
             \textbf{Problema}    & Dificuldade de acesso à informações de autocuidado com relação ao DM por deficientes visuais.                                          \\
@@ -72,7 +60,7 @@ A \autoref{tab-desc-pro} apresenta, de forma resumida, o problema, seus impactos
             \textbf{Diferencial} & Acessibilidade ao deficiente visual.
         \end{tabular}
     \end{center}
-    \legend{Fonte: Autores.}
+    \legend{Fonte: Autor e \citeonline{Sobral2021}.}
 \end{quadro}
 
 \subsection{Riscos e Impedimentos}
@@ -88,8 +76,6 @@ Os seguintes riscos e possíveis impedimentos com relação ao produto foram ide
     \item Constrangimento do usuário por falta de entendimento das funcionalidades.
 \end{itemize}
 
-\newpage
-
 \section{Requisitos}
 
 Antes de inciar o desenvolvimento de qualquer tarefa técnica de engenharia de \emph{software}, é interessante que seja criado
@@ -100,7 +86,7 @@ dos clientes \cite{pressman2014software}.
 
 Esses requisitos costumam ser classificados como funcionais, não-funcionais e inversos \cite{sommerville2007engenharia}.
 E serão apresentados nesta seção, iniciando pelas estórias de usuários, parte inicial do processo de elicitação
-dos requisitos e finalizando com os casos de uso.
+dos requisitos, passando pelos diagramas de casos de uso e classes, e finalizando com o protótipo de telas.
 
 \newpage
 
@@ -218,7 +204,7 @@ Assim, as estórias de usuários identificadas são listadas na \autoref{tab-est
             Assegurar credibilidade ao aplicativo.                                                                              \\
             % \hline
         \end{tabular}
-        \legend{Fonte: Autores.}
+        \legend{Fonte: Autor e \citeonline{Sobral2021}.}
     \end{center}
 \end{quadro}
 
@@ -226,14 +212,14 @@ Assim, as estórias de usuários identificadas são listadas na \autoref{tab-est
 
 \subsection{Requisitos Funcionais}
 
-A \autoref{tab-req-fun} mostra os requisitos funcionais da aplicação, estes que referem-se, principalmente, às funções e 
+O \autoref{qua-req-fun} mostra os requisitos funcionais da aplicação, estes que referem-se, principalmente, às funções e 
 comportamentos do sistema.
 
 \begin{quadro}[htb]
     \begin{center}
         \ABNTEXfontereduzida
         \caption{Requisitos Funcionais da aplicação.}
-        \label{tab-req-fun}
+        \label{qua-req-fun}
         \begin{tabular}{p{1.1cm}|p{1.3cm}|p{3.0cm}|p{1.5cm}|p{6.7cm}}
             %\hline
             \textbf{Código} & \textbf{Atores} & \textbf{Requisito}              & \textbf{Prioridade} & \textbf{Descrição} \\
@@ -296,7 +282,7 @@ comportamentos do sistema.
             Notificações deverão ser enviadas de acordo com as configurações definidas pelo paciente.                      \\
             % \hline
         \end{tabular}
-        \legend{Fonte: Autores.}
+        \legend{Fonte: Autor e \citeonline{Sobral2021}.}
     \end{center}
 \end{quadro}
 
@@ -335,7 +321,7 @@ de cada um deles para este projeto.
             Deve-se utilizar de ferramentas que possibilitem a construção da aplicação para Android e iOS\@.             \\
             % \hline
         \end{tabular}
-        \legend{Fonte: Autores.}
+        \legend{Fonte: Autor e \citeonline{Sobral2021}.}
     \end{center}
 \end{quadro}
 
@@ -362,7 +348,7 @@ Os requisitos listados na \autoref{tab-req-inv}, chamados inversos, referem-se �
             O administrador do sistema não deve ter acesso aos dados dos usuários.
             % \hline
         \end{tabular}
-        \legend{Fonte: Autores.}
+        \legend{Fonte: Autor e \citeonline{Sobral2021}.}
     \end{center}
 \end{quadro}
 
@@ -385,18 +371,37 @@ A partir dos requisitos e estórias de usuários identificados, o diagrama de ca
 
 \newpage
 
-\section{Protótipo de Telas}
+\subsection{Diagrama de Classes}
 
-Nesta seção são apresentadas imagens do protótipo de telas elaborado em \citeonline{Sobral2021}, com o objetivo de melhorar o entendimento dos
-requisitos e funcionalidades do aplicativo que será desenvolvido.
-Assim, nas \autoref{fig_tel_ini_prot} e \autoref{fig_tel_pos_prot} são mostradas as telas do protótipo.
+O  Diagrama de Classes é um dos principais artefatos definidos pelo UML e tem como objetivo
+descrever a estrutura e as relações de um sistema por meio de classes que representam abstrações
+de objetos do mundo real.
+
+Diante disso, a \autoref{fig_class_dom} ilustra as classes de domínio e as relações identificadas
+durante a análise e planejamento do sistema.
+
+\begin{figure}[htb]
+    \caption{\label{fig_class_dom}Diagrama de Classes de Domínio.}
+    \begin{center}
+        \includegraphics[scale=0.35]{Imagens/proposta/diagrama_classes.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+\newpage
+
+\subsection{Protótipo de Telas}
+
+Um protótipo de telas foi elaborado por \citeonline{Sobral2021} e teve como objetivo
+melhorar o entendimento dos requisitos e funcionalidades esperados do aplicativo desenvolvido.
+Assim, nas \autoref{fig_tel_ini_prot} e \autoref{fig_tel_pos_prot} são apresentadas as telas do protótipo.
 
 \begin{figure}[htb]
     \caption{\label{fig_tel_ini_prot}Telas iniciais do protótipo.}
     \begin{center}
         \includegraphics[scale=0.57]{Imagens/proposta/telas_iniciais_prot.png}
     \end{center}
-    \legend{Fonte: \cite{Sobral2021}.}
+    \legend{Fonte: \citeonline{Sobral2021}.}
 \end{figure}
 
 \begin{figure}[htb]
@@ -404,20 +409,5 @@ Assim, nas \autoref{fig_tel_ini_prot} e \autoref{fig_tel_pos_prot} são mostrada
     \begin{center}
         \includegraphics[scale=0.45]{Imagens/proposta/telas_post_prot.png}
     \end{center}
-    \legend{Fonte: \cite{Sobral2021}.}
-\end{figure}
-
-\newpage
-
-\section{Cronograma}
-
-Por fim, o cronograma na \autoref{fig_cro_con} foi definido visando a organização e planejamento das atividades que serão realizadas
-na segunda parte desse trabalho em 2022.
-
-\begin{figure}[htb]
-    \caption{\label{fig_cro_con}Cronograma de continuidade do Projeto.}
-    \begin{center}
-        \includegraphics[scale=0.65]{Imagens/proposta/cronograma_continuidade.png}
-    \end{center}
-    \legend{Fonte: Autor.}
+    \legend{Fonte: \citeonline{Sobral2021}.}
 \end{figure}
