@@ -72,6 +72,8 @@ O \autoref{qua-esp-maq-gui} mostra as especificações das máquinas utilizadas 
     \end{center}
 \end{quadro}
 
+\newpage
+
 \subsection{Dispositivos de Teste}
 
 Os testes e validações da aplicação, durante o processo de desenvolvimento, foram realizados em dispositivos físicos
@@ -118,7 +120,7 @@ A plataforma é baseada no ParsePlatform, um \emph{framework} de código aberto 
 com armazenamentos de objetos e arquivos, autenticação de usuário, \emph{push notifications}, \emph{dashboard} para gerenciamento e integração com aplicações móveis e \emph{web}.
 
 O Back4app também disponibiliza a criação, customização e hospedagem de uma aplicação \emph{web} para administração do sistema.
-Sendo possível definir as classes e operações que estarão disponíveis para gerenciamento pelo administrador do sistema.
+Sendo possível definir as classes e operações que estarão disponíveis para gerenciamento pelo Administrador do Sistema (ADS).
 
 Devido a simplicidade que o Back4app oferece para criação, gerenciamento e hospedagem de \emph{backend}, comparado
 à aplicações convencionais desenvolvidas por meio da codificação, e ao foco deste trabalho, que é o
@@ -141,34 +143,34 @@ para Android e iOS a partir de uma base de código única, mantendo desempenho p
 Esta seção detalha as soluções de implementação adotadas, tais como a arquitetura do sistema e as soluções
 para os problemas de acessibilidade.
 
-\subsection{Organização e Estrutura do Projeto}
+\subsection{Arquitetura}
 
 A estrutura de pastas do projeto está organizada em módulos, os quais não conhecem uns aos outros,
 apenas as classes relativas ao próprio módulo estão dentro de cada pasta. A exceção é para os \emph{repositories} (repositórios)
 que estão numa camada separada e contém os modelos e as conexões com a fonte de dados.
 Essa camada não tem conhecimento a respeito das demais camadas da aplicação.
 
-\newpage
-
 Dentro de cada módulo estão as outras duas camadas, os \emph{controllers} (controladores) e a \emph{view} (interface visual).
 Os \emph{controllers} fazem a mediação entre a \emph{view} e os \emph{repositories}, eles controlam o estado da aplicação,
 devendo atualizar a \emph{view} quando receber atualização dos \emph{repositories} e chamar os \emph{repositories}
-quando algum evento é disparado na \emph{view}.
+quando determinados eventos são disparados na \emph{view}.
 
 A \autoref{fig_est_proj} mostra como está organizada essa estrutura de pastas, sendo que a \emph{view}
 está divida em \emph{pages}, que são as telas e \emph{widgets}, que são os componentes que fazem parte das telas.
 
+\newpage
+
 \begin{figure}[htb]
     \caption{\label{fig_est_proj}Estrutura de Pastas do Projeto.}
     \begin{center}
-        \includegraphics[scale=0.75]{Imagens/desenvolvimento/arquitetura_dia_vision.png}
+        \includegraphics[scale=1]{Imagens/desenvolvimento/arquitetura_dia_vision.png}
     \end{center}
     \legend{Fonte: Autor.}
 \end{figure}
 
 Ainda na \autoref{fig_est_proj} percebe-se que dentro de cada módulo existe uma classe geral, é nela onde são definidas
 as rotas, injeções de dependências e \emph{singletons}\footnote{\emph{Singleton} é um padrão de projeto que garante
-a existência de apenas uma instância de uma classe.} de cada módulo, como mostra a \autoref{fig_mod_app_vis}.
+    a existência de apenas uma instância de uma classe.} de cada módulo, como mostra a \autoref{fig_mod_app_vis}.
 
 \newpage
 
@@ -201,3 +203,126 @@ como nota-se na linha 24 da \autoref{fig_pag_app_vis}.
     \end{center}
     \legend{Fonte: Autor.}
 \end{figure}
+
+\subsection{\emph{Backend}}
+
+O Back4app foi escolhido para o \emph{backend} do sistema e com ele foi possível definir a estrutura de dados, que pode
+ser vista na \autoref{fig_bac_app_data}, graficamente por meio de sua interface de usuário.
+
+\begin{figure}[htb]
+    \caption{\label{fig_bac_app_data}Esquema do Banco de Dados.}
+    \begin{center}
+        \includegraphics[scale=1.1]{Imagens/desenvolvimento/back4app_database.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Embora a plataforma utilize um banco de dados NoSQL - banco de dados não relacional -, o esquema de dados
+é definido de forma relacional, onde classes representam tabelas e os relacionamentos são definidos com a utilização
+de ponteiros que apontam para objetos de outras classes. Assim, unindo o maior desempenho possibilitado por uma
+estrutura NoSQL com uma visão relacional do esquema de dados em alto nível.
+
+\newpage
+
+\subsubsection{Classes do Banco de Dados}
+
+A \autoref{fig_back_data_ali} apresenta a classe ``Alimentacao'' como exemplo, cada classe no banco, por padrão,
+possui os atributos objectId, que é utilizado para referenciar os objetos em outras classes por
+meio de ponteiros, createdAt, que é a data de criação do objeto, updatedAt, que é a data da última atualização
+do objeto, e ACL\footnote{Lista de Controle de Acesso (ACL, do inglês \emph{\textit{Access Control List}})
+    são regras de acesso definidas para cada objeto na sua criação.}, que define qual usuário tem permissão de acesso a
+esse objeto e quais são essas permissões (escrita, leitura ou ambos).
+
+Com isso, visando a segurança dos dados dos usuários, todas as classes que registram dados dos pessoais
+possuem restrição de ACL, onde somente o próprio usuário possui permissão tanto de leitura quanto de escrita.
+
+\begin{figure}[htb]
+    \caption{\label{fig_back_data_ali}Exemplo de Classe no Banco.}
+    \begin{center}
+        \includegraphics[scale=0.63]{Imagens/desenvolvimento/back4app_database_alimentacao.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Ainda na \autoref{fig_back_data_ali}, percebe-se que a classe ``Alimentacao'' possui um atributo chamado paciente do tipo
+\emph{Pointer} (Ponteiro) que armazena o objectId que faz referencia à classe Paciente como uma chave estrangeira em
+bancos de dados relacionais.
+
+\newpage
+
+\subsubsection{\emph{Dashboard} do Administrador do Sistema}
+
+O Back4app também possibilitou a construção de um \emph{dashboard web} para gerenciamento das informações que são disponibilizadas
+para os usuários no aplicativo, atendendo aos requisitos funcionais do Administrador do Sistema, mencionados no \autoref{qua-req-fun}.
+
+A customização e disponibilização das funcionalidades nesse \emph{dashboard} foi feita utilizando a própria
+interface da plataforma, onde foi possível definir as funcionalidades, campos e perfis acesso que estariam
+disponíveis. Ao habilitar o \emph{dashboard} e realizar as customizações, são criadas novas classes no banco
+de dados, como pôde ser observado nas que iniciam com "B4a" na \autoref{fig_back_data_ali}, que mantém salvas
+essas configurações.
+
+A \autoref{fig_back_dash_auth} apresenta a página de autenticação e a \emph{URL}\footnote{Localizador Uniforme de Recursos 
+(URL, do inglês \emph{Uniform Resource Locator}), se refere ao endereço que permite que um site ou recurso seja encontrado na rede.}
+de acesso, sendo que as credenciais para autenticar-se são as mesmas utilizadas no aplicativo, porém, com um ACL específico de acesso ao \emph{dashboard}.
+
+\begin{figure}[htb]
+    \caption{\label{fig_back_dash_auth}Tela de \emph{Login} do \emph{Dashboard}.}
+    \begin{center}
+        \includegraphics[scale=0.65]{Imagens/desenvolvimento/auth_admin.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+\newpage
+
+Na \autoref{fig_back_dash_apps} é possível visualizar a tela inicial do \emph{dashboard} com as classes
+que estão disponíveis para gerenciamento no menu lateral esquerdo.
+
+\begin{figure}[htb]
+    \caption{\label{fig_back_dash_apps}\emph{Dashboard} do Administrador do Sistema.}
+    \begin{center}
+        \includegraphics[scale=0.39]{Imagens/desenvolvimento/apps_visao_admin.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Assim, a classe ``Apps de Visão'' trata-se de sugestões de aplicativos, de diversas categorias e finalidades, accessíveis
+à PDV, essas sugestões podem ser cadastradas pelo ADS ou sugeridas pelos usuários do DiaVision e aprovadas pelo ADS. A
+classe ``Centros de Saúde'' segue o mesmo modelo da anterior, porém, se refere à informações sobre centros de saúde, como
+nome, descrição, categoria, contatos e endereço.
+
+A classe ``Autocuidados'' armazena dicas de autocuidado com relação à saúde para os usuários. Porém, diferentemente das duas
+classes anteriores, apenas o ADS pode cadastrar novas dicas, os usuários do aplicativo não podem criar sugestões.
+
+Já a classe ``Endereço'', armazena as informações de endereços, como nome, rua, CEP etc, e no momento é utilizada apenas
+pela classe ``Centro de Saúde''. As imagens com o logotipo do DiaVision exibidas tanto na tela de autenticação quanto na
+tela principal do \emph{dashboard} são arquivos cujas referências ficam na classe ``Imagens''.
+
+Por fim, a classe ``Medicamentos'' armazena informações sobre os nomes de medicamentos disponíveis no Brasil, especificamente
+o nome de substâncias utilizadas e o nome comercial de cada medicamento. Essas informações são utilizadas para facilitar
+o processo para o usuário informar os medicamentos que faz uso no aplicativo DiaVision.
+
+A \autoref{fig_dash_apps_edit} mostra o exemplo de edição de um objeto da classe ``Apps de Visão''. O campo ``verificado''
+é utilizado para aprovar as sugestões de \emph{apps} feitas pelos usuários.
+
+\begin{figure}[htb]
+    \caption{\label{fig_dash_apps_edit}Página para Edição de Objeto.}
+    \begin{center}
+        \includegraphics[scale=0.53]{Imagens/desenvolvimento/apps_visao_edit_admin.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Na \autoref{fig_dash_auto_add}, pode-se visualizar um exemplo de cadastro do objeto ``Autocuidado''.
+
+\begin{figure}[htb]
+    \caption{\label{fig_dash_auto_add}Página para Cadastro de Objeto.}
+    \begin{center}
+        \includegraphics[scale=0.53]{Imagens/desenvolvimento/autocuidados_add_admin.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+\newpage
+
+\subsection{Aplicativo}
