@@ -245,7 +245,7 @@ possuem restrição de ACL, onde somente o próprio usuário possui permissão t
 \end{figure}
 
 Ainda na \autoref{fig_back_data_ali}, percebe-se que a classe ``Alimentacao'' possui um atributo chamado paciente do tipo
-\emph{Pointer} (Ponteiro) que armazena o objectId que faz referencia à classe Paciente como uma chave estrangeira em
+\emph{Pointer} (Ponteiro) que armazena o objectId que faz referência à classe Paciente como uma chave estrangeira em
 bancos de dados relacionais.
 
 \newpage
@@ -261,8 +261,8 @@ disponíveis. Ao habilitar o \emph{dashboard} e realizar as customizações, sã
 de dados, como pôde ser observado nas que iniciam com "B4a" na \autoref{fig_back_data_ali}, que mantém salvas
 essas configurações.
 
-A \autoref{fig_back_dash_auth} apresenta a página de autenticação e a \emph{URL}\footnote{Localizador Uniforme de Recursos 
-(URL, do inglês \emph{Uniform Resource Locator}), se refere ao endereço que permite que um site ou recurso seja encontrado na rede.}
+A \autoref{fig_back_dash_auth} apresenta a página de autenticação e a \emph{URL}\footnote{Localizador Uniforme de Recursos
+    (URL, do inglês \emph{Uniform Resource Locator}), se refere ao endereço que permite que um site ou recurso seja encontrado na rede.}
 de acesso, sendo que as credenciais para autenticar-se são as mesmas utilizadas no aplicativo, porém, com um ACL específico de acesso ao \emph{dashboard}.
 
 \begin{figure}[htb]
@@ -326,3 +326,599 @@ Na \autoref{fig_dash_auto_add}, pode-se visualizar um exemplo de cadastro do obj
 \newpage
 
 \subsection{Aplicativo}
+
+O aplicativo foi desenvolvido utilizando o \emph{framework} de desenvolvimento Flutter, como mencionado
+no capitulo anterior, de acordo com os requisitos definidos no planejamento e as soluções de acessibilidade
+identificadas no MSL do Capítulo \ref{ch:mapping} e propostas para DiaVision.
+
+\subsubsection{Introdução}
+
+A página inicial do aplicativo pode ser vista na \autoref{fig_app_intro1}, é nela onde é apresentada
+uma das principais funcionalidades da aplicação, o \emph{feedback} por voz dos componentes de interface.
+
+\begin{figure}[htb]
+    \caption{\label{fig_app_intro1}Introdução ao Aplicativo.}
+    \begin{center}
+        \includegraphics[scale=0.70]{Imagens/desenvolvimento/app/intro_1.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Ao pressionar e manter pressionados componentes como botões, textos, imagens etc, uma descrição desses
+componentes é lida pelo assistente de voz do aparelho, sem a necessidade de ativar o modo acessibilidade
+que habilita os leitores de tela citados no Capítulo \ref{ch:fundament}. Essa funcionalidade faz referência
+às soluções de acessibilidade TAM2 e TAM6, propostas para o \emph{app} no final do Capítulo \ref{ch:mapping}.
+
+Ainda na tela inicial, da \autoref{fig_app_intro1}, nota-se que existe um botão flutuante na parte inferior
+da tela, a criação dele foi inspirada no AssistiveTouch do iOS\footnote{O AssistiveTouch é um botão flutuante,
+    disponível em dispositivos Apple com iOS, que pode ser arrastado para qualquer borda da tela e que abre
+    um menu no qual é possível ajustar o volume, bloquear a tela, usar gestos com vários dedos, reiniciar o
+    dispositivo etc.}. Já na \autoref{fig_intro_bttn_acs}, o botão flutuante
+está em outro canto da tela após ser arrastado para lá pelo usuário.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Botão de Acessibilidade.}\label{fig_intro_bttn_acs}
+        \includegraphics[scale=0.63]{Imagens/desenvolvimento/app/intro_bttn_acs.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Menu de Acessibilidade.}\label{fig_intro_menu_acs}
+        \includegraphics[scale=0.63]{Imagens/desenvolvimento/app/intro_menu_acs.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Ao clicar no Botão de Acessibilidade, um menu com opções de personalização do aplicativo é aberto,
+como pode ser observado na \autoref{fig_intro_menu_acs}. As funcionalidades disponíveis, baseadas nas
+soluções de acessibilidade TAM1, TAM4, TAM8 e TAM11, são:
+
+\begin{enumerate}
+    \item Aumentar e diminuir o tamanho da fonte de toda a aplicação;
+    \item Ocultar o botão de acessibilidade, sendo possível exibi-lo novamente na Tela de Configurações do \emph{app};
+    \item Acessar atalhos tanto para a Tela Inicial quanto para a de Configurações do \emph{app};
+    \item Alternar o tema do aplicativo entre claro e escuro;
+    \item Ativar e desativar o \emph{feedback} por voz de toda a aplicação.
+\end{enumerate}
+
+A \autoref{fig_intro_font_inc} exibe o resultado do aumento no tamanho da fonte e da aplicação do tema escuro. Enquanto
+na \autoref{fig_app_intro_2} é exibida a segunda tela de introdução, com tema escuro e tamanho normal da fonte,
+explicando o funcionamento do botão de acessibilidade para o usuário.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.47\textwidth}
+        \centering
+        \caption{Demonstração de Personalização.}\label{fig_intro_font_inc}
+        \includegraphics[scale=0.63]{Imagens/desenvolvimento/app/app_intro_font_inc.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.44\textwidth}
+        \centering
+        \caption{Intro Botão de Acessibilidade.}\label{fig_app_intro_2}
+        \includegraphics[scale=0.63]{Imagens/desenvolvimento/app/app_intro_2.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+\newpage
+
+\subsubsection{Autenticação}
+
+Ao clicar no botão ``Pronto'', mostrado na \autoref{fig_app_intro_2}, o aplicativo direciona para a tela de autenticação,
+apresentada na \autoref{fig_app_login}. A partir dessa tela o usuário pode realizar \emph{login}, informando usuário e
+senha, para ser direcionado à tela principal do aplicativo.
+
+\begin{figure}[htb]
+    \caption{\label{fig_app_login}Tela de Autenticação.}
+    \begin{center}
+        \includegraphics[scale=0.70]{Imagens/desenvolvimento/app/app_login.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Além disso, a partir da tela de autenticação também é possível ir para tela de registro,
+caso ainda não tenha conta, ou para a tela de recuperação a senha, caso tenha-a esquecido,
+clicando nos textos correspondentes abaixo do botão ``Entrar'', este que podê ser visto na
+\autoref{fig_app_login}.
+
+\newpage
+
+A tela de registro é apresenta na \autoref{fig_app_register}, nela é possível registrar um novo usuário,
+inicialmente, informando apenas e-mail e senha, mas podendo acrescentar mais informações  na tela de Edição
+e Dados, após realizar a autenticação.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.44\textwidth}
+        \centering
+        \caption{Tela de Registro.}\label{fig_app_register}
+        \includegraphics[scale=0.72]{Imagens/desenvolvimento/app/app_register.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.47\textwidth}
+        \centering
+        \caption{Tela para Recuperação de Senha.}\label{fig_app_rec_pass}
+        \includegraphics[scale=0.72]{Imagens/desenvolvimento/app/app_rec_pass.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Já a \autoref{fig_app_rec_pass}, mostra a tela de recuperação de senha, bastando informar o e-mail
+da conta para receber um \emph{link} no mesmo endereço para criação da nova senha.
+
+\newpage
+
+\subsubsection{Tela Principal}
+
+A tela principal, é apresentada na \autoref{fig_app_inicio_dark} e na \autoref{fig_app_inicio_2},
+é a partir dela que pode-se acessar os módulos e outras funcionalidades do aplicativo.
+Na listagem há 9 módulos que podem ser acessados ao clicar em um dos quadrados e, assim
+como os demais componentes do \emph{app}, ao mantê-los pressionados, suas descrições
+serão lidas pelo assistente de voz do aparelho.
+
+Na primeira imagem o tema está escuro, enquanto que, na segunda, está claro e com o
+botão de acessibilidade oculto, mostrando que a personalização da aplicação é dinâmica
+e está acessível ao longo de todo o aplicativo.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Tela Principal Tema Escuro.}\label{fig_app_inicio_dark}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/app_inicio_dark.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Restante da Tela Principal.}\label{fig_app_inicio_2}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/app_inicio_2.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Configurações}
+
+O botão de engrenagem no topo da tela principal leva até a tela de configurações, mostrada na
+\autoref{fig_app_sett}, onde é possível visualizar e alterar os dados pessoais, editar preferências
+e realizar \emph{logoff}.
+
+Na \autoref{fig_app_dat_pref} são apresentadas as telas de edição dos dados do usuário e de preferências.
+Em “Meus Dados” o usuário pode alterar os dados de e-mail, nome, telefone, data nascimento, peso e altura.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.42\textwidth}
+        \centering
+        \caption{Tela de Configurações.}\label{fig_app_sett}
+        \includegraphics[scale=0.69]{Imagens/desenvolvimento/app/app_sett.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.53\textwidth}
+        \centering
+        \caption{Telas de Preferências e Dados.}\label{fig_app_dat_pref}
+        \includegraphics[scale=0.56]{Imagens/desenvolvimento/app/app_dat_pref.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Já em “Preferências”, como mostrado na \autoref{fig_app_dat_pref}, o usuário pode definir quais notificações
+e alertas deseja receber, o tempo para relembrete das notificações e os valores mínimo e máximo de glicemia,
+que por padrão são 70 e 120 mg/dL. Bem como, no caso da notificação de glicemia estar ativa, os horários em
+que deseja ser lembrado de registrá-la.
+
+\newpage
+
+\subsubsection{Notificações}
+
+As notificações enviadas pelo aplicativo podem ser visualizadas na barra de notificações e possuem um botão
+interativo para adiá-las, como mostram a \autoref{fig_app_not_med} e a \autoref{fig_app_not_gli}. Por enquanto,
+o tempo adiado se refere ao ``Tempo para relembrete'' definido nas “Preferências”, este que também define
+os minutos de antecedência do horário das notificações e registro glicemia.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \caption{Notificação de Medicação.}\label{fig_app_not_med}
+        \includegraphics[scale=0.64]{Imagens/desenvolvimento/app/app_not_med.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.57\textwidth}
+        \centering
+        \caption{Notificação de Glicemia.}\label{fig_app_not_gli}
+        \includegraphics[scale=0.57]{Imagens/desenvolvimento/app/app_not_gli.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+As notificações de medicações são enviadas para lembrar o usuário de que ele precisa tomar uma medicação
+nos horários pré-definidos pelo mesmo e para cada medicação. O cadastro de medicações a ativação dessas
+notificações será abordado mais à frente.
+
+Já as notificações de glicemia, vistas na \autoref{fig_app_not_gli}, são enviadas periodicamente, também
+nos horários definidos pelo usuário, para lembrá-lo de que precisa medir e registrar sua glicemia.
+
+\newpage
+
+\subsubsection{Módulo Alimentacão}
+
+Na primeira tela deste módulo, como pode-se observar na \autoref{fig_list_share_alim}, são listados todos
+os registros de alimentação feitos pelo usuário. Também há um botão “compartilhar” no canto superior direito,
+por meio do qual é possível exportar esses registros, no formato CSV\footnote{Valores Separados por Vírgula
+    (CSV, do inglês \emph{Comma-separated values}) é um formato de arquivo de texto comumente utilizado por
+    \emph{softwares} de planilhas como o Google Planilhas, o Microsoft Excel e o \emph{software} livre
+    LibreOffice Calc.}, e compartilhá-los para outros \emph{apps}.
+
+\begin{figure}[htb]
+    \caption{\label{fig_list_share_alim}Tela Inicial do Módulo Alimentação.}
+    \begin{center}
+        \includegraphics[scale=0.72]{Imagens/desenvolvimento/app/list_share_alim.png}
+    \end{center}
+    \legend{Fonte: Autor.}
+\end{figure}
+
+Ao clicar no botão “+”, no canto inferior direito da \autoref{fig_list_share_alim}, o usuário é direcionado
+para a tela de cadastro de alimentação.
+
+Para registrar uma alimentação é necessário definir o tipo (Almoço, Jantar etc) e adicionar cada alimento,
+informando as calorias de cada porção consumida. Porém, também é possível não adicionar os alimentos
+e informar as calorias totais da refeição diretamente.
+
+A \autoref{fig_reg_alimentacao} mostra a tela de registro de alimentação no estado inicial, sem nenhum alimento
+adicionado. A medida que alimentos vão sendo adicionados, esses vão aparecendo na tela e o valor das calorias
+também vai sendo atualizado automaticamente com os valores das calorias consumidas de cada alimento, como
+observa-se na \autoref{fig_reg_alimentacao_2}.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.39\textwidth}
+        \centering
+        \caption{Registro de Alimentação.}\label{fig_reg_alimentacao}
+        \includegraphics[scale=0.60]{Imagens/desenvolvimento/app/reg_alimentacao.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.58\textwidth}
+        \centering
+        \caption{Adicionando Alimentos.}\label{fig_reg_alimentacao_2}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/reg_alimentacao_2.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Para que o cálculo das calorias seja feito automaticamente a cada alimento adicionado, o usuário precisa
+informar os dados necessários, sendo estes: nome, porção, calorias por porção e porção consumida. O usuário
+não é obrigado a informar nenhum desses dados, porém, caso não informe, o cálculo não poderá ser feito.
+
+\newpage
+
+Cada alimento pode ser adicionado manualmente ou por meio da opção ``Pesquisar alimento...'', localizada
+na barra superior do aplicativo na \autoref{fig_reg_alimento}, na qual o usuário
+informa o nome do alimento ou parte dele e o \emph{app} faz uma busca pelo alimento referido.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.39\textwidth}
+        \centering
+        \caption{Registro de Alimento.}\label{fig_reg_alimento}
+        \includegraphics[scale=0.59]{Imagens/desenvolvimento/app/reg_alimento.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.58\textwidth}
+        \centering
+        \caption{Buscar Alimento.}\label{fig_busca_alimento}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/busca_alimento.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Ao realizar a busca, o \emph{app} retorna uma lista de alimentos que possuem os nomes parecidos com o
+informado, como nota-se na \autoref{fig_busca_alimento}. Os alimentos são retornados com os valores de
+porção, unidade de medida e calorias por porção, assim, ao selecionar um desses alimentos, resta ao usuário
+apenas informar a quantidade consumida na mesma unidade indicada para o alimento selecionado.
+
+\newpage
+
+\subsubsection{Módulo \emph{Apps} de Visão}
+
+Neste módulo, são apresentados sugestões de aplicativos de diversos temas que auxiliam, de alguma forma, pessoas
+com deficiência visual, como constata-se na \autoref{fig_list_apps_visao}. Ao clicar em um deles, o usuário será
+direcionado à página do \emph{app} na loja de aplicativos, de acordo com SO do \emph{smartphone} utilizado.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Listagem de \emph{Apps} de Visão.}\label{fig_list_apps_visao}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_apps_visao.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Sugerir \emph{App} de Visão.}\label{fig_sug_apps_visao}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/sug_apps_visao.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Vale ressaltar que as sugestões podem ser diferentes de acordo com o SO, caso um \emph{app} esteja disponível
+apenas para Android, não aparecerá na listagem ao acessar esse módulo em um dispositivo iOS e vice-versa.
+
+O usuário também pode sugerir algum aplicativo que acredite ser útil para pessoas com deficiência visual, como
+visto na \autoref{fig_sug_apps_visao}. As sugestões recebidas são aprovadas por um administrador do sistema, se
+estiverem de acordo com o esperado.
+
+\subsubsection{Módulo Atividade Física}
+
+Este módulo tem o objetivo de oferecer uma opção para gerenciamento das atividades físicas praticadas
+pelo usuário. Nesta tela inicial há uma listagem simples dos exercícios físicos registrados, como mostra a
+\autoref{fig_list_atv_fis}. Ao clicar em um deles, o usuário é direcionado a página de edição da atividade,
+para que possa alterar algum dado informado.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Listagem de Atividades Física.}\label{fig_list_atv_fis}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_atv_fis.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Registro de Atividade Física.}\label{fig_reg_atv_fis}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/reg_atv_fis.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Por enquanto pode-se registrar apenas exercícios considerando o tempo que foi praticado e a distância, sendo
+que, esta última se aplica somente nos dois tipos predefinidos (caminhada e corrida). Neste módulo também há a
+opção de compartilhar os registros no formato CSV\@.
+
+Para o registro mostrado na \autoref{fig_reg_atv_fis}, o primeiro campo solicitado é o tipo, que pode ser um
+dos predefinidos ou “Outro”, este que pode ser informado pelo usuário no campo que surge quando essa opção é
+selecionada. O segundo campo varia de acordo com a opção selecionada no primeiro. E o terceiro é a duração,
+em minutos, do exercício.
+
+\subsubsection{Módulo Autocuidado}
+
+Na tela inicial deste módulo, como mostra a \autoref{fig_list_autoc}, são listadas dicas de autocuidado
+divididas em diversas categorias, onde o usuário pode filtrar por alguma específica ou manter todas as
+categorias na listagem.
+
+Essas dicas são cadastradas, exclusivamente, por um administrador do sistema de acordo com recomendações
+validadas por profissionais da saúde.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Listagem de Autocuidados.}\label{fig_list_autoc}
+        \includegraphics[scale=0.6]{Imagens/desenvolvimento/app/list_autoc.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Tela de Autocuidado.}\label{fig_page_autoc}
+        \includegraphics[scale=0.72]{Imagens/desenvolvimento/app/page_autoc.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Ao clicar em um dos componentes de autocuidado, é aberta uma nova tela com os detalhes. Essa tela pode
+conter título, descrição e as datas de publicação e última atualização da dica, como foi mostrado na
+\autoref{fig_page_autoc}.
+
+\subsubsection{Módulo Centros de Saúde}
+
+Neste módulo são listados, na tela principal, centros de saúde com informações sobre o tipo, nome, descrição,
+telefones para contato, endereço e localização no Google Maps\footnote{O Google Maps é um serviço de busca e
+    visualizar de mapas, localizações e rotas oferecido pelo Google de forma gratuita.}.
+
+Como pode-se observar na \autoref{fig_list_centros}, a listagem possui uma filtragem por tipo, assim,
+em conjunto com às funcionalidades de acessibilidade do \emph{app}, o usuário pode encontrar por
+centros de saúde que atendam sua demanda de maneira mais acessível.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Listagem de Centros de Saúde.}\label{fig_list_centros}
+        \includegraphics[scale=0.6]{Imagens/desenvolvimento/app/list_centros.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Tela do Centro de Saúde.}\label{fig_page_centro}
+        \includegraphics[scale=0.7]{Imagens/desenvolvimento/app/page_centro.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Ao clicar em um dos componentes de centro de saúde, o usuário é direcionado para uma tela como a da
+\autoref{fig_page_centro}, na qual ele pode visualizar os detalhes desse centro.
+
+Além disso, o usuário também pode sugerir novos centros de saúde para o sistema, funcionando da mesma forma das
+sugestões de \emph{apps} de visão.
+
+\subsubsection{Módulo Glicemia}
+
+Na tela inicial do módulo de glicemia é exibida uma listagem dos registros de glicemia feitos pelo usuário.
+Esses registros também podem ser exportados da mesma forma que os registros de alimentação e atividade física.
+
+Ao clicar no botão “+” no fim da tela mostrada na \autoref{fig_list_glicemia}, é possível inserir um novo registro. Porém, na primeira vez que o botão
+é pressionado, um dialogo é exibido perguntando se o usuário quer manter os limites padrões de glicemia ou
+definir os próprios, como mostra a figura.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Listagem de Registros de Glicemia.}\label{fig_list_glicemia}
+        \includegraphics[scale=0.6]{Imagens/desenvolvimento/app/list_glicemia.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Alerta de Glicemia.}\label{fig_alerta_glicemia}
+        \includegraphics[scale=0.7]{Imagens/desenvolvimento/app/alerta_glicemia.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Ao registrar um valor de glicemia, caso ele seja superior ao limite máximo ou inferior ao mínimo,
+um alerta de hiper ou hipoglicemia, respectivamente, será exibido, de acordo com os valores definidos
+nas “Preferências”.
+
+\subsubsection{Módulo Medicações}
+
+O objetivo geral deste módulo é que o usuário registre todas as medicações que faz uso para que possa ser
+notificado alguns minutos antes de cada horário de medicação.
+
+Assim, como mostra a \autoref{fig_list_med}, na primeira tela do módulo são listadas as medicações que o usuário
+registrou. Para cada uma dessas medicações, é exibido um botão para ativar as notificações, caso ele esteja verde,
+as notificações para essa medicação estão desativadas, e ativadas caso contrário, como pode ser visto
+na \autoref{fig_list_med_not}.
+
+É importante ressaltar que o \emph{feedback} por voz da aplicação, caso esteja ativo, se aplica também à
+mensagens de alerta como a exibida na \autoref{fig_list_med_not}.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Listagem de Medicações.}\label{fig_list_med}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_med.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Notificar de Medicação.}\label{fig_list_med_not}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_med_not.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+As notificações de medicações são baseadas no horário inicial e na posologia, e aparecem determinado tempo
+antes de cada horário, sendo 10 minutos por padrão e podendo ser alterado nas “Preferências”.
+
+Para registro de medicação, alguns dados como nome, dosagem, posologia, horário inicial e data final,
+são importantes para que o usuário possa ser notificado. Isso porque a posologia (intervalo entre as doses)
+e o horário inicial definem os horários de notificação. A data final define quando as notificações devem
+parar. E, o nome e a dosagem são exibidos na notificação de lembrete.
+
+Porém, nenhum desses dados, exibidos na \autoref{fig_reg_med}, são obrigatórios. Assim, se não informados,
+o usuário não será notificado nos horários que deve tomar as medicações.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Registro de Medicação.}\label{fig_reg_med}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/reg_med.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.46\textwidth}
+        \centering
+        \caption{\emph{Autocomplete} de Medicamentos.}\label{fig_reg_med_auto_comp}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/reg_med_auto_comp.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Ao digitar o nome da medicação no campo “Nome”, após a quarta letra, o \emph{app} começa a buscar e filtrar
+sugestões para a medicação que está sendo buscada, como mostra o exemplo na \autoref{fig_reg_med_auto_comp}.
+
+Contudo, nessa listagem de sugestões, diferente da maioria dos componentes do aplicativo, não é possível ouvir o
+\emph{feedback} com as descrições ao manter os itens pressionados. Isso ocorre devido a uma limitação do
+componente utilizado e por esta razão existe o ``ícone de \emph{play}'' ao lado de cada item para cumprir
+esse papel.
+
+\subsubsection{Módulo Pés}
+
+Este módulo serve para que o usuário possa acompanhar a evolução dos cuidados com os pés, com o registro
+diário de avaliação do estado dos mesmos.
+
+Como nos demais módulos de registros pessoais do usuário, no canto superior direito da \autoref{fig_list_ava_pes}
+tem um botão para compartilhar esses registros. Assim, o usuário pode utilizar esse recurso para compartilhar as
+avaliações com seu podologista ou com algum familiar responsável por acompanhá-lo na visita ao profissional.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.47\textwidth}
+        \centering
+        \caption{Listagem de Avaliações dos Pés.}\label{fig_list_ava_pes}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_ava_pes.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Avaliar Pés.}\label{fig_reg_ava_pes}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/reg_ava_pes.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+No registro de avaliação, o usuário pode informar a data da última consulta e a temperatura da água utilizada
+para lavagem dos pés. Além disso, há várias perguntas de “Sim” ou “Não” com detalhes que podem descrever o
+estado dos pés do usuário em cada registro, como mostrou a \autoref{fig_reg_ava_pes}.
+
+\subsubsection{Módulo Rins}
+
+Este é o último módulo e se refere ao acompanhamento dos rins e diurese - quantidade de urina produzida em
+determinado período -, listando os registros diários de diurese na tela inicial como pode-se observar na
+\autoref{fig_list_diurese}.
+
+Essas informações podem auxiliar o usuário na visita ao profissional da saúde, pois, oferecem dados que
+possibilitam a avaliação da função renal. Assim, também há a funcionalidade para compartilhamento desses
+registros.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.47\textwidth}
+        \centering
+        \caption{Listagem de Diurese.}\label{fig_list_diurese}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_diurese.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Avaliar Diurese.}\label{fig_reg_diurese}
+        \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/reg_diurese.png}
+        \legend{Fonte: Autor.}
+    \end{minipage}
+\end{figure}
+
+Na avaliação de diurese, conforme mostrado na \autoref{fig_reg_diurese}, são solicitados o volume em mL
+(mililitros), uma avaliação da coloração da urina e se houve ardor.
+
+Como esses registros sempre acrescentam a data automaticamente, o usuário pode fazer o registro
+a cada vez que urina ou somente uma vez somando todo o volume diário. A estratégia fica a cargo do usuário,
+devendo o mesmo relatar o método utilizado para o profissional responsável.
+
+\section{Considerações Finais}
+
+Este capítulo buscou elucidar o processo de desenvolvimento, relatando a estrutura do projeto, as tecnologias
+utilizadas, as soluções de acessibilidade adotas e o resultado final do sistema DiaVision. Este que incluiu o
+aplicativo móvel multiplataforma e a aplicação \emph{backend} para gerenciamento dos dados, que também ofereceu
+suporte para criação de um \emph{dashboard} para administração de dados do sistema.
