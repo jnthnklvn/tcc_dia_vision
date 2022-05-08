@@ -11,7 +11,7 @@ Esta seção lista as principais tecnologias e recursos utilizados no desenvolvi
 \subsection{Visual Studio Code}
 
 O Visual Studio Code (VSCode) é um editor de código \emph{open source} desenvolvido pela Microsoft para Windows, Linux e MacOS.
-Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, IntelliSense
+Ele inclui suporte para depuração, controle de verão incorporado com Git, realce de sintaxe, IntelliSense
 - termo para um conjunto de funcionalidades de edição de código, tais como completar código e informações de parâmetros -
 e refatoração de código.
 
@@ -43,7 +43,7 @@ inicialmente de forma privada e disponibilizados de forma pública após a final
 \subsection{Ambiente de Desenvolvimento}
 
 A máquina principal utilizada para desenvolvimento do sistema DiaVision foi um computador de mesa (do inglês \emph{Desktop}), com o SO Windows 11.
-Porém, trata-se do desenvolvimento de uma aplicação multiplataforma e não é possível testar a aplicação para o sistema operacional
+Porém, tratou-se do desenvolvimento de uma aplicação multiplataforma e não é possível testar a aplicação para o sistema operacional
 iOS, da Apple, em um computador que não seja esteja rodando o macOS. Assim, para validação do aplicativo, também foi
 utilizado um MacBook.
 
@@ -114,7 +114,7 @@ O Back4app é uma plataforma gratuita (no plano básico) que segue o modelo de s
 para desenvolvimento de \emph{backend} e gerenciamento de infraestrutura com eficiência e facilidade. Com a plataforma é possível
 criar estruturas de dados e serviços de forma simples, sem a necessidade de codificação, possibilitando também a adição de código por meio de \emph{Cloud
     Functions}\footnote{Com Funções em Nuvem é possível escrever funções simples que são disparadas a partir de eventos emitidos
-    pela infraestrutura e serviços de nuvem.} para criar validações ou funcionalidades mais complexas.
+    pela infraestrutura ou pelos serviços de nuvem.} para criar validações ou funcionalidades mais complexas.
 
 A plataforma é baseada no ParsePlatform, um \emph{framework} de código aberto que fornece um conjunto de SDKs que visam a criação rápida de \emph{backends}
 com armazenamentos de objetos e arquivos, autenticação de usuário, \emph{push notifications}, \emph{dashboard} para gerenciamento e integração com aplicações móveis e \emph{web}.
@@ -124,19 +124,19 @@ Sendo possível definir as classes e operações que estarão disponíveis para 
 
 Devido a simplicidade que o Back4app oferece para criação, gerenciamento e hospedagem de \emph{backend}, comparado
 à aplicações convencionais desenvolvidas por meio da codificação, e ao foco deste trabalho, que é o
-desenvolvimento da aplicação móvel com o foco na usabilidade, esse foi o serviço escolhido para o desenvolvimento do sistema.
+desenvolvimento da aplicação móvel, esse foi o serviço escolhido para o desenvolvimento do sistema.
 
 O plano utilizado para o serviço foi o gratuito, que possui limite de 10 mil requisições por mês, 250MB para armazenamento de dados,
 1GB para transferência de dados, 1GB para armazenamento de arquivos e 1 \emph{Cloud Code Job}\footnote{\emph{Cloud Jobs} são utilizados
     para execução de funções de longa duração, das quais não é necessário aguardar a resposta, no servidor. Em outras soluções é possível
-    executar essas funções periodicamente, porém, essa funcionalidade ainda não está disponível no Back4app e elas precisam ser disparadas
+    executar essas funções periodicamente, porém, essa funcionalidade ainda não está disponível no Back4app, assim, elas precisam ser disparadas
     por meio da API Rest.}.
 
 \subsection{Flutter}
 
-O \emph{framework} escolhido para desenvolvimento do aplicativo móvel foi o Flutter, apresentado no Capítulo \ref{ch:fundament},
-devido a sua facilidade no desenvolvimento móvel multiplataforma, possibilitando a geração de aplicações
-para Android e iOS a partir de uma base de código única, mantendo desempenho próximo ao de aplicações nativas.
+A linguagem escolhida para desenvolvimento do aplicativo móvel foi o Dart, com o \emph{framework} Flutter, apresentado
+no Capítulo \ref{ch:fundament}, devido a sua facilidade no desenvolvimento móvel multiplataforma, possibilitando a geração
+de aplicações para Android e iOS a partir de uma base de código única, mantendo desempenho próximo ao de aplicações nativas.
 
 \section{Implementação}
 
@@ -156,7 +156,7 @@ devendo atualizar a \emph{view} quando receber atualização dos \emph{repositor
 quando determinados eventos são disparados na \emph{view}.
 
 A \autoref{fig_est_proj} mostra como está organizada essa estrutura de pastas, sendo que a \emph{view}
-está divida em \emph{pages}, que são as telas e \emph{widgets}, que são os componentes que fazem parte das telas.
+está divida em \emph{pages}, que são as telas, e \emph{widgets}, que são os componentes que fazem parte das telas.
 
 \newpage
 
@@ -206,8 +206,8 @@ como nota-se na linha 24 da \autoref{fig_pag_app_vis}.
 
 \subsection{\emph{Backend}}
 
-O Back4app foi escolhido para o \emph{backend} do sistema e com ele foi possível definir a estrutura de dados, que pode
-ser vista na \autoref{fig_bac_app_data}, graficamente por meio de sua interface de usuário.
+O Back4app foi escolhido para o \emph{backend} do sistema e com ele foi possível definir a estrutura de dados que pode
+ser vista na \autoref{fig_bac_app_data}, por meio de sua interface de usuário.
 
 \begin{figure}[htb]
     \caption{\label{fig_bac_app_data}Esquema do Banco de Dados.}
@@ -230,11 +230,11 @@ A \autoref{fig_back_data_ali} apresenta a classe ``Alimentacao'' como exemplo, c
 possui os atributos objectId, que é utilizado para referenciar os objetos em outras classes por
 meio de ponteiros, createdAt, que é a data de criação do objeto, updatedAt, que é a data da última atualização
 do objeto, e ACL\footnote{Lista de Controle de Acesso (ACL, do inglês \emph{\textit{Access Control List}})
-    são regras de acesso definidas para cada objeto na sua criação.}, que define qual usuário tem permissão de acesso a
+    são regras de acesso definidas para cada objeto no momento de sua criação.}, que define qual usuário tem permissão de acesso a
 esse objeto e quais são essas permissões (escrita, leitura ou ambos).
 
 Com isso, visando a segurança dos dados dos usuários, todas as classes que registram dados dos pessoais
-possuem restrição de ACL, onde somente o próprio usuário possui permissão tanto de leitura quanto de escrita.
+possuem restrição de ACL, assim, somente o próprio usuário possui permissão tanto de leitura quanto de escrita.
 
 \begin{figure}[htb]
     \caption{\label{fig_back_data_ali}Exemplo de Classe no Banco.}
@@ -245,7 +245,7 @@ possuem restrição de ACL, onde somente o próprio usuário possui permissão t
 \end{figure}
 
 Ainda na \autoref{fig_back_data_ali}, percebe-se que a classe ``Alimentacao'' possui um atributo chamado paciente do tipo
-\emph{Pointer} (Ponteiro) que armazena o objectId que faz referência à classe Paciente como uma chave estrangeira em
+\emph{Pointer} (Ponteiro) que armazena o objectId que faz referência à classe Paciente, como uma chave estrangeira em
 bancos de dados relacionais.
 
 \newpage
@@ -256,14 +256,14 @@ O Back4app também possibilitou a construção de um \emph{dashboard web} para g
 para os usuários no aplicativo, atendendo aos requisitos funcionais do Administrador do Sistema, mencionados no \autoref{qua-req-fun}.
 
 A customização e disponibilização das funcionalidades nesse \emph{dashboard} foi feita utilizando a própria
-interface da plataforma, onde foi possível definir as funcionalidades, campos e perfis acesso que estariam
+interface da plataforma, sendo possível definir as funcionalidades, campos e perfis acesso que estariam
 disponíveis. Ao habilitar o \emph{dashboard} e realizar as customizações, são criadas novas classes no banco
-de dados, como pôde ser observado nas que iniciam com "B4a" na \autoref{fig_back_data_ali}, que mantém salvas
+de dados, como pôde ser observado nas que iniciam com ``B4a'' na \autoref{fig_bac_app_data}, que mantém salvas
 essas configurações.
 
-A \autoref{fig_back_dash_auth} apresenta a página de autenticação e a \emph{URL}\footnote{Localizador Uniforme de Recursos
-    (URL, do inglês \emph{Uniform Resource Locator}), se refere ao endereço que permite que um site ou recurso seja encontrado na rede.}
-de acesso, sendo que as credenciais para autenticar-se são as mesmas utilizadas no aplicativo, porém, com um ACL específico de acesso ao \emph{dashboard}.
+A \autoref{fig_back_dash_auth} apresenta a \emph{URL}\footnote{Localizador Uniforme de Recursos (URL, do inglês \emph{Uniform
+        Resource Locator}) se refere ao endereço que permite que um site ou recurso seja encontrado na rede.}
+de acesso e a página de autenticação, sendo que as credenciais para autenticar-se são as mesmas utilizadas no aplicativo, porém, com um ACL específico de acesso ao \emph{dashboard}.
 
 \begin{figure}[htb]
     \caption{\label{fig_back_dash_auth}Tela de \emph{Login} do \emph{Dashboard}.}
@@ -286,8 +286,8 @@ que estão disponíveis para gerenciamento no menu lateral esquerdo.
     \legend{Fonte: Autor.}
 \end{figure}
 
-Assim, a classe ``Apps de Visão'' trata-se de sugestões de aplicativos, de diversas categorias e finalidades, accessíveis
-à PDV, essas sugestões podem ser cadastradas pelo ADS ou sugeridas pelos usuários do DiaVision e aprovadas pelo ADS. A
+Assim, a classe ``Apps de Visão'' armazena sugestões de aplicativos, de diversas categorias e finalidades, accessíveis
+à PDV. Essas sugestões podem ser cadastradas pelo ADS ou sugeridas pelos usuários do DiaVision e aprovadas pelo ADS. A
 classe ``Centros de Saúde'' segue o mesmo modelo da anterior, porém, se refere à informações sobre centros de saúde, como
 nome, descrição, categoria, contatos e endereço.
 
@@ -344,17 +344,17 @@ uma das principais funcionalidades da aplicação, o \emph{feedback} por voz dos
     \legend{Fonte: Autor.}
 \end{figure}
 
-Ao pressionar e manter pressionados componentes como botões, textos, imagens etc, uma descrição desses
+Ao pressionar componentes como botões, textos e imagens, e mantê-los pressionados, uma descrição desses
 componentes é lida pelo assistente de voz do aparelho, sem a necessidade de ativar o modo acessibilidade
 que habilita os leitores de tela citados no Capítulo \ref{ch:fundament}. Essa funcionalidade faz referência
 às soluções de acessibilidade TAM2 e TAM6, propostas para o \emph{app} no final do Capítulo \ref{ch:mapping}.
 
-Ainda na tela inicial, da \autoref{fig_app_intro1}, nota-se que existe um botão flutuante na parte inferior
+Ainda na tela inicial, nota-se, conforme a \autoref{fig_app_intro1}, que existe um botão flutuante na parte inferior
 da tela, a criação dele foi inspirada no AssistiveTouch do iOS\footnote{O AssistiveTouch é um botão flutuante,
     disponível em dispositivos Apple com iOS, que pode ser arrastado para qualquer borda da tela e que abre
     um menu no qual é possível ajustar o volume, bloquear a tela, usar gestos com vários dedos, reiniciar o
-    dispositivo etc.}. Já na \autoref{fig_intro_bttn_acs}, o botão flutuante
-está em outro canto da tela após ser arrastado para lá pelo usuário.
+    dispositivo etc.}. Já na \autoref{fig_intro_bttn_acs}, esse botão está em outro canto da tela após ser
+arrastado para lá pelo usuário.
 
 \begin{figure}[htb]
     \centering
@@ -374,8 +374,8 @@ está em outro canto da tela após ser arrastado para lá pelo usuário.
 \end{figure}
 
 Ao clicar no Botão de Acessibilidade, um menu com opções de personalização do aplicativo é aberto,
-como pode ser observado na \autoref{fig_intro_menu_acs}. As funcionalidades disponíveis, baseadas nas
-soluções de acessibilidade TAM1, TAM4, TAM8 e TAM11, são:
+como pôde ser observado na \autoref{fig_intro_menu_acs}. As funcionalidades disponíveis foram baseadas nas
+soluções de acessibilidade TAM1, TAM4, TAM8 e TAM11, são elas:
 
 \begin{enumerate}
     \item Aumentar e diminuir o tamanho da fonte de toda a aplicação;
@@ -424,13 +424,13 @@ senha, para ser direcionado à tela principal do aplicativo.
 
 Além disso, a partir da tela de autenticação também é possível ir para tela de registro,
 caso ainda não tenha conta, ou para a tela de recuperação a senha, caso tenha-a esquecido,
-clicando nos textos correspondentes abaixo do botão ``Entrar'', este que podê ser visto na
+clicando nos textos correspondentes abaixo do botão ``Entrar'', este que pôde ser visto na
 \autoref{fig_app_login}.
 
 \newpage
 
 A tela de registro é apresenta na \autoref{fig_app_register}, nela é possível registrar um novo usuário,
-inicialmente, informando apenas e-mail e senha, mas podendo acrescentar mais informações  na tela de Edição
+inicialmente informando apenas e-mail e senha, mas podendo acrescentar mais informações  na tela de Edição
 e Dados, após realizar a autenticação.
 
 \begin{figure}[htb]
@@ -457,14 +457,14 @@ da conta para receber um \emph{link} no mesmo endereço para criação da nova s
 
 \subsubsection{Tela Principal}
 
-A tela principal, é apresentada na \autoref{fig_app_inicio_dark} e na \autoref{fig_app_inicio_2},
-é a partir dela que pode-se acessar os módulos e outras funcionalidades do aplicativo.
+A tela principal é apresentada na \autoref{fig_app_inicio_dark} e na \autoref{fig_app_inicio_2},
+é a partir dela que tem-se acesso aos módulos e outras funcionalidades do aplicativo.
 Na listagem há 9 módulos que podem ser acessados ao clicar em um dos quadrados e, assim
 como os demais componentes do \emph{app}, ao mantê-los pressionados, suas descrições
 serão lidas pelo assistente de voz do aparelho.
 
-Na primeira imagem o tema está escuro, enquanto que, na segunda, está claro e com o
-botão de acessibilidade oculto, mostrando que a personalização da aplicação é dinâmica
+Na \autoref{fig_app_inicio_dark} o tema está escuro, enquanto que, na \autoref{fig_app_inicio_2}
+está claro e com o botão de acessibilidade oculto, mostrando que a personalização da aplicação é dinâmica
 e está acessível ao longo de todo o aplicativo.
 
 \begin{figure}[htb]
@@ -487,7 +487,7 @@ e está acessível ao longo de todo o aplicativo.
 \subsubsection{Configurações}
 
 O botão de engrenagem no topo da tela principal leva até a tela de configurações, mostrada na
-\autoref{fig_app_sett}, onde é possível visualizar e alterar os dados pessoais, editar preferências
+\autoref{fig_app_sett}, na qual é possível visualizar e alterar os dados pessoais, editar preferências
 e realizar \emph{logoff}.
 
 Na \autoref{fig_app_dat_pref} são apresentadas as telas de edição dos dados do usuário e de preferências.
@@ -533,20 +533,20 @@ os minutos de antecedência do horário das notificações e registro glicemia.
         \legend{Fonte: Autor.}
     \end{minipage}
     \hfill
-    \begin{minipage}{0.57\textwidth}
+    \begin{minipage}{0.58\textwidth}
         \centering
         \caption{Notificação de Glicemia.}\label{fig_app_not_gli}
-        \includegraphics[scale=0.57]{Imagens/desenvolvimento/app/app_not_gli.png}
+        \includegraphics[scale=0.59]{Imagens/desenvolvimento/app/app_not_gli.png}
         \legend{Fonte: Autor.}
     \end{minipage}
 \end{figure}
 
-As notificações de medicações são enviadas para lembrar o usuário de que ele precisa tomar uma medicação
-nos horários pré-definidos pelo mesmo e para cada medicação. O cadastro de medicações a ativação dessas
+As notificações de medicações são enviadas para lembrar o usuário de que ele precisa tomar as medicações
+nos horários pré-definidos pelo mesmo para cada medicação. O cadastro de medicações e a ativação dessas
 notificações será abordado mais à frente.
 
 Já as notificações de glicemia, vistas na \autoref{fig_app_not_gli}, são enviadas periodicamente, também
-nos horários definidos pelo usuário, para lembrá-lo de que precisa medir e registrar sua glicemia.
+em horários definidos pelo usuário, para lembrá-lo de que precisa medir e registrar sua glicemia.
 
 \newpage
 
@@ -575,7 +575,7 @@ informando as calorias de cada porção consumida. Porém, também é possível 
 e informar as calorias totais da refeição diretamente.
 
 A \autoref{fig_reg_alimentacao} mostra a tela de registro de alimentação no estado inicial, sem nenhum alimento
-adicionado. A medida que alimentos vão sendo adicionados, esses vão aparecendo na tela e o valor das calorias
+adicionado. A medida que alimentos vão sendo adicionados, estes vão aparecendo na tela e o valor das calorias
 também vai sendo atualizado automaticamente com os valores das calorias consumidas de cada alimento, como
 observa-se na \autoref{fig_reg_alimentacao_2}.
 
@@ -603,7 +603,7 @@ não é obrigado a informar nenhum desses dados, porém, caso não informe, o c�
 \newpage
 
 Cada alimento pode ser adicionado manualmente ou por meio da opção ``Pesquisar alimento...'', localizada
-na barra superior do aplicativo na \autoref{fig_reg_alimento}, na qual o usuário
+na barra superior do aplicativo exibida na \autoref{fig_reg_alimento}, na qual o usuário
 informa o nome do alimento ou parte dele e o \emph{app} faz uma busca pelo alimento referido.
 
 \begin{figure}[htb]
@@ -624,7 +624,7 @@ informa o nome do alimento ou parte dele e o \emph{app} faz uma busca pelo alime
 \end{figure}
 
 Ao realizar a busca, o \emph{app} retorna uma lista de alimentos que possuem os nomes parecidos com o
-informado, como nota-se na \autoref{fig_busca_alimento}. Os alimentos são retornados com os valores de
+informado, como observou-se na \autoref{fig_busca_alimento}. Os alimentos são retornados com os valores de
 porção, unidade de medida e calorias por porção, assim, ao selecionar um desses alimentos, resta ao usuário
 apenas informar a quantidade consumida na mesma unidade indicada para o alimento selecionado.
 
@@ -632,7 +632,7 @@ apenas informar a quantidade consumida na mesma unidade indicada para o alimento
 
 \subsubsection{Módulo \emph{Apps} de Visão}
 
-Neste módulo, são apresentados sugestões de aplicativos de diversos temas que auxiliam, de alguma forma, pessoas
+Neste módulo, são apresentadas sugestões de aplicativos de diversos temas que auxiliam, de alguma forma, pessoas
 com deficiência visual, como constata-se na \autoref{fig_list_apps_visao}. Ao clicar em um deles, o usuário será
 direcionado à página do \emph{app} na loja de aplicativos, de acordo com SO do \emph{smartphone} utilizado.
 
@@ -663,8 +663,8 @@ estiverem de acordo com o esperado.
 \subsubsection{Módulo Atividade Física}
 
 Este módulo tem o objetivo de oferecer uma opção para gerenciamento das atividades físicas praticadas
-pelo usuário. Nesta tela inicial há uma listagem simples dos exercícios físicos registrados, como mostra a
-\autoref{fig_list_atv_fis}. Ao clicar em um deles, o usuário é direcionado a página de edição da atividade,
+pelo usuário. Na tela inicial há uma listagem simples dos exercícios físicos registrados, como mostra a
+\autoref{fig_list_atv_fis}. Ao clicar em um itens, o usuário é direcionado a página de edição da atividade,
 para que possa alterar algum dado informado.
 
 \begin{figure}[htb]
@@ -684,8 +684,8 @@ para que possa alterar algum dado informado.
     \end{minipage}
 \end{figure}
 
-Por enquanto pode-se registrar apenas exercícios considerando o tempo que foi praticado e a distância, sendo
-que, esta última se aplica somente nos dois tipos predefinidos (caminhada e corrida). Neste módulo também há a
+Por enquanto pode-se registrar exercícios apenas considerando o tempo que foi praticado e a distância, sendo
+esta última se aplicável somente nos dois tipos predefinidos (caminhada e corrida). Neste módulo também há a
 opção de compartilhar os registros no formato CSV\@.
 
 Para o registro mostrado na \autoref{fig_reg_atv_fis}, o primeiro campo solicitado é o tipo, que pode ser um
@@ -753,7 +753,7 @@ centros de saúde que atendam sua demanda de maneira mais acessível.
 Ao clicar em um dos componentes de centro de saúde, o usuário é direcionado para uma tela como a da
 \autoref{fig_page_centro}, na qual ele pode visualizar os detalhes desse centro.
 
-Além disso, o usuário também pode sugerir novos centros de saúde para o sistema, funcionando da mesma forma das
+Além disso, o usuário também pode sugerir novos centros de saúde para o sistema, funcionando da mesma forma que as
 sugestões de \emph{apps} de visão.
 
 \subsubsection{Módulo Glicemia}
@@ -810,13 +810,13 @@ mensagens de alerta como a exibida na \autoref{fig_list_med_not}.
     \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \caption{Notificar de Medicação.}\label{fig_list_med_not}
+        \caption{Notificar Medicação.}\label{fig_list_med_not}
         \includegraphics[scale=0.66]{Imagens/desenvolvimento/app/list_med_not.png}
         \legend{Fonte: Autor.}
     \end{minipage}
 \end{figure}
 
-As notificações de medicações são baseadas no horário inicial e na posologia, e aparecem determinado tempo
+As notificações de medicações são baseadas no horário inicial e na posologia e aparecem determinado tempo
 antes de cada horário, sendo 10 minutos por padrão e podendo ser alterado nas “Preferências”.
 
 Para registro de medicação, alguns dados como nome, dosagem, posologia, horário inicial e data final,
@@ -909,8 +909,8 @@ registros.
     \end{minipage}
 \end{figure}
 
-Na avaliação de diurese, conforme mostrado na \autoref{fig_reg_diurese}, são solicitados o volume em mL
-(mililitros), uma avaliação da coloração da urina e se houve ardor.
+Na avaliação de diurese, conforme mostrado na \autoref{fig_reg_diurese}, são solicitadas informações de volume em mL
+(mililitros) e coloração da urina e se houve ardor.
 
 Como esses registros sempre acrescentam a data automaticamente, o usuário pode fazer o registro
 a cada vez que urina ou somente uma vez somando todo o volume diário. A estratégia fica a cargo do usuário,
