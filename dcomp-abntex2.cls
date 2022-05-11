@@ -55,7 +55,7 @@
 \usepackage{microtype} 			  % para melhorias de justificação
 
 \usepackage[brazilian,hyperpageref]{backref}
-\usepackage[alf]{abntex2cite}	  % Citações padrão ABNT
+\usepackage[alf,abnt-etal-text=emph]{abntex2cite}	  % Citações padrão ABNT
 
 \usepackage{parskip}			  % espaçamento entre os parágrafos
 \usepackage{xcolor}

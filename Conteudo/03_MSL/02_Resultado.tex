@@ -17,16 +17,16 @@ O jogador recebe determinada pontuação cada vez que joga de acordo com os acer
 As principais funcionalidades do \emph{app} relativas à acessibilidade identificadas foram:
 
 \begin{enumerate}
-    \item Contraste de cor para garantir diferentes níveis de acessibilidade;
-    \item Apresentações de conteúdos de forma auditiva e visual;
-    \item Interação via gestos ou toques;
-    \item Suporte auditivo com descrições dos elementos.
+  \item Contraste de cor para garantir diferentes níveis de acessibilidade;
+  \item Apresentações de conteúdos de forma auditiva e visual;
+  \item Interação via gestos ou toques;
+  \item Suporte auditivo com descrições dos elementos.
 \end{enumerate}
 
 Por meio da avaliação desse protótipo, por cegos, o estudo investigou o suporte de acessibilidade \emph{mobile} multiplataforma do conjunto de especificações
 técnicas WAI-Aria\footnote{A Iniciativa de Acessibilidade na Web (WAI, do inglês \emph{Web Accessibility Initiative})
-    define uma maneira de tonar aplicações e conteúdos web mais acessíveis às pessoas com deficiência por meio do conjunto
-    Aplicações para a Internet Ricas em Acessibilidade (ARIA, do inglês \emph{Accessible Rich Internet Applications Suite}).},
+  define uma maneira de tonar aplicações e conteúdos web mais acessíveis às pessoas com deficiência por meio do conjunto
+  Aplicações para a Internet Ricas em Acessibilidade (ARIA, do inglês \emph{Accessible Rich Internet Applications Suite}).},
 observando problemas na detecção de elementos devido às suas posições na tela e conteúdos difíceis
 de identificar na interação com leitores de tela. Notando também que houve alguma dificuldade por
 conta de gestos implementados no \emph{app} diferirem dos habituais utilizados pelos usuários no \emph{VoiceOver} do iOS.
@@ -34,11 +34,17 @@ conta de gestos implementados no \emph{app} diferirem dos habituais utilizados p
 Apesar dos problemas encontrados, o artigo aponta que o \emph{feedback} foi positivo e os resultados mostraram que os exercícios puderam ser realizados facilmente, por pessoas cegas,
 fazendo uso de simples gestos com auxilio dos leitores de tela.
 
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Cordova Framework}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} multiplataforma (Android e iOS).
-
-\textbf{Público alvo da aplicação:} PDV\@.
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am1}Características do Desenvolvimento do Aplicativo do AM1.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Cordova Framework \\ \hline
+    \textbf{Plataformas}            & Android e iOS     \\ \hline
+    \textbf{Público-alvo}           & PDV               \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{A Model-Driven Approach to Cross-Platform Development of Accessible Business Apps}}
 
@@ -55,24 +61,30 @@ os usuários podem ter uma visão de eventos de inundações próximos e compart
 O estudo comparou uma versão da aplicação desenvolvida nativamente que necessitou de 3,400 linhas de código \emph{Java} e 3,200 linhas de código \emph{XML}
 (gerado de forma semiautomática) com outra versão, com um conjunto similar de funcionalidades. A nova versão do \emph{app} consistiu em 445 linhas de código \emph{MD²}, \emph{framework}
 baseado na abordagem orientada a modelos para desenvolvimento móvel multiplataforma com a linguagem de alto nível \emph{Xtend}\footnote{
-    Linguagem de programação de alto nível para a JVM (\emph{Java Virtual Machine}) com foco em injeção de dependências e geração de código Java. \url{https://www.eclipse.org/xtend/}}.
+  Linguagem de programação de alto nível para a JVM (\emph{Java Virtual Machine}) com foco em injeção de dependências e geração de código Java. \url{https://www.eclipse.org/xtend/}}.
 Principais funcionalidades sobre acessibilidade identificadas:
 
 \begin{enumerate}
-    \item Adaptação da \emph{interface} de acordo com as necessidades do usuário;
-    \item Integração com os leitores de tela graças ao fornecimento de descrições em texto para elementos não textuais;
-    \item Personalização do contorno de foco do \emph{TalkBack}.
+  \item Adaptação da \emph{interface} de acordo com as necessidades do usuário;
+  \item Integração com os leitores de tela graças ao fornecimento de descrições em texto para elementos não textuais;
+  \item Personalização do contorno de foco do \emph{TalkBack}.
 \end{enumerate}
 
 Segundo o artigo, o estudo de caso mostrou que \emph{apps} acessíveis podem ser gerados a partir do modelo de alto nível \emph{MD²}, implementando as técnicas de integração adequadas em
 cada ponto. Embora o autor afirme isso, o estudo também deixa claro que ainda havia uma pendência de validação centrada no usuário, visto que o trabalho não implementou todas as técnicas
 e a solução proposta não foi testada com PDV\@.
 
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Xtend, Java} e \emph{Eclipse}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} multiplataforma (Android e iOS).
-
-\textbf{Público alvo da aplicação:} PDV interessadas em saber sobre eventos climáticos locais como chuvas fortes e inundações.
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am2}Características do Desenvolvimento do Aplicativo do AM2.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Xtend, Java e Eclipse                          \\ \hline
+    \textbf{Plataformas}            & Android e iOS                                  \\ \hline
+    \textbf{Público-alvo}           & PDV com interesse em eventos climáticos locais \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{An Accessible Roller Coaster Simulator for Touchscreen Devices: An Educational Game for the Visually Impaired}}
 
@@ -82,10 +94,10 @@ A aplicação foi desenvolvida para auxiliar no estudo de Energia Mecânica e tr
 As principais funcionalidades sobre acessibilidade identificadas no \emph{app} foram:
 
 \begin{enumerate}
-    \item Os elementos visuais possuem descrições textuais para integração com leitores de tela;
-    \item \emph{Feedback} por meio de ``texto para voz'' (TTS, do inglês \emph{text-to-speech}) e vibração ao clicar em determinados elementos
-          na tela, mesmo com o modo de acessibilidade desativado;
-    \item Efeitos sonoros característicos que ilustram os resultados da simulação ao longo do percurso.
+  \item Os elementos visuais possuem descrições textuais para integração com leitores de tela;
+  \item \emph{Feedback} por meio de ``texto para voz'' (TTS, do inglês \emph{text-to-speech}) e vibração ao clicar em determinados elementos
+        na tela, mesmo com o modo de acessibilidade desativado;
+  \item Efeitos sonoros característicos que ilustram os resultados da simulação ao longo do percurso.
 \end{enumerate}
 
 Com taxas de 73\% eficácia, 77\% de eficiência e 66\% satisfação do usuário com relação a aplicação desenvolvida, os testes de usabilidade
@@ -95,11 +107,17 @@ Contudo, alguns problemas de acessibilidade afetaram a taxa de satisfação dos 
 dificuldades em seguir a trilha da montanha com apenas um dedo, não ser possível detectar quando o carro está voltando
 no trilho e falha no comando que altera o foco dos elementos, alterando para o elemento errado.
 
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Unity 3D engine}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} Pessoas com e sem DV\@.
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am3}Características do Desenvolvimento do Aplicativo do AM3.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Unity 3D             \\ \hline
+    \textbf{Plataformas}            & Android              \\ \hline
+    \textbf{Público-alvo}           & Pessoas com e sem DV \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Application for the Configuration and Adaptation of the Android Operating System for the Visually Impaired}}
 
@@ -108,9 +126,9 @@ um número significativo nesse grupo. Assim, o estudo de \citeonline{Oliveira201
 as preferências de acessibilidade de cada PDV, por meio de comandos de voz. O artigo apresenta algumas funcionalidades e técnicas relacionadas a acessibilidade que são listadas a seguir:
 
 \begin{enumerate}
-    \item Escala de Usabilidade do Sistema (SUS, do inglês \emph{System Usability Scale}) para avaliação de usabilidade da aplicação;
-    \item \emph{SpeechRecognizer} do Android para reconhecimento de voz;
-    \item Eurísticas de Usabilidade de Nielsen (do inglês, \emph{Nielsen Usability Heuristics}) para evitar problemas de acessibilidade já mapeados.
+  \item Escala de Usabilidade do Sistema (SUS, do inglês \emph{System Usability Scale}) para avaliação de usabilidade da aplicação;
+  \item \emph{SpeechRecognizer} do Android para reconhecimento de voz;
+  \item Eurísticas de Usabilidade de Nielsen (do inglês, \emph{Nielsen Usability Heuristics}) para evitar problemas de acessibilidade já mapeados.
 \end{enumerate}
 
 Um protótipo foi desenvolvido e mostrou potencial para ser utilizado como ferramenta para PDV, trazendo benefícios com a possibilidade do uso de comando de voz.
@@ -120,11 +138,17 @@ Das quais três já possuíam experiência com comandos de voz e apenas duas das
 Por fim, as voluntárias expressaram avaliações positivas quanto à autonomia, satisfação e usabilidade da aplicação.
 E o tempo gasto para realizar as configurações de acessibilidade foi mais curto no \emph{app} desenvolvido que na aplicação padrão do Android.
 
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Android Studio 2.0}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} PDV\@.
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am4}Características do Desenvolvimento do Aplicativo do AM4.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Android Studio 2.0 \\ \hline
+    \textbf{Plataformas}            & Android            \\ \hline
+    \textbf{Público-alvo}           & PDV                \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Blind and visually impaired user interface to solve accessibility problems}}
 
@@ -132,69 +156,69 @@ Este estudo realizou uma RSL e testes em várias aplicações móveis para PDV, 
 Uma aplicação móvel, chamada ``\emph{Read Master}'', também foi desenvolvida no trabalho de \citeonline{Shera2021285}, incorporando soluções para os principais problemas de OAC\@.
 
 \begin{table}[htb]
-    \begin{center}
-        \ABNTEXfontereduzida
-        \caption{Categorias dos problemas identificados.}
-        \label{tab-cat-pro-enc-ar5}
-        \begin{tabular}{p{2.0cm}|p{5.0cm}}
-            %\hline
-            \textbf{Código} & \textbf{Categoria} \\
-            \hline
-            CRR1            & Apresentação       \\
-            \hline
-            CRR2            & Comportamento      \\
-            \hline
-            CRR3            & Organizacional     \\
-            % \hline
-        \end{tabular}
-        \legend{Fonte: \citeonline{Shera2021285}.}
-    \end{center}
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Categorias dos problemas identificados.}
+    \label{tab-cat-pro-enc-ar5}
+    \begin{tabular}{p{2.0cm}|p{5.0cm}}
+      %\hline
+      \textbf{Código} & \textbf{Categoria} \\
+      \hline
+      CRR1            & Apresentação       \\
+      \hline
+      CRR2            & Comportamento      \\
+      \hline
+      CRR3            & Organizacional     \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Shera2021285}.}
+  \end{center}
 \end{table}
 
 Na tabela \autoref{tab-pro-enc-ar5} estão listados os problemas identificados pelo estudo.
 Os códigos na coluna ``Categoria'' referem-se às categorias da \autoref{tab-cat-pro-enc-ar5}.
 
 \begin{table}[htb]
-    \begin{center}
-        \ABNTEXfontereduzida
-        \caption{Problemas de acessibilidade encontrados por categoria.}
-        \label{tab-pro-enc-ar5}
-        \begin{tabular}{p{1.2cm}|p{11.5cm}|p{1.5cm}}
-            %\hline
-            \textbf{Código} & \textbf{Problema}                                                                                 & \textbf{Categoria} \\
-            \hline
-            AM1P1           & Falta de consistência no \emph{layout} e terminologias                                            & CRR1               \\
-            \hline
-            AM1P2           & Leitor de tela fornecendo \emph{feedbacks} confusos                                               & CRR1               \\
-            \hline
-            AM1P3           & Leitor de tela quebrando                                                                          & CRR2               \\
-            \hline
-            AM1P4           & Ouvir cabeçalhos e títulos das páginas de forma redundante antes de detectar o conteúdo das telas & CRR2               \\
-            \hline
-            AM1P5           & Conteúdos na tela da aplicação móvel                                                              & CRR3               \\
-            \hline
-            AM1P6           & Fluxo de tarefas                                                                                  & CRR3               \\
-            \hline
-            AM1P7           & Não entendimento da sequência natural de leitura                                                  & CRR3               \\
-            \hline
-            AM1P8           & Não entendimento do fluxo natural de tarefas                                                      & CRR3               \\
-            \hline
-            AM1P9           & Problemas de navegação                                                                            & CRR3               \\
-            \hline
-            AM1P10          & Sobrecarga de informações                                                                         & CRR3               \\
-            % \hline
-        \end{tabular}
-        \legend{Fonte: \citeonline{Shera2021285}.}
-    \end{center}
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas de acessibilidade encontrados por categoria.}
+    \label{tab-pro-enc-ar5}
+    \begin{tabular}{p{1.2cm}|p{11.5cm}|p{1.5cm}}
+      %\hline
+      \textbf{Código} & \textbf{Problema}                                                                                 & \textbf{Categoria} \\
+      \hline
+      AM1P1           & Falta de consistência no \emph{layout} e terminologias                                            & CRR1               \\
+      \hline
+      AM1P2           & Leitor de tela fornecendo \emph{feedbacks} confusos                                               & CRR1               \\
+      \hline
+      AM1P3           & Leitor de tela quebrando                                                                          & CRR2               \\
+      \hline
+      AM1P4           & Ouvir cabeçalhos e títulos das páginas de forma redundante antes de detectar o conteúdo das telas & CRR2               \\
+      \hline
+      AM1P5           & Conteúdos na tela da aplicação móvel                                                              & CRR3               \\
+      \hline
+      AM1P6           & Fluxo de tarefas                                                                                  & CRR3               \\
+      \hline
+      AM1P7           & Não entendimento da sequência natural de leitura                                                  & CRR3               \\
+      \hline
+      AM1P8           & Não entendimento do fluxo natural de tarefas                                                      & CRR3               \\
+      \hline
+      AM1P9           & Problemas de navegação                                                                            & CRR3               \\
+      \hline
+      AM1P10          & Sobrecarga de informações                                                                         & CRR3               \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Shera2021285}.}
+  \end{center}
 \end{table}
 
 O \emph{app} desenvolvido consistiu em duas funcionalidades principais: fornecer informações cientificas e \emph{quizzes} de múltipla escolha.
 As principais técnicas e funcionalidades identificadas no estudo para o suporte de acessibilidade foram:
 
 \begin{enumerate}
-    \item \emph{SUS} para avaliação de usabilidade da aplicação;
-    \item Leitor de tela embutido por meio de TTS\@.
-    \item Levantamento e categorização dos principais problemas de acessibilidade em \emph{apps} móveis.
+  \item \emph{SUS} para avaliação de usabilidade da aplicação;
+  \item Leitor de tela embutido por meio de TTS\@.
+  \item Levantamento e categorização dos principais problemas de acessibilidade em \emph{apps} móveis.
 \end{enumerate}
 
 Uma avaliação de usabilidade do \emph{app}, com 56 PDV, foi conduzida e validada com foco na experiência de usuários com DV\@.
@@ -206,11 +230,17 @@ O nível mais alto de satisfação quanto às 3 categorias de problemas avaliado
 na apresentação com 89,21\%.
 No geral, o estudo indica que a aplicação reduziu a gravidade dos problemas de OPB, oferecendo alta usabilidade.
 
-\textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} PDV\@.
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am5}Características do Desenvolvimento do Aplicativo do AM5.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado \\ \hline
+    \textbf{Plataformas}            & Android       \\ \hline
+    \textbf{Público-alvo}           & PDV           \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Design and development of a mobile app of drug information for people with visual impairment}}
 
@@ -225,22 +255,27 @@ ao usuário de forma acessível e podendo ser realizada por vários meios.
 As principais técnicas e funcionalidades identificadas, relacionadas à acessibilidade e utilizadas no desenvolvimento dessa solução, foram:
 
 \begin{enumerate}
-    \item Tamanho da fonte das letras personalizável;
-    \item Vibração e sons para alertar o usuário do resultado da busca;
-    \item \emph{Tutorial} com possibilidade de ser visto novamente;
-    \item Possibilidade de busca por \emph{barcode} e \emph{qrcode}, foto, comando de voz e texto;
-    \item Possibilidade de ativar e desativar o assistente de voz do \emph{app}.
+  \item Tamanho da fonte das letras personalizável;
+  \item Vibração e sons para alertar o usuário do resultado da busca;
+  \item \emph{Tutorial} com possibilidade de ser visto novamente;
+  \item Possibilidade de busca por \emph{barcode} e \emph{qrcode}, foto, comando de voz e texto;
+  \item Possibilidade de ativar e desativar o assistente de voz do \emph{app}.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada no desenvolvimento:} \emph{Java, Android Studio, Accessibility Scanner App}, e o \emph{Test Lab do Firebase}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} PDV que buscam obter informações de rótulos de medicamentos\@.
 
 O estudo envolveu 48 PDV, das quais 69\% necessitavam de assistência para o uso de medicamentos e 90\% possuíam celulares, sendo 93\%  deles com o SO Android.
 Na avaliação final, 100\% dos usuários disseram utilizariam o \emph{app} e o avaliaram entre 4 e 5 estrelas (bom e muito bom).
 
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am6}Características do Desenvolvimento do Aplicativo do AM6.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Java, Accessibility Scanner App e Firebase Test Lab   \\ \hline
+    \textbf{Plataformas}            & Android                                               \\ \hline
+    \textbf{Público-alvo}           & PDV que buscam informações de rótulos de medicamentos \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Designing multimodal mobile interaction for a text messaging application for visually impaired users}}
 
@@ -257,19 +292,13 @@ Um outro gesto aciona a função para revisão da mensagem escrita por meio do T
 As principais características relacionadas à acessibilidade identificadas nessa solução foram:
 
 \begin{enumerate}
-    \item Reconhecimento de voz;
-    \item Reconhecimento de gestos;
-    \item Sintese de fala.
-    \item Possibilidade de revisar as mensagens escritas de maneira acessível;
-    \item Possibilidade de parar a narração durante a revisão da mensagem e editar palavras especificas;
-    \item Aplicação de questionário da escala SUS\@.
+  \item Reconhecimento de voz;
+  \item Reconhecimento de gestos;
+  \item Síntese de fala.
+  \item Possibilidade de revisar as mensagens escritas de maneira acessível;
+  \item Possibilidade de parar a narração durante a revisão da mensagem e editar palavras especificas;
+  \item Aplicação de questionário da escala SUS\@.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada no desenvolvimento:} \emph{Java, Android Studio, Accessibility Scanner App}, e o \emph{Test Lab do Firebase}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} PDV\@.
 
 Uma pesquisa foi realizada com 9 usuários com DV e resultou em \emph{feedbacks} positivos, principalmente a respeito da interação por gestos.
 O estudo também trouxe comparativo de performance dos usuários na realização de tarefas no \emph{app} de envio de mensagem padrão com o \emph{app} desenvolvido.
@@ -277,6 +306,18 @@ Na avaliação da usabilidade das aplicações, fazendo uso da escala SUS, ambas
 
 Os resultados mostraram que na realização de tarefas fáceis a performance do \emph{app} era pouco superior a alternativa padrão do sistema.
 Porém, passa-se a notar grandes diferenças a favor do \emph{app} desenvolvido em tarefas consideradas normais e difíceis, com cerca de 30\% e 50\% mais performance, respectivamente, para a solução desenvolvida em relação ao \emph{app} padrão.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am7}Características do Desenvolvimento do Aplicativo do AM7.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado \\ \hline
+    \textbf{Plataformas}            & Android       \\ \hline
+    \textbf{Público-alvo}           & PDV           \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Do You like My Outfit? Cromnia, a Mobile Assistant for Blind Users}}
 
@@ -294,17 +335,11 @@ O \emph{app} é bem simples e consiste em uma única \emph{interface}, parecida 
 As principais soluções de acessibilidade utilizadas no desenvolvimento foram:
 
 \begin{enumerate}
-    \item Integração com leitores de tela;
-    \item Tamanho de fontes e \emph{labels} adaptáveis de acordo com o tipo de deficiência;
-    \item Sistema de notificações simples e imediato;
-    \item Resposta em tempo real.
+  \item Integração com leitores de tela;
+  \item Tamanho de fontes e \emph{labels} adaptáveis de acordo com o tipo de deficiência;
+  \item Sistema de notificações simples e imediato;
+  \item Resposta em tempo real.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada no desenvolvimento:} Não informado.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} iOS.
-
-\textbf{Público alvo da aplicação:} PDV\@.
 
 Como resultado do estudo uma aplicação chamada \emph{Cromnia} foi desenvolvida, esta que possibilita que os usuários reconheçam
 cores, padrões e combinações de cores, considerando a iluminação do ambiente.
@@ -312,6 +347,18 @@ cores, padrões e combinações de cores, considerando a iluminação do ambient
 Os testes envolveram 6 PDV com parcial e 6 com DV total.
 Os participantes gostaram dos benefícios do \emph{app} e mostraram-se ansiosos para experimentar novas versões, pensando em quando poderão utilizar o aplicativo de fato no dia-a-dia.
 O \emph{app} está disponível na \emph{AppStore} e conta com alto número de \emph{downloads}.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am8}Características do Desenvolvimento do Aplicativo do AM8.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado \\ \hline
+    \textbf{Plataformas}            & iOS           \\ \hline
+    \textbf{Público-alvo}           & PDV           \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Improved and Accessible E-Book Reader Application for Visually Impaired People}}
 
@@ -325,17 +372,11 @@ O \emph{app} possibilita a realização de busca, \emph{download} e leitura de c
 Quanto à acessibilidade, foram identificadas as seguintes soluções:
 
 \begin{enumerate}
-    \item Suporte para comandos de voz;
-    \item Configurações de alto contraste;
-    \item Sintese de voz para leitura dos \emph{e-books};
-    \item Tamanho dos botões e espaçamentos adequados à PDV\@.
+  \item Suporte para comandos de voz;
+  \item Configurações de alto contraste;
+  \item Sintese de voz para leitura dos \emph{e-books};
+  \item Tamanho dos botões e espaçamentos adequados à PDV\@.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada no desenvolvimento:} Não informado.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} iOS.
-
-\textbf{Público alvo da aplicação:} PDV que gostam de livros\@.
 
 Nos resultados dos testes, realizados com 12 PDV (7 experientes e 5 sem experiência), o estudo mostrou que a média de satisfação
 dos usuários foi de aproximadamente 75\% nos testes de usabilidade, realizados em 3 fases, com usuários com e sem experiência.
@@ -343,6 +384,18 @@ E o tempo médio de execução das tarefas foi de 92 segundos para usuários nã
 
 Entretanto, usuários experientes acabaram enfrentando erros relacionados a \emph{login}, configuração e busca por tentarem
 utilizar suas próprias abordagens baseadas nas interações com outras aplicações.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am9}Características do Desenvolvimento do Aplicativo do AM9.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado            \\ \hline
+    \textbf{Plataformas}            & iOS                      \\ \hline
+    \textbf{Público-alvo}           & PDV que gostam de livros \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{MathMelodies 2: A Mobile Assistive Application for People with Visual Impairments Developed with React Native}}
 
@@ -358,25 +411,31 @@ Assim, nesse trabalho, \citeonline{Ducci2018}, desenvolve essa nova versão como
 As principais técnicas e funcionalidades para acessibilidade, utilizadas nesse estudo, são listadas a seguir:
 
 \begin{enumerate}
-    \item Implementação nativa para iOS e Android de componentes não acessíveis no \emph{React Native};
-    \item Elementos chave de interação sempre posicionados na mesma parte da tela, em locais de fácil acesso;
-    \item Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela;
-    \item Todos os elementos visíveis na tela sem necessidade de rolagem;
-    \item Cores de fundo uniformes e neutras;
-    \item Interações por gestos simples.
+  \item Implementação nativa para iOS e Android de componentes não acessíveis no \emph{React Native};
+  \item Elementos chave de interação sempre posicionados na mesma parte da tela, em locais de fácil acesso;
+  \item Tamanho dos ícones e componentes adaptáveis de acordo com tamanho da tela;
+  \item Todos os elementos visíveis na tela sem necessidade de rolagem;
+  \item Cores de fundo uniformes e neutras;
+  \item Interações por gestos simples.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{React Native}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} multiplataforma (Android e iOS).
-
-\textbf{Público alvo da aplicação:} Crianças com DV\@.
 
 Embora as funcionalidades básicas tenham sido contempladas pelo \emph{framework} utilizado, uma funcionalidade avançada que foi requerida não era suportada.
 Por conta disso, foi necessário desenvolver componentes adicionais nativamente, isto é, utilizando as tecnologias especificas para cada plataforma.
 
 Por fim, o artigo conclui que \emph{React Native} é uma escolha válida para o desenvolvimento de aplicações acessíveis,
 com base nos resultados de testes preliminares, com participação de duas pessoas (uma com DV parcial e outra total), sugerindo que a aplicação estava totalmente acessível.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am10}Características do Desenvolvimento do Aplicativo do AM10.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & React Native    \\ \hline
+    \textbf{Plataformas}            & Android e iOS   \\ \hline
+    \textbf{Público-alvo}           & Crianças com DV \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Object Recognition and Hearing Assistive Technology Mobile Application Using Convolutional Neural Network}}
 
@@ -386,19 +445,13 @@ uma aplicação com objetivo de atender as necessidades desse grupo utilizando t
 O \emph{app} utiliza algoritmos de \emph{Convolutional Neural Network} (CNN), solução de aprendizado de máquina reconhecida como um poderoso método para reconhecimento de
 imagens, para identificar detalhes em imagens e narrá\@-los para o usuário por meio do TTS\@.
 
-O artigo concentra-se mais na apresentação da API utilizada para o RO, mostrando pouco sobre a aplicação \emph{mobile},
-ainda assim, foram identificadas as seguintes características de acessibilidade no \emph{app}:
+O artigo concentra-se na apresentação da API utilizada para o RO, mostrando pouco sobre a aplicação \emph{mobile},
+ainda assim, foram identificadas as seguintes características de acessibilidade:
 
 \begin{enumerate}
-    \item Reconhecimento de detalhes de imagens;
-    \item Sintese dos resultados do RO por voz.
+  \item Reconhecimento de detalhes de imagens;
+  \item Sintese dos resultados do RO por voz.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} PDV\@.
 
 O estudo realizou a revisão de diferentes estudos e tecnologias que utilizam CNN, um dos principais estudos citados
 foi publicado em 2015 na Conferência Brasileira de Sistemas Inteligentes (BRACIS), este que utiliza RO para um sistema
@@ -407,6 +460,20 @@ Fazendo uso de informações identificadas nos trabalhos relacionados, o trabalh
 
 Os resultados mostraram que CNN tem potencial para classificar coisas vivas e objetos em ambientes interiores e exteriores com alta precisão, fazendo uso de imagens públicas
 como base de treinamento, possibilitando um desempenho funcional e confiável do sistema em benefício das PDV graças ao \emph{app} desenvolvido.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am11}Características do Desenvolvimento do Aplicativo do AM11.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado \\ \hline
+    \textbf{Plataformas}            & Android       \\ \hline
+    \textbf{Público-alvo}           & PDV           \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
+
+\newpage
 
 \subsection{\emph{QUIMIVOX MOBILE 2.0: Application for Helping Visually Impaired People in Learning Periodic Table and Electron Configuration}}
 
@@ -424,18 +491,12 @@ do reconhecimento de voz e uma opção para retornar à tela anterior.
 Segue abaixo as principais técnicas e funcionalidades para acessibilidade identificadas no estudo:
 
 \begin{enumerate}
-    \item Interação por reconhecimento de voz e gestos;
-    \item Tamanhos de fontes de letras ampliados;
-    \item Alto contraste (fundos pretos e textos brancos);
-    \item Possibilidade de escolha de cores do \emph{app} para melhorar a legibilidade para pessoas daltônicas;
-    \item \emph{Feedback} sonoro mesmo com \emph{Talkback} desativado.
+  \item Interação por reconhecimento de voz e gestos;
+  \item Tamanhos de fontes de letras ampliados;
+  \item Alto contraste (fundos pretos e textos brancos);
+  \item Possibilidade de escolha de cores do \emph{app} para melhorar a legibilidade para pessoas daltônicas;
+  \item \emph{Feedback} sonoro mesmo com \emph{Talkback} desativado.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{Java, Android Studio} e \emph{API Airy}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android 4.0 ou superior.
-
-\textbf{Público alvo da aplicação:} PDV interessadas no aprendizado de Química\@.
 
 Os usuários apontaram o comando de voz como a funcionalidade que mais facilitou na utilização da \emph{app}.
 Na avaliação de uma das PDV, participante dos testes, o desenvolvimento de manual poderia contribuir com melhor entendimento do funcionamento do aplicativo.
@@ -445,6 +506,18 @@ O artigo conclui que os participantes aprovaram a nova versão, avaliando positi
 E relata que essa dificuldade estava relacionada aos gestos, com a maioria fazendo algum comentário negativo, citando 5 desses participantes.
 
 Porém, o autor supõe que, com a prática no uso dos gestos, essa dificuldade poderia ser diminuída significativamente, citando o reconhecimento da falta de experiência na utilização de dispositivos móveis por 4 participantes como justificativa, sendo que apenas um deles, chamado P10, fazia parte dos 5 participantes citados pelos comentários negativos.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am12}Características do Desenvolvimento do Aplicativo do AM12.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Java, Android Studio e API Airy            \\ \hline
+    \textbf{Plataformas}            & Android                                    \\ \hline
+    \textbf{Público-alvo}           & PDV interessadas no aprendizado de Química \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{``Talkin' about the weather'': Incorporating TalkBack functionality and sonifications for accessible app design}}
 
@@ -462,22 +535,28 @@ importantes e em qual ordem eles gostariam de consumi-las.
 As principais soluções quanto à acessibilidade identificadas foram:
 
 \begin{enumerate}
-    \item Alternativa aos ícones padrões utilizados com os chamados ``Ícones audíveis'';
-    \item Utilização constante do \emph{TalkBack} durante o processo de desenvolvimento;
-    \item Interface com alto contraste (textos brancos em fundo preto), visando a experiência de usuário (UX) de PDV\@;
-    \item Integração com \emph{Talkback} seguindo as Diretrizes de Acessibilidade do Google.
+  \item Alternativa aos ícones padrões utilizados com os chamados ``Ícones audíveis'';
+  \item Utilização constante do \emph{TalkBack} durante o processo de desenvolvimento;
+  \item Interface com alto contraste (textos brancos em fundo preto), visando a experiência de usuário (UX) de PDV\@;
+  \item Integração com \emph{Talkback} seguindo as Diretrizes de Acessibilidade do Google.
 \end{enumerate}
 
 ``Ícones audíveis'' emitem sons breves, baseados nos sons reais do cotidiano, e servem alternativa para representação dos ícones
 visuais de clima, como o ícone de chuva, representado por sons que remetem ao evento.
 
-\textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} PDV que necessitam saber sobre o clima\@.
-
 Nos testes de usabilidade, 7 participantes responderam que utilizaram o \emph{app} por pelo menos seis dias durante a semana e, no geral, reportaram terem obtido experiência tão boa ou melhor que nos \emph{apps} de clima que já utilizaram anteriormente.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am13}Características do Desenvolvimento do Aplicativo do AM13.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado                                   \\ \hline
+    \textbf{Plataformas}            & Android                                         \\ \hline
+    \textbf{Público-alvo}           & PDV que necessitam de informações sobre o clima \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
 
 \subsection{\emph{Users’ perception on usability aspects of a braille learning mobile application ‘mBRAILLE’}}
 
@@ -490,15 +569,9 @@ Embora a publicação não apresente muitos detalhes do processo de desenvolvime
 mencionam leitores de tela, algumas características relacionadas à acessibilidade utilizadas na solução foram identificadas, seguem:
 
 \begin{enumerate}
-    \item \emph{Tutorial} para auxiliar o usuário na utilização do \emph{app};
-    \item \emph{Feedback} por vibração e áudio;
+  \item \emph{Tutorial} para auxiliar o usuário na utilização do \emph{app};
+  \item \emph{Feedback} por vibração e áudio;
 \end{enumerate}
-
-\textbf{Tecnologia utilizada para desenvolvimento:} Não informado.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} Android.
-
-\textbf{Público alvo da aplicação:} Estudantes de \emph{Bangladesh} com DV\@.
 
 O trabalho avaliou 4 aspectos de usabilidade (aprendizagem, interface e funcionalidades, acessibilidade e auto descritividade)
 do \emph{app} por meio de testes com 5 usuários com DV, que realizaram a avaliação após utilizarem a aplicação por 2 semanas,
@@ -507,6 +580,20 @@ mostrando resultados de avaliação média satisfatórios, de 6 ou acima, numa e
 O estudo teve a uma limitação de apenas 5 participantes, sendo todos experientes em \emph{Braille}.
 Contudo, o artigo menciona que trabalhos futuros irão concentrar-se na avaliação e testes da efetividade do
 aprendizado de \emph{Braille} por meio do \emph{app} com um grande número de participantes de diferentes escolas.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am14}Características do Desenvolvimento do Aplicativo do AM14.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & Não informado                   \\ \hline
+    \textbf{Plataformas}            & Android                         \\ \hline
+    \textbf{Público-alvo}           & Estudantes de Bangladesh com DV \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
+
+\newpage
 
 \subsection{\emph{WordMelodies: Supporting Children with Visual Impairment in Learning Literacy}}
 
@@ -522,16 +609,10 @@ A aplicação foi projetada e avaliada por 3 especialistas no domínio de tecnol
 para crianças com DV\@. As principais características relativas à acessibilidade encontradas no artigo foram:
 
 \begin{enumerate}
-    \item Elementos chave de interação sempre posicionados na mesma parte da tela, priorizando os cantos da tela;
-    \item Interações por gestos como ``arrastar e soltar'' com descrição auditiva;
-    \item Descrição alternativa em texto dos elementos de tela para integração com leitores de tela.
+  \item Elementos chave de interação sempre posicionados na mesma parte da tela, priorizando os cantos da tela;
+  \item Interações por gestos como ``arrastar e soltar'' com descrição auditiva;
+  \item Descrição alternativa em texto dos elementos de tela para integração com leitores de tela.
 \end{enumerate}
-
-\textbf{Tecnologia utilizada para desenvolvimento:} \emph{React Native}.
-
-\textbf{Plataforma alvo do \emph{app} desenvolvido:} multiplataforma (Android e iOS).
-
-\textbf{Público alvo da aplicação:} Crianças com DV\@.
 
 Exceto por um problema que afetou a utilização do usuário ao navegar entre os elementos utilizando leitores de tela, o \emph{app}
 mostrou-se totalmente acessível na avaliação dos especialistas. Nessa navegação, a ordem dos elementos não corresponde com a ordem
@@ -541,3 +622,693 @@ utilizada, o \emph{React Native}.
 Um dos principais desafios no desenvolvimento foi alcançar uma funcionalidade de ``arrastar e soltar'' acessível e fácil de utilizar,
 pois no \emph{React Native} esse componente não fornece suporte à acessibilidade, sendo necessário o desenvolvimento de um componente
 nativo tanto no iOS como no Android, para prover informações auditivas ao usuário durante o uso do componente.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-car-am15}Características do Desenvolvimento do Aplicativo do AM15.}
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Tecnologias Utilizadas} & React Native    \\ \hline
+    \textbf{Plataformas}            & Android e iOS   \\ \hline
+    \textbf{Público-alvo}           & Crianças com DV \\
+    \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
+
+\section{Estudos Relacionados}
+
+Durante o processo de seleção de artigos do MSL, foram encontrados alguns estudos secundários, tipo de estudo que realiza revisão de estudos primários
+relacionados a um tema específico \cite{Kitchenham2007}. Embora tenham sido rejeitados no MSL, por se enquadrarem em algum dos critérios definidos
+na seção anterior, os estudos que realizaram essas revisões dentro do tema abordado neste trabalho foram considerados como estudos relacionados.
+
+Assim, esta seção apresenta os principais problemas e propostas de soluções relacionados à acessibilidade de aplicações para dispositivos móveis
+identificados por esses estudos. No \autoref{qua-art-rev-sis} estão listadas as informações de cada um desses estudos secundários.
+
+\begin{quadro}[htb!]
+  \caption{\label{qua-art-rev-sis}Estudos relacionados identificados no processo de MSL.}
+  \begin{tabular}{|m{1.2cm} | m{8.1cm} | m{2.7cm} | m{2.5cm}|}
+    %\hline
+    \hline
+    \textbf{Código} & \textbf{Título}                                                                                                             & \textbf{Referência}  & \textbf{Base de dados}     \\
+    \hline
+    AR1             & \emph{Accessibility of Mobile Applications: Evaluation by Users with Visual Impairment and by Automated Tools}              & \cite{Mateus2020}    & \emph{ACM Digital Library} \\
+    \hline
+    AR2             & \emph{Can Everyone use my app? An Empirical Study on Accessibility in Android Apps}                                         & \cite{Vendome201941} & \emph{Scopus}              \\
+    \hline
+    AR3             & \emph{Effect of UX Design Guideline on the information accessibility for the visually impaired in the mobile health apps}   & \cite{Kim20191103}   & \emph{Scopus}              \\
+    \hline
+    AR4             & \emph{Mobile Device Accessibility for the Visually Impaired: Problems Mapping and Empirical Study of Touch Screen Gestures} & \cite{Damaceno2016}  & \emph{ACM Digital Library} \\
+    \hline
+    AR5             & \emph{Observation Based Analysis on the Use of Mobile Applications for Visually Impaired Users}                             & \cite{Siebra2016}    & \emph{ACM Digital Library} \\
+    \hline
+    AR6             & \emph{Prioritization of mobile accessibility guidelines for visual impaired users}                                          & \cite{Quispe2020}    & \emph{Scopus}              \\
+    \hline
+    % \hline
+  \end{tabular}
+  \legend{Fonte: Autor.}
+\end{quadro}
+
+% ---
+\subsection{\emph{Accessibility of Mobile Applications: Evaluation by Users with Visual Impairment and by Automated Tools}}
+% ---
+
+O artigo apresenta um estudo comparativo de problemas de acessibilidade encontrados pelas ferramentas automatizadas MATE e \emph{Accessibility Scanner}, com os problemas encontrados em um estudo anterior envolvendo 11 usuários com DV\@.
+Além disso, o trabalho sumarizou e categorizou os problemas mais encontrados pelos usuários.
+As principais categorias são listadas na \autoref{tab-cat-pro-1}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Categorias dos tipos de problemas mais identificados.}
+    \label{tab-cat-pro-1}
+    \begin{tabular}{p{2.0cm}|p{7cm}}
+      %\hline
+      \textbf{Código} & \textbf{Categoria}                       \\
+      \hline
+      CPF1            & Botões                                   \\
+      \hline
+      CPF2            & Características do Sistema               \\
+      \hline
+      CPF3            & Conteúdo e Significado                   \\
+      \hline
+      CPF4            & Controles, formulários e funcionalidades \\
+      \hline
+      CPF5            & Imagem                                   \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Christoph2020}.}
+  \end{center}
+\end{table}
+
+Na \autoref{tab-pro-blind-1} são listados os principais tipos de problemas, que apresentaram um total de pelo menos 10 observações.
+As categorias, de acordo com a \autoref{tab-cat-pro-1}, e o número total de observações para cada tipo de DV\@ (total ou parcial) também são relacionados à cada tipo de problema.
+Como o artigo só menciona os tipos problemas encontrados com maior frequência por cada tipo de usuário, o número de observações de alguns não estão presentes na \autoref{tab-pro-blind-1}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas mais frequentes encontrados pelos usuários por tipo de DV.}
+    \label{tab-pro-blind-1}
+    \begin{tabular}{p{1.2cm}|p{8.7cm}|p{1.4cm}|p{0.6cm}|p{0.6cm}|p{0.7cm}}
+      %\hline
+      \textbf{Código} & \textbf{Problema}                                                        & \textbf{Categoria} & \textbf{DVT} & \textbf{DVP} & \textbf{Total} \\
+      \hline
+      AR1P1           & \emph{Feedback} inapropriado.                                            & CPF4               & 34           & 15           & 49             \\
+      \hline
+      AR1P2           & Falta de informações.                                                    & CPF1               & 22           & 8            & 30             \\
+      \hline
+      AR1P3           & Usuários presumiram que era uma funcionalidade.                          & CPF4               & 18           & 9            & 27             \\
+      \hline
+      AR1P4           & Funcionalidades confusas ou não claras.                                  & CPF4               & 25           & -            & 25             \\
+      \hline
+      AR1P5           & Apresentação padrão de elementos de controle ou formulário não adequada. & CPF4               & 11           & 12           & 23             \\
+      \hline
+      AR1P6           & Sequências de interação confusas ou não claras.                          & CPF4               & 15           & 6            & 21             \\
+      \hline
+      AR1P7           & Usuários não entenderam sentido do conteúdo.                             & CPF3               & 15           & 5            & 20             \\
+      \hline
+      AR1P8           & Organização do conteúdo inconsistente.                                   & CPF3               & 12           & 6            & 18             \\
+      \hline
+      AR1P9           & Funcionalidade não funciona como esperado.                               & CPF4               & 6            & 10           & 16             \\
+      \hline
+      AR1P10          & Funcionalidades dos botões confusas ou não claras.                       & CPF1               & 15           & -            & 15             \\
+      \hline
+      AR1P11          & Expectativa de funcionalidade que não existe.                            & CPF4               & 10           & 5            & 15             \\
+      \hline
+      AR1P12          & Sem alternativa textual.                                                 & CPF5               & 14           & -            & 14             \\
+      \hline
+      AR1P13          & Sistema muito lento.                                                     & CPF2               & -            & 11           & 11             \\
+      \hline
+      AR1P14          & Significado no conteúdo está perdido.                                    & CPF3               & 6            & 4            & 10             \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Christoph2020}.}
+  \end{center}
+\end{table}
+
+Os resultados do estudo mostraram que 36 tipos de problemas foram encontrados somente pelos usuários, 11 somente pelas ferramentas
+e 3 por ambos os métodos. Evidenciando assim a necessidade de utilização de mais de um método para identificação dos problemas de
+acessibilidade.
+
+Além disso, o estudo mostrou a importância da utilização dessas ferramentas automatizadas, visto que parte significativa dos problemas
+podem ser identificados ainda no processo de desenvolvimento, reduzindo o esforço e, consequentemente, o custo para solucioná-los.
+
+% ---
+\subsection{\emph{Can Everyone use my app? An Empirical Study on Accessibility in Android Apps}}
+% ---
+
+Esse trabalho realizou um estudo piloto no qual foi observado que desenvolvedores de aplicativos móveis raramente utilizam as APIs de Acessibilidade e que o uso de descrições alternativas para elementos de \emph{interface} também é limitado.
+Ademais, visando entender a perspectiva desses desenvolvedores, o estudo também realizou uma investigação de postagens no Stack Overflow, identificando os aspectos de acessibilidade que os desenvolvedores implementavam e os que experienciavam dificuldades.
+
+O estudo investigou aspectos de acessibilidade no geral, baseado em 336 discussões de desenvolvedores Android no Stack Overflow, sendo 159 dessas sobre acessibilidade à DV\@.
+Dessas 159 discussões, os principais aspectos discutidos foram sobre \emph{feedbacks} sonoros e legibilidade (114 e 24 postagens, respectivamente) como mostra a \autoref{tab-acc-asp-sta-flow}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Aspectos de acessibilidade à DV discutidos por \emph{devs} Android no Stack Overflow.}
+    \label{tab-acc-asp-sta-flow}
+    \begin{tabular}{p{1.2cm}|p{7.0cm}|p{3.8cm}}
+      %\hline
+      \textbf{Código} & \textbf{Aspecto}                       & \textbf{Categoria}       \\
+      \hline
+      AR2P1           & Alertas de acessibilidade              & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P2           & Ampliação da tela                      & Legibilidade             \\
+      \hline
+      AR2P3           & Aspectos não funcionais                & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P4           & Consciência de contexto                & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P5           & Conteúdos, ações e gestos customizados & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P6           & \emph{Frameworks} de terceiros         & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P7           & \emph{Mobile web apps}                 & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P8           & Problemas com serviços                 & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P9           & Sons e vibrações                       & \emph{Feedbacks} sonoros \\
+      \hline
+      AR2P10          & Suporte à \emph{Braille}               & Teclados alternativos    \\
+      \hline
+      AR2P11          & Tamanho de fonte                       & Legibilidade             \\
+      \hline
+      AR2P12          & Teclado customizado                    & Teclados alternativos    \\
+      \hline
+      AR2P13          & Transformações de cores                & Transformações de cores  \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Vendome201941}.}
+  \end{center}
+\end{table}
+
+O trabalho de \citeonline{Vendome201941} analisou 13.817 \emph{apps} Android de código aberto, descobrindo que cerca de 50\% deles tinham descrições alternativas para todos os elementos, enquanto cerca de 37\% não tinha nenhuma.
+Além disso, o artigo apontou que apenas cerca de 2\% desses \emph{apps} utilizavam alguma API de acessibilidade no projeto.
+
+% ---
+\subsection{\emph{Effect of UX Design Guideline on the information accessibility for the visually impaired in the mobile health apps}}
+% ---
+
+Acessibilidade de informações visuais para DV raramente é considerada ao projetar aplicações móveis para saúde \cite{Kim20191103}.
+Diante disso, o artigo propõe um guia de diretrizes de acessibilidade à DV, chamado UXDG (\emph{UX Design Guideline}), para resolver esse problema.
+A \autoref{tab-acc-dir-uxd-1} lista as diretrizes do UXDG de acordo com as categorias.
+
+Como parte da validação do guia, 120 \emph{apps} da área de saúde foram analisados quanto à taxa de conformidade com o guia.
+Na análise desses \emph{apps}, a média da taxa de conformidade com o guia foi de 39,24\%, com a diretriz AR3D7 apresentando
+a maior taxa, com 71,67\%, enquanto a AR3D9 apresentou a menor, com 5\%.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Diretrizes do UXDG por categoria.}
+    \label{tab-acc-dir-uxd-1}
+    \begin{tabular}{p{1.2cm}|p{8.8cm}|p{4.5cm}}
+      %\hline
+      \textbf{Código} & \textbf{Diretriz}                                                    & \textbf{Categoria}             \\
+      \hline
+      AR3D1           & Destacar as mídias que disparam ação.                                & Aquisição de informação        \\
+      \hline
+      AR3D2           & Destacar as principais imagens que o usuário pode acessar.           & Aquisição de informação        \\
+      \hline
+      AR3D3           & Navegação intuitiva.                                                 & Acessibilidade dos dados       \\
+      \hline
+      AR3D4           & Posicionar a caixa de pesquisa sempre no mesmo local.                & Busca de dados                 \\
+      \hline
+      AR3D5           & Posicionar resultados de buscas logo após a caixa de texto.          & Busca de dados                 \\
+      \hline
+      AR3D6           & Reconhecimento de voz para entrada de texto.                         & Busca de dados                 \\
+      \hline
+      AR3D7           & Resposta intuitiva do \emph{menu} de acordo com intenção do usuário. & Acessibilidade dos dados       \\
+      \hline
+      AR3D8           & Suporte à esquemas de cores alternativos.                            & Melhora na exposição dos dados \\
+      \hline
+      AR3D9           & Suporte de \emph{zoom in/out} para os principais conteúdos.          & Melhora na exposição dos dados \\
+      \hline
+      AR3D10          & Suporte para outros métodos entrada além do toque.                   & Acessibilidade dos dados       \\
+      \hline
+      AR3D11          & Uso de fontes com alta legibilidade.                                 & Aquisição de informação        \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Kim20191103}.}
+  \end{center}
+\end{table}
+
+O estudo realizou testes, conduzidos com 23 PDV e 23 sem DV, comparando \emph{apps} selecionados da área da saúde antes e depois da aplicação do UXDG\@.
+Os resultados apontaram que houve um aumento na velocidade de reconhecimento das informações depois de aplicar as diretrizes.
+De acordo com o experimento, esse aumento aconteceu tanto para usuários com DV, aumento de 13,68\%, quanto para os sem, de 32,41\%.
+
+% ---
+\subsection{\emph{Mobile Device Accessibility for the Visually Impaired: Problems Mapping and Empirical Study of Touch Screen Gestures}}
+% ---
+
+Esse artigo, mediante um MSL, apresenta os problemas de acessibilidade enfrentados na utilização de dispositivos móveis por PDV encontrados na literatura.
+A \autoref{tab-cat-pro-4} mostra, como categorias, 6 dos 7 grupos de problemas identificados no estudo,
+desconsiderando o de ``borda não sensível ao toque'', visto que esse é um problema relativo aos dispositivos físicos.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Categorias dos problemas mapeados na literatura.}
+    \label{tab-cat-pro-4}
+    \begin{tabular}{p{2.0cm}|p{5.0cm}}
+      %\hline
+      \textbf{Código} & \textbf{Categoria}   \\
+      \hline
+      CPM1            & Botões               \\
+      \hline
+      CPM2            & Comandos de voz      \\
+      \hline
+      CPM3            & Entrada de dados     \\
+      \hline
+      CPM4            & Interação por gestos \\
+      \hline
+      CPM5            & Leitor de tela       \\
+      \hline
+      CPM6            & Retorno ao usuário   \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Damaceno2016}.}
+  \end{center}
+\end{table}
+
+Na \autoref{tab-pro-1-2-6} são listados os problemas relacionados à botões (CPM1), comandos de voz (CPM2) e retorno do usuário (CPM6),
+e o número de citações, este último que corresponde ao número de estudos nos quais o problema foi identificado, sendo que os problemas
+relacionados aos botões físicos dos dispositivos foram desconsiderados, por estarem fora do controle da aplicação.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas relacionados às categorias CPM1, CPM2 e CPM6.}
+    \label{tab-pro-1-2-6}
+    \begin{tabular}{p{1.2cm}|p{10.0cm}|p{1.4cm}|p{1.4cm}}
+      %\hline
+      \textbf{Código} & \textbf{Problema}                                                                                & \textbf{Categoria} & \textbf{Citações} \\
+      \hline
+      AR4P1           & A grande proximidade entre os botões virtuais dificulta a interação.                             & CPM1               & 1                 \\
+      \hline
+      AR4P2           & Os botões virtuais acarretam menor sensibilidade tátil.                                          & CPM1               & 1                 \\
+      \hline
+      AR4P3           & Apenas um comando de voz é reconhecido por vez.                                                  & CPM2               & 2                 \\
+      \hline
+      AR4P4           & Há baixa privacidade ao emitir comandos de voz.                                                  & CPM2               & 1                 \\
+      \hline
+      AR4P5           & Há diminuição do desempenho do reconhecimento em condições de ruído.                             & CPM2               & 1                 \\
+      \hline
+      AR4P6           & Há diminuição do desempenho do reconhecimento devido à entonação e à acentuação.                 & CPM2               & 1                 \\
+      \hline
+      AR4P7           & Há dificuldade para ativar comando de voz.                                                       & CPM2               & 1                 \\
+      \hline
+      AR4P8           & Há necessidade de mentalizar instrução por voz, aumentando carga de memória do indivíduo.        & CPM2               & 1                 \\
+      \hline
+      AR4P9           & O reconhecimento de voz funciona apenas em alguns aplicativos.                                   & CPM2               & 1                 \\
+      \hline
+      AR4P10          & O uso de comandos de voz é computacionalmente custoso.                                           & CPM2               & 1                 \\
+      \hline
+      AR4P11          & Há ausência de retorno ao usuário, ao interagir com alguns elementos de interface.               & CPM6               & 1                 \\
+      \hline
+      AR4P12          & Há dificuldade para compreender diferentes padrões vibratórios.                                  & CPM6               & 1                 \\
+      \hline
+      AR4P13          & Há dificuldade para compreender a orientação da interface, utilizando apenas o retorno auditivo. & CPM6               & 1                 \\
+      \hline
+      AR4P14          & Retorno auditivo é prejudicado em ambientes ruidosos.                                            & CPM6               & 2                 \\
+      \hline
+      AR4P15          & Usar apenas o retorno auditivo não é o suficiente para a interação.                              & CPM6               & 1                 \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Damaceno2016}.}
+  \end{center}
+\end{table}
+
+\newpage
+
+A \autoref{tab-pro-ent-dad-1} mostra os problemas relacionados à entrada de dados (CPM3) com o número de citações para cada problema.
+Os problemas que mencionavam teclado físico de dispositivos móveis foram desconsiderados, pois a aplicação desenvolvida suporta apenas
+\emph{smartphones}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas relacionados à entrada de dados (CPM3).}
+    \label{tab-pro-ent-dad-1}
+    \begin{tabular}{p{1.2cm}|p{12.0cm}|p{1.3cm}}
+      %\hline
+      \textbf{Código} & \textbf{Problema}                                                                                                                   & \textbf{Citações} \\
+      \hline
+      AR4P16          & A digitação de textos é lenta em teclados QWERTY virtuais.                                                                          & 2                 \\
+      \hline
+      AR4P17          & As teclas mais distantes das bordas são mais difíceis de encontrar do que as mais próximas das bordas, em teclados virtuais QWERTY. & 1                 \\
+      \hline
+      AR4P18          & É preciso conhecer previamente Braille para ter bom desempenho de digitação utilizando esta modalidade.                             & 2                 \\
+      \hline
+      AR4P19          & É preciso trocar o modo do teclado virtual, para acessar determinados caracteres.                                                   & 1                 \\
+      \hline
+      AR4P20          & Há ausência de marca tátil para o número 5, no teclado numérico virtual, e para as letras “F” e “J” no teclado QWERTY virtual.      & 2                 \\
+      \hline
+      AR4P21          & Há erros ao corrigir caracteres digitados equivocadamente, substituindo por fonemas semelhantes, em teclados virtuais.              & 1                 \\
+      \hline
+      AR4P22          & Há erros de omissão de caracteres, faltando um ou mais ao digitar palavras em teclados virtuais.                                    & 1                 \\
+      \hline
+      AR4P23          & Há necessidade de confirmação de cada caractere digitado em teclados virtuais.                                                      & 1                 \\
+      \hline
+      AR4P24          & Há necessidade de navegar pelo teclado virtual para localizar os caracteres desejados.                                              & 1                 \\
+      \hline
+      AR4P25          & Há um segundo de espera para entrar com cada tecla em teclados virtuais.                                                            & 1                 \\
+      \hline
+      AR4P26          & O teclado numérico virtual é denso dificultando, a interação.                                                                       & 1                 \\
+    \end{tabular}
+    \legend{Fonte: \citeonline{Damaceno2016}.}
+  \end{center}
+\end{table}
+
+A \autoref{tab-pro-int-ges-1} lista os problemas relacionados à interação por gestos (CPM4) com o número de citações para cada problema encontrado.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas relacionados à interação por gestos (CPM4).}
+    \label{tab-pro-int-ges-1}
+    \begin{tabular}{p{1.2cm}|p{12.0cm}|p{1.2cm}}
+      %\hline
+      \textbf{Código} & \textbf{Problema}                                                                   & \textbf{Citações} \\
+      \hline
+      AR4P27          & Baixa flexibilidade de ângulo e velocidade dos gestos dificultam o reconhecimento.  & 1                 \\
+      \hline
+      AR4P28          & Gestos com forma da letra “L” são difíceis de fazer.                                & 2                 \\
+      \hline
+      AR4P29          & Gestos com formas geométricas fechadas (círculo e triângulo) são difíceis de fazer. & 1                 \\
+      \hline
+      AR4P30          & Gestos com formas geométricas são lentos de se fazer.                               & 1                 \\
+      \hline
+      AR4P31          & Conflito na desambiguação entre dois toques com um dedo e três toques com um dedo.  & 1                 \\
+      \hline
+      AR4P32          & Dificuldade para fazer gestos estando em movimento.                                 & 1                 \\
+      \hline
+      AR4P33          & Dificuldade para fazer gestos próximos à barra superior de sistemas.                & 1                 \\
+      \hline
+      AR4P34          & Dificuldade para fazer gestos representados por símbolos.                           & 2                 \\
+      \hline
+      AR4P35          & Dificuldade para fazer o gesto de dois toques com um dedo.                          & 1                 \\
+      \hline
+      AR4P36          & Dificuldade para se localizar na tela para realizar gestos.                         & 1                 \\
+      \hline
+      AR4P37          & Erros na detecção de gestos multitoque.                                             & 1                 \\
+      \hline
+      AR4P38          & Falha de interpretação de gestos em geral, pelo sistema.                            & 4                 \\
+      \hline
+      AR4P39          & Mudança indevida de foco ao tentar fazer o gesto dois toques com um dedo.           & 1                 \\
+      \hline
+      AR4P40          & Não é possível alterar mapeamento dos gestos às funções do sistema.                 & 1                 \\
+      \hline
+      AR4P41          & Não há consistência de gestos entre diferentes sistemas.                            & 1                 \\
+      \hline
+      AR4P42          & Não há gestos que acionam as principais funções do sistema.                         & 1                 \\
+      \hline
+      AR4P43          & O toque acidental na tela, com outro dedo, prejudica o reconhecimento de gestos.    & 1                 \\
+      \hline
+      AR4P44          & Os manuais de explicação de como fazer gestos de toque não são eficientes.          & 3                 \\
+      \hline
+      AR4P45          & Conflito entre do aplicativo gestos e os do leitor de tela do sistema.              & 1                 \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Damaceno2016}.}
+  \end{center}
+\end{table}
+
+\newpage
+
+Por fim, são listados, na \autoref{tab-pro-lei-tel-1}, os problemas relacionados a leitores de tela (CPM5) com o número de citações.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Problemas relacionados a leitores de tela (CPM5).}
+    \label{tab-pro-lei-tel-1}
+    \begin{tabular}{p{1.2cm}|p{12.0cm}|p{1.4cm}}
+      %\hline
+      \textbf{Código} & \textbf{Problema}                                                                                 & \textbf{Citações} \\
+      \hline
+      AR4P46          & A leitura é linear, demorando para se ter noção global da interface.                              & 2                 \\
+      \hline
+      AR4P47          & A pronúncia de algumas palavras é problemática.                                                   & 1                 \\
+      \hline
+      AR4P48          & A voz do leitor de tela é artificial.                                                             & 1                 \\
+      \hline
+      AR4P49          & Alguns elementos de interface não são lidos.                                                      & 3                 \\
+      \hline
+      AR4P50          & Há baixa familiaridade com o leitor de tela de dispositivos móveis.                               & 1                 \\
+      \hline
+      AR4P51          & Há conflito ao usar o leitor de tela do sistema em conjunto com o leitor embutido em aplicativos. & 2                 \\
+      \hline
+      AR4P52          & Há desconforto ao ouvir o leitor de tela em ambientes ruidosos.                                   & 2                 \\
+      \hline
+      AR4P53          & Há leitura de apenas o que está em foco.                                                          & 1                 \\
+      \hline
+      AR4P54          & Não há controle de velocidade de leitura.                                                         & 2                 \\
+      \hline
+      AR4P55          & Não há um botão para interromper a leitura imediatamente.                                         & 1                 \\
+      \hline
+      AR4P56          & O foco do leitor de tela muda indevidamente.                                                      & 2                 \\
+      \hline
+      AR4P57          & O foco do leitor de tela não possui uma ordem de navegação lógica.                                & 2                 \\
+      \hline
+      AR4P58          & O leitor de tela é lento.                                                                         & 1                 \\
+      \hline
+      AR4P59          & O texto lido é, por vezes, inadequado.                                                            & 1                 \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Damaceno2016}.}
+  \end{center}
+\end{table}
+
+% ---
+\subsection{\emph{Observation Based Analysis on the Use of Mobile Applications for Visually Impaired Users}}
+% ---
+
+O estudo realizou uma análise, envolvendo 5 PDV, com o objetivo de validar se a falta dos requisitos de acessibilidade levantados
+em um trabalho anterior realmente impactavam na utilização de \emph{apps} móveis por PDV\@.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Categorias dos requisitos encontrados.}
+    \label{tab-cat-req-enc-5}
+    \begin{tabular}{p{2.0cm}|p{5.0cm}}
+      %\hline
+      \textbf{Código} & \textbf{Categoria}                \\
+      \hline
+      CRED1           & \emph{Feedbacks} audíveis         \\
+      \hline
+      CRED2           & Adaptação das informações visuais \\
+      \hline
+      CRED3           & Navegação                         \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Siebra2016}.}
+  \end{center}
+\end{table}
+
+Os requisitos foram divididos em 3 categorias, como mostra a \autoref{tab-cat-req-enc-5}.
+Baseados na análise dos resultados, o estudo qualificou os requisitos em 3 níveis (Essencial, Desejável e Não observado).
+
+Como os requisitos ``não observados'', de acordo com o artigo, não foram mencionados pelos participantes dos testes, apenas
+os requisitos essenciais e desejáveis são listados na \autoref{tab-req-ess-des-1}.
+Somente um requisito foi classificado como desejável pelo estudo, o AR5R7, o restante foi classificado como essencial.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Requisitos essenciais e desejáveis focados em DV.}
+    \label{tab-req-ess-des-1}
+    \begin{tabular}{p{1.2cm}|p{12.1cm}|p{1.4cm}}
+      %\hline
+      \textbf{Código} & \textbf{Requisito}                                                                                                & \textbf{Categoria} \\
+      \hline
+      AR5R1           & O nome do caractere que está sendo digitado deve ser ouvido.                                                      & CRED1              \\
+      \hline
+      AR5R2           & Nomes de elementos e imagens na tela devem ser ouvidos ao serem tocados ou selecionados.                          & CRED1              \\
+      \hline
+      AR5R3           & \emph{Feedback} de ações/interações devem ser claros e fornecidos de forma tátil, voz ou eventos sonoros.         & CRED1              \\
+      \hline
+      AR5R4           & Estratégias para o uso de leitores de tela (ex.\@: atalhos para navegar na tela de forma mais eficiente.)         & CRED1              \\
+      \hline
+      AR5R5           & Prover uma chave ``home'' tátil de acesso fácil e rápido para que um usuário possa retornar a um lugar conhecido. & CRED2              \\
+      \hline
+      AR5R6           & Prover documentação em formatos alternativos, utilizando fontes grandes.                                          & CRED3              \\
+      \hline
+      AR5R7           & Permitir customizações pelo usuário e evitar que essas preferências sejam perdidas.                               & CRED3              \\
+      \hline
+      AR5R8           & Apresentar amplificador com \emph{zoom} ajustável.                                                                & CRED3              \\
+      \hline
+      AR5R9           & Prover equivalências textuais claras para evitar erros quando os textos são lidos na tela.                        & CRED3              \\
+      \hline
+      AR5R10          & Brilho, contrate e cores ajustáveis.                                                                              & CRED3              \\
+      \hline
+      AR5R11          & Prover alertas informativos por outros canais além do visual (ex.\@: voz.)                                        & CRED3              \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Siebra2016}.}
+  \end{center}
+\end{table}
+
+% ---
+\subsection{\emph{Prioritization of mobile accessibility guidelines for visual impaired users}}
+% ---
+
+O artigo apresenta uma proposta de priorização de diretrizes de acessibilidade que resultaram de estudos anteriores.
+Essas diretrizes foram baseadas no eMAG, entretanto, diretrizes como as da BCC (\emph{BBC Mobile Accessibility Guidelines}) e recomendações da plataforma Android também foram consideradas.
+Para criação do \emph{ranking}, o estudo utilizou um questionário que foi respondido 103 vezes, sendo 66 dessas respostas de PDV, nas quais a análise se concentrou.
+
+O estudo dividiu as diretrizes em 6 categorias que podem ser visualizadas na \autoref{tab-cat-dir-acc-5}.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Categorias das diretrizes de acessibilidade \emph{mobile} baseadas no eMAG.}
+    \label{tab-cat-dir-acc-5}
+    \begin{tabular}{p{1.5cm}|p{4.5cm}}
+      %\hline
+      \textbf{Código} & \textbf{Categoria}         \\
+      \hline
+      AR6CE           & Estrutura                  \\
+      \hline
+      AR6CC           & Comportamento              \\
+      \hline
+      AR6CCI          & Conteúdo/Informação        \\
+      \hline
+      AR6CAD          & Apresentação/\emph{Design} \\
+      \hline
+      AR6CM           & Multimídia                 \\
+      \hline
+      AR6CF           & Formulários                \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Quispe2020}.}
+  \end{center}
+\end{table}
+
+O estudo considerou a priorização para 4 grupos diferentes, baseados no tipo de DV (baixa visão, visão parcial e os 2 tipos de cegueira: legal e total).
+E os resultados mostraram que existiam diferenças notáveis na percepção das diretrizes entre os grupos.
+
+\begin{quadro}[htb!]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{\label{qua-pri-acc-gui}Priorização de diretrizes de acessibilidade para usuários com DV.}
+    \begin{tabular}{|m{0.5cm} | m{2.4cm} | m{2.4cm} | m{2.8cm} | m{3.0cm} | m{2.4cm}|}
+      %\hline
+      \hline
+      \textbf{Id} & \textbf{Visão parcial} & \textbf{Baixa visão} & \textbf{Cegueira legal}       & \textbf{Cegueira total}              & \textbf{Todas as DV} \\
+      \hline
+      1           & AR6D7, AR6D28          & AR6D9                & AR6D24, AR6D28                & AR6D8, AR6D22, AR6D23                & AR6D8                \\
+      \hline
+      2           & AR6D25                 & AR6D11, AR6D28       & AR6D7, AR6D11, AR6D22, AR6D25 & AR6D1, AR6D6, AR6D25, AR6D28         & AR6D25               \\
+      \hline
+      3           & AR6D24                 & AR6D25               & AR6D1, AR6D27                 & AR6D7, AR6D9, AR6D15, AR6D24, AR6D27 & AR6D7, AR6D9, AR6D22 \\
+      \hline
+      4           & AR6D9, AR6D22          & AR6D7, AR6D22        & AR6D9                         & AR6D11                               & AR6D11, AR6D24       \\
+      \hline
+      5           & AR6D11                 & AR6D10               & AR6D10                        & AR6D10                               & AR6D27               \\
+      \hline
+      6           & AR6D10, AR6D27         & AR6D15               & AR6D8, AR6D23                 & \-                                   & AR6D1                \\
+      \hline
+      7           & AR6D8, AR6D15          & AR6D1, AR6D6, AR6D27 & AR6D6                         & \-                                   & AR6D8                \\
+      \hline
+      8           & AR6D6                  & AR6D8                & AR6D15                        & \-                                   & AR6D6, AR6D23        \\
+      \hline
+      9           & AR6D1                  & AR6D23, AR6D24       & \-                            & \-                                   & AR6D10, AR6D15       \\
+      \hline
+      10          & AR6D23                 & \-                   & \-                            & \-                                   & \-                   \\
+      \hline
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Quispe2020}.}
+  \end{center}
+\end{quadro}
+
+A partir desses resultados, o trabalho relacionou as diretrizes com as percepções de cada grupo
+e criou a lista de priorização que pode ser vista no \autoref{qua-pri-acc-gui}.
+No qual a coluna ``Id'' informa a ordem de priorização e os códigos que estão nas demais são listados na \autoref{tab-dir-acc-mob-1} junto com as diretrizes.
+
+\begin{table}[htb]
+  \begin{center}
+    \ABNTEXfontereduzida
+    \caption{Diretrizes de acessibilidade \emph{mobile} baseadas no eMAG.}
+    \label{tab-dir-acc-mob-1}
+    \begin{tabular}{p{1.2cm}|p{12.0cm}|p{1.5cm}}
+      %\hline
+      \textbf{Código} & \textbf{Diretriz}                                                                                                                            & \textbf{Categoria} \\
+      \hline
+      AR6D1           & Elementos de tela devem ser organizados de maneira lógica e semântica.                                                                       & AR6CE              \\
+      \hline
+      AR6D2           & As telas devem apresentar sequência lógica de leitura para navegação entre \emph{links}, controles de formulário e outros elementos.         & AR6CE              \\
+      \hline
+      AR6D3           & \emph{Links} na tela devem ser organizados para evitar confusão.                                                                             & AR6CE              \\
+      \hline
+      AR6D4           & Informações devem ser divididas em grupos específicos para facilitar a procura e leitura dos conteúdos.                                      & AR6CE              \\
+      \hline
+      AR6D5           & Usuários devem ser informados se \emph{links} abrem novas telas para poderem decidir se querem ou não sair da tela atual.                    & AR6CE              \\
+      \hline
+      AR6D6           & Todas as funcionalidades na tela devem estar disponíveis a partir do teclado.                                                                & AR6CC              \\
+      \hline
+      AR6D7           & Todos os elementos de \emph{interface} na tela devem ser acessíveis.                                                                         & AR6CC              \\
+      \hline
+      AR6D8           & Redirecionamento automático de telas não deve acontecer.                                                                                     & AR6CC              \\
+      \hline
+      AR6D9           & Em telas com limite de tempo, deve haver opções para desligar ou ajustar o tempo.                                                            & AR6CC              \\
+      \hline
+      AR6D10          & Não deve haver efeitos visuais piscantes, intermitentes ou cintilantes na tela.                                                              & AR6CC              \\
+      \hline
+      AR6D11          & Conteúdos animados não devem iniciar automaticamente.                                                                                        & AR6CC              \\
+      \hline
+      AR6D12          & A linguagem utilizada na tela deve ser especificada.                                                                                         & AR6CCI             \\
+      \hline
+      AR6D13          & Mudanças na linguagem dos conteúdos sempre devem ser especificadas.                                                                          & AR6CCI             \\
+      \hline
+      AR6D14          & Títulos de telas devem ser descritivos, informativos e representativos com relação ao conteúdo principal.                                    & AR6CCI             \\
+      \hline
+      AR6D15          & Deve haver algum mecanismo para indicar ao usuário onde ele está no momento, no conjunto de telas.                                           & AR6CCI             \\
+      \hline
+      AR6D16          & Alvos de \emph{links} devem ser identificados claramente, incluindo informações sobre se estão funcionando ou se direcionam para outra tela. & AR6CCI             \\
+      \hline
+      AR6D17          & Todas as imagens devem possuir descrição textual.                                                                                            & AR6CCI             \\
+      \hline
+      AR6D18          & Documentos em formatos acessíveis devem estar disponíveis.                                                                                   & AR6CCI             \\
+      \hline
+      AR6D19          & Quando uma tabela é utilizada na tela, título e sumário apropriados devem ser fornecidos.                                                    & AR6CCI             \\
+      \hline
+      AR6D20          & Os textos nas telas devem ser fáceis de ler e entender.                                                                                      & AR6CCI             \\
+      \hline
+      AR6D21          & Totos as siglas, abreviações e palavras incomuns na tela devem possuir explicação.                                                           & AR6CCI             \\
+      \hline
+      AR6D22          & Deve haver uma taxa miníma de contraste entre as cores de fundo e as de frente.                                                              & AR6CAD             \\
+      \hline
+      AR6D23          & Características sensoriais (ex.\: cores, formas e sons) não podem ser o único significado para distinguir elementos de tela.                 & AR6CAD             \\
+      \hline
+      AR6D24          & O elemento ou área em foco deve ser evidente visualmente.                                                                                    & AR6CAD             \\
+      \hline
+      AR6D25          & Vídeos que não incluem áudio devem fornecer alternativas como legendas.                                                                      & AR6CM              \\
+      \hline
+      AR6D26          & Deve haver alternativas a conteúdo de áudio (ex.\: transcrição ou linguagem de sinais).                                                      & AR6CM              \\
+      \hline
+      AR6D27          & Conteúdos visuais que não estão disponíveis como áudio devem ser descritos.                                                                  & AR6CM              \\
+      \hline
+      AR6D28          & Devem haver mecanismos para controlar áudios da aplicação.                                                                                   & AR6CM              \\
+      \hline
+      AR6D29          & Devem haver mecanismos para controlar animações que iniciam automaticamente.                                                                 & AR6CM              \\
+      \hline
+      AR6D30          & Botões de imagem ou conteúdos de áudio em formulários devem possuir alternativas textuais.                                                   & AR6CF              \\
+      \hline
+      AR6D31          & Todos os campos do formulário devem ser identificados.                                                                                       & AR6CF              \\
+      \hline
+      AR6D32          & Uma ordem lógica na navegação pelo formulário deve ser garantida.                                                                            & AR6CF              \\
+      \hline
+      AR6D33          & Não devem haver mudanças automáticas quando um elemento do formulário é focado, para não confundir ou desorientar o usuário.                 & AR6CF              \\
+      \hline
+      AR6D34          & Formulários devem possuir instruções de preenchimento.                                                                                       & AR6CF              \\
+      \hline
+      AR6D35          & Erros de entrada devem sempre ser descritos e as submissões de dados confirmadas.                                                            & AR6CF              \\
+      % \hline
+    \end{tabular}
+    \legend{Fonte: \citeonline{Quispe2020}.}
+  \end{center}
+\end{table}
