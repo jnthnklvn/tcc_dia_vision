@@ -2,7 +2,7 @@
 \label{ch:development}
 
 Neste capítulo são apresentadas as tecnologias utilizadas, as soluções adotadas para os problemas
-de acessibilidade identificados no MSL e os resultados alcançados ao final do processo desenvolvimento.
+de acessibilidade identificados no MSL e os resultados alcançados ao final do processo de desenvolvimento.
 
 \section{Tecnologias Utilizadas}
 
@@ -11,7 +11,7 @@ Esta seção lista as principais tecnologias e recursos utilizados no desenvolvi
 \subsection{Visual Studio Code}
 
 O Visual Studio Code (VSCode) é um editor de código \emph{open source} desenvolvido pela Microsoft para Windows, Linux e MacOS.
-Ele inclui suporte para depuração, controle de verão incorporado com Git, realce de sintaxe, IntelliSense
+Ele inclui suporte para depuração, controle de versão incorporado com Git, realce de sintaxe, IntelliSense
 - termo para um conjunto de funcionalidades de edição de código, tais como completar código e informações de parâmetros -
 e refatoração de código.
 
@@ -19,7 +19,7 @@ O VSCode também possibilita a instalação de extensões que adicionam funciona
 Por conta dessas características, esse foi o editor utilizado neste projeto tanto para desenvolver o sistema DiaVision quanto para a parte escrita deste trabalho.
 
 As extensões utilizadas para desenvolvimento da aplicação foram: Flutter e Dart, que dão suporte à criação de aplicações com o SDK do Flutter
-e fluttermobx, que oferece atalhos para adicionar componentes de gerenciamento do estado da aplicação. Já Para a parte escrita,
+e fluttermobx, que oferece atalhos para adicionar componentes de gerenciamento do estado da aplicação. Já para a parte escrita,
 foi utilizado o conjunto de extensões: bibtexLanguage, Code Speell Checker, LaTeX e LaTeX Workshop.
 
 \newpage
@@ -119,11 +119,11 @@ criar estruturas de dados e serviços de forma simples, sem a necessidade de cod
 A plataforma é baseada no ParsePlatform, um \emph{framework} de código aberto que fornece um conjunto de SDKs que visam a criação rápida de \emph{backends}
 com armazenamentos de objetos e arquivos, autenticação de usuário, \emph{push notifications}, \emph{dashboard} para gerenciamento e integração com aplicações móveis e \emph{web}.
 
-O Back4app também disponibiliza a criação, customização e hospedagem de uma aplicação \emph{web} para administração do sistema.
-Sendo possível definir as classes e operações que estarão disponíveis para gerenciamento pelo Administrador do Sistema (ADS).
+O Back4app também disponibiliza a criação, customização e hospedagem de uma aplicação \emph{web} para administração do sistema,
+sendo possível definir as classes e operações que estarão disponíveis para gerenciamento pelo Administrador do Sistema (ADS).
 
-Devido a simplicidade que o Back4app oferece para criação, gerenciamento e hospedagem de \emph{backend}, comparado
-à aplicações convencionais desenvolvidas por meio da codificação, e ao foco deste trabalho, que é o
+Devido à simplicidade que o Back4app oferece para criação, gerenciamento e hospedagem de \emph{backend}, comparado
+a aplicações convencionais desenvolvidas por meio da codificação, e ao foco deste trabalho, que é o
 desenvolvimento da aplicação móvel, esse foi o serviço escolhido para o desenvolvimento do sistema.
 
 O plano utilizado para o serviço foi o gratuito, que possui limite de 10 mil requisições por mês, 250MB para armazenamento de dados,
@@ -131,6 +131,9 @@ O plano utilizado para o serviço foi o gratuito, que possui limite de 10 mil re
     para execução de funções de longa duração, das quais não é necessário aguardar a resposta, no servidor. Em outras soluções é possível
     executar essas funções periodicamente, porém, essa funcionalidade ainda não está disponível no Back4app, assim, elas precisam ser disparadas
     por meio da API Rest.}.
+
+Todos os serviços de \emph{backend} necessários para o aplicativo do DiaVision são de operações básicas de CRUD (\emph{Create, Read, Update, Delete}),
+não havendo regras de negócio ou cálculos complexos, assim, as \emph{Cloud Functions}, citadas no início da seção, não foram utilizadas.
 
 \subsection{Flutter}
 
@@ -143,7 +146,7 @@ de aplicações para Android e iOS a partir de uma base de código única, mante
 Esta seção detalha as soluções de implementação adotadas, tais como a arquitetura do sistema e as soluções
 para os problemas de acessibilidade.
 
-\subsection{Arquitetura}
+\subsection{Arquitetura do Aplicativo}
 
 A estrutura de pastas do projeto está organizada em módulos, os quais não conhecem uns aos outros,
 apenas as classes relativas ao próprio módulo estão dentro de cada pasta. A exceção é para os \emph{repositories} (repositórios)
@@ -156,7 +159,7 @@ devendo atualizar a \emph{view} quando receber atualização dos \emph{repositor
 quando determinados eventos são disparados na \emph{view}.
 
 A \autoref{fig_est_proj} mostra como está organizada essa estrutura de pastas, sendo que a \emph{view}
-está divida em \emph{pages}, que são as telas, e \emph{widgets}, que são os componentes que fazem parte das telas.
+está divida em \emph{pages}, que são as telas e os \emph{widgets}, componentes que fazem parte das telas.
 
 \newpage
 
@@ -204,10 +207,63 @@ como nota-se na linha 24 da \autoref{fig_pag_app_vis}.
     \legend{Fonte: Autor.}
 \end{figure}
 
+O \autoref{codigodart} mostra um trecho do código fonte de uma das classes de repositório
+que faz a conexão do aplicativo com o \emph{backend} no Back4app. Essa conexão pode ser feita por meio de API Rest,
+acessando \emph{endpoints} diretamente, ou com o auxilio do ParseServerSDK, que é um SDK disponibilizado para
+o Flutter por meio de uma biblioteca de código Dart.
+
+Essa biblioteca disponibiliza classes como a ParseObject, para estender objetos do Back4app disponibilizando
+métodos para salvar, atualizar e deletar esses objetos, a QueryBuilder, para realização de consultas aos objetos
+de classes do banco e a ParseACL, para definir o controle de acesso a esses objetos. O \autoref{codigodart}
+traz o exemplo do repositório da classe ``Alimentacao'', mostrando como funcionam as consultas e a criação de objetos,
+com a definição do controle de acesso para determinado usuário.
+
+\begin{codigo}
+    \caption{Trecho de Código do Repositório de Alimentação}
+    \label{codigodart}
+    \begin{lstlisting}[language = java]
+        import 'package:parse_server_sdk/parse_server_sdk.dart';
+
+        class AlimentacaoRepository implements IAlimentacaoRepository {
+            @override
+            Future<Either<AlimentacaoFailure, Alimentacao>>
+                getById(String objectId) async {
+              final query = QueryBuilder(Alimentacao.clone())
+                ..whereEqualTo("objectId", objectId);
+              final response = await query.query();
+          
+              return _getSingleResult(response);
+            }
+          
+            @override
+            Future<Either<AlimentacaoFailure, List<Alimentacao>>> 
+                getAllByPaciente(Paciente paciente) async {
+              final query = QueryBuilder(Alimentacao.clone())
+                ..whereEqualTo('paciente', paciente)
+                ..orderByDescending("createdAt");
+              final response = await query.query();
+          
+              return _getResult(response);
+            }
+          
+            @override
+            Future<Either<AlimentacaoFailure, Alimentacao>>
+                save(Alimentacao alimentacao, User user) async {
+              final acl = ParseACL(owner: user);
+              alimentacao.setACL(acl);
+              final response = await alimentacao.save();
+          
+              return _getSingleResult(response);
+            }
+        }
+  \end{lstlisting}
+  \end{codigo}
+
 \subsection{\emph{Backend}}
 
 O Back4app foi escolhido para o \emph{backend} do sistema e com ele foi possível definir a estrutura de dados que pode
-ser vista na \autoref{fig_bac_app_data}, por meio de sua interface de usuário.
+ser vista na \autoref{fig_bac_app_data}, por meio de sua interface de usuário. Ao clicar no botão ``Create a class'' no topo dessa figura,
+é possível criar classes de forma manual, informando o nome da classe, controle de acesso e, posteriormente as colunas com os tipos de dados.
 
 \begin{figure}[htb]
     \caption{\label{fig_bac_app_data}Esquema do Banco de Dados.}
@@ -233,8 +289,18 @@ do objeto, e ACL\footnote{Lista de Controle de Acesso (ACL, do inglês \emph{\te
     são regras de acesso definidas para cada objeto no momento de sua criação.}, que define qual usuário tem permissão de acesso a
 esse objeto e quais são essas permissões (escrita, leitura ou ambos).
 
-Com isso, visando a segurança dos dados dos usuários, todas as classes que registram dados dos pessoais
+Com isso, visando a segurança dos dados dos usuários, todas as classes que registram dados pessoais
 possuem restrição de ACL, assim, somente o próprio usuário possui permissão tanto de leitura quanto de escrita.
+
+No lado direito da \autoref{fig_back_data_ali} há um menu aberto, nele existem opções para gerenciar a classe, tais como:
+definir os níveis de acesso da classe ou campos como protegidos, adicionar/remover linhas (registros) e colunas (campos),
+apagar a classe, importar/exportar os dados no formato CSV\footnote{Valores Separados por Vírgula
+(CSV, do inglês \emph{Comma-separated values}) é um formato de arquivo de texto comumente utilizado por
+\emph{softwares} de planilhas como o Google Planilhas, o Microsoft Excel e o \emph{software} livre
+LibreOffice Calc.} ou JSON\footnote{
+    Notação de Objetos JavaScript (JSON, do inglês \emph{JavaScript Object Notation}) é um formato de
+    arquivo de texto leve para troca de dados simples e rápida entre sistemas.
+} e etc.
 
 \begin{figure}[htb]
     \caption{\label{fig_back_data_ali}Exemplo de Classe no Banco.}
@@ -248,15 +314,13 @@ Ainda na \autoref{fig_back_data_ali}, percebe-se que a classe ``Alimentacao'' po
 \emph{Pointer} (Ponteiro) que armazena o objectId que faz referência à classe Paciente, como uma chave estrangeira em
 bancos de dados relacionais.
 
-\newpage
-
 \subsubsection{\emph{Dashboard} do Administrador do Sistema}
 
 O Back4app também possibilitou a construção de um \emph{dashboard web} para gerenciamento das informações que são disponibilizadas
 para os usuários no aplicativo, atendendo aos requisitos funcionais do Administrador do Sistema, mencionados no \autoref{qua-req-fun}.
 
 A customização e disponibilização das funcionalidades nesse \emph{dashboard} foi feita utilizando a própria
-interface da plataforma, sendo possível definir as funcionalidades, campos e perfis acesso que estariam
+interface da plataforma, sendo possível definir as funcionalidades, campos e perfis de acesso que estariam
 disponíveis. Ao habilitar o \emph{dashboard} e realizar as customizações, são criadas novas classes no banco
 de dados, como pôde ser observado nas que iniciam com ``B4a'' na \autoref{fig_bac_app_data}, que mantém salvas
 essas configurações.
@@ -268,7 +332,7 @@ de acesso e a página de autenticação, sendo que as credenciais para autentica
 \begin{figure}[htb]
     \caption{\label{fig_back_dash_auth}Tela de \emph{Login} do \emph{Dashboard}.}
     \begin{center}
-        \includegraphics[scale=0.65]{Imagens/desenvolvimento/auth_admin.png}
+        \includegraphics[scale=0.55]{Imagens/desenvolvimento/auth_admin.png}
     \end{center}
     \legend{Fonte: Autor.}
 \end{figure}
@@ -288,7 +352,7 @@ que estão disponíveis para gerenciamento no menu lateral esquerdo.
 
 Assim, a classe ``Apps de Visão'' armazena sugestões de aplicativos, de diversas categorias e finalidades, accessíveis
 à PDV. Essas sugestões podem ser cadastradas pelo ADS ou sugeridas pelos usuários do DiaVision e aprovadas pelo ADS. A
-classe ``Centros de Saúde'' segue o mesmo modelo da anterior, porém, se refere à informações sobre centros de saúde, como
+classe ``Centros de Saúde'' segue o mesmo modelo da anterior, porém, refere-se a informações sobre centros de saúde, como
 nome, descrição, categoria, contatos e endereço.
 
 A classe ``Autocuidados'' armazena dicas de autocuidado com relação à saúde para os usuários. Porém, diferentemente das duas
@@ -328,7 +392,7 @@ Na \autoref{fig_dash_auto_add}, pode-se visualizar um exemplo de cadastro do obj
 \subsection{Aplicativo}
 
 O aplicativo foi desenvolvido utilizando o \emph{framework} de desenvolvimento Flutter, como mencionado
-no capitulo anterior, de acordo com os requisitos definidos no planejamento e as soluções de acessibilidade
+no capítulo anterior, de acordo com os requisitos definidos no planejamento e as soluções de acessibilidade
 identificadas no MSL do Capítulo \ref{ch:mapping} e propostas para DiaVision.
 
 \subsubsection{Introdução}
@@ -423,7 +487,7 @@ senha, para ser direcionado à tela principal do aplicativo.
 \end{figure}
 
 Além disso, a partir da tela de autenticação também é possível ir para tela de registro,
-caso ainda não tenha conta, ou para a tela de recuperação a senha, caso tenha-a esquecido,
+caso ainda não tenha conta, ou para a tela de recuperação a senha, caso a tenha esquecido,
 clicando nos textos correspondentes abaixo do botão ``Entrar'', este que pôde ser visto na
 \autoref{fig_app_login}.
 
@@ -512,7 +576,7 @@ Em “Meus Dados” o usuário pode alterar os dados de e-mail, nome, telefone, 
 
 Já em “Preferências”, como mostrado na \autoref{fig_app_dat_pref}, o usuário pode definir quais notificações
 e alertas deseja receber, o tempo para relembrete das notificações e os valores mínimo e máximo de glicemia,
-que por padrão são 70 e 120 mg/dL. Bem como, no caso da notificação de glicemia estar ativa, os horários em
+que por padrão são 70 e 120 mg/dL. Da mesma forma, no caso da notificação de glicemia estar ativa, os horários em
 que deseja ser lembrado de registrá-la.
 
 \newpage
@@ -554,10 +618,7 @@ em horários definidos pelo usuário, para lembrá-lo de que precisa medir e reg
 
 Na primeira tela deste módulo, como pode-se observar na \autoref{fig_list_share_alim}, são listados todos
 os registros de alimentação feitos pelo usuário. Também há um botão “compartilhar” no canto superior direito,
-por meio do qual é possível exportar esses registros, no formato CSV\footnote{Valores Separados por Vírgula
-    (CSV, do inglês \emph{Comma-separated values}) é um formato de arquivo de texto comumente utilizado por
-    \emph{softwares} de planilhas como o Google Planilhas, o Microsoft Excel e o \emph{software} livre
-    LibreOffice Calc.}, e compartilhá-los para outros \emph{apps}.
+por meio do qual é possível exportar esses registros, no formato CSV, e compartilhá-los para outros \emph{apps}.
 
 \begin{figure}[htb]
     \caption{\label{fig_list_share_alim}Tela Inicial do Módulo Alimentação.}
@@ -575,9 +636,9 @@ informando as calorias de cada porção consumida. Porém, também é possível 
 e informar as calorias totais da refeição diretamente.
 
 A \autoref{fig_reg_alimentacao} mostra a tela de registro de alimentação no estado inicial, sem nenhum alimento
-adicionado. A medida que alimentos vão sendo adicionados, estes vão aparecendo na tela e o valor das calorias
+adicionado. À medida que alimentos vão sendo adicionados, estes vão aparecendo na tela e o valor das calorias
 também vai sendo atualizado automaticamente com os valores das calorias consumidas de cada alimento, como
-observa-se na \autoref{fig_reg_alimentacao_2}.
+se observa na \autoref{fig_reg_alimentacao_2}.
 
 \begin{figure}[htb]
     \centering
@@ -633,7 +694,7 @@ apenas informar a quantidade consumida na mesma unidade indicada para o alimento
 \subsubsection{Módulo \emph{Apps} de Visão}
 
 Neste módulo, são apresentadas sugestões de aplicativos de diversos temas que auxiliam, de alguma forma, pessoas
-com deficiência visual, como constata-se na \autoref{fig_list_apps_visao}. Ao clicar em um deles, o usuário será
+com deficiência visual, como se constata na \autoref{fig_list_apps_visao}. Ao clicar em um deles, o usuário será
 direcionado à página do \emph{app} na loja de aplicativos, de acordo com SO do \emph{smartphone} utilizado.
 
 \begin{figure}[htb]
@@ -730,7 +791,7 @@ telefones para contato, endereço e localização no Google Maps\footnote{O Goog
     visualizar de mapas, localizações e rotas oferecido pelo Google de forma gratuita.}.
 
 Como pode-se observar na \autoref{fig_list_centros}, a listagem possui uma filtragem por tipo, assim,
-em conjunto com às funcionalidades de acessibilidade do \emph{app}, o usuário pode encontrar por
+em conjunto com as funcionalidades de acessibilidade do \emph{app}, o usuário pode encontrar
 centros de saúde que atendam sua demanda de maneira mais acessível.
 
 \begin{figure}[htb]
@@ -816,13 +877,14 @@ mensagens de alerta como a exibida na \autoref{fig_list_med_not}.
     \end{minipage}
 \end{figure}
 
-As notificações de medicações são baseadas no horário inicial e na posologia e aparecem determinado tempo
-antes de cada horário, sendo 10 minutos por padrão e podendo ser alterado nas “Preferências”.
+As notificações de medicações são programadas no próprio dispositivo do usuário, com base no horário inicial e na posologia,
+assim, mesmo que não haja conexão de rede constante, as notificações continuarão sendo disparadas. Essas notificações
+aparecem determinado tempo antes de cada horário, sendo 10 minutos por padrão e podendo ser alterado nas “Preferências”.
 
 Para registro de medicação, alguns dados como nome, dosagem, posologia, horário inicial e data final,
 são importantes para que o usuário possa ser notificado. Isso porque a posologia (intervalo entre as doses)
 e o horário inicial definem os horários de notificação. A data final define quando as notificações devem
-parar. E, o nome e a dosagem são exibidos na notificação de lembrete.
+parar. E o nome e a dosagem são exibidos na notificação de lembrete.
 
 Porém, nenhum desses dados, exibidos na \autoref{fig_reg_med}, são obrigatórios. Assim, se não informados,
 o usuário não será notificado nos horários que deve tomar as medicações.
@@ -858,7 +920,7 @@ Este módulo serve para que o usuário possa acompanhar a evolução dos cuidado
 diário de avaliação do estado dos mesmos.
 
 Como nos demais módulos de registros pessoais do usuário, no canto superior direito da \autoref{fig_list_ava_pes}
-tem um botão para compartilhar esses registros. Assim, o usuário pode utilizar esse recurso para compartilhar as
+há um botão para compartilhar esses registros. Assim, o usuário pode utilizar esse recurso para compartilhar as
 avaliações com seu podologista ou com algum familiar responsável por acompanhá-lo na visita ao profissional.
 
 \begin{figure}[htb]
@@ -924,7 +986,8 @@ nem todas as funcionalidades levantadas em \citeonline{Sobral2021} e apresentada
 na \autoref{tab_cor_func} entraram no planejamento, devido à viabilidade do projeto.
 
 Das 10 soluções de acessibilidade levantadas no MSL e propostas para o DiaVision na \autoref{tab_tec_pro},
-7 foram implementadas, duas não foram (TAM13 e TAM14) e uma foi implementada parcialmente (TAM9).
+7 foram implementadas. Porém, devido ao prazo para entrega do projeto, duas dessas soluções não foram implementadas
+(TAM13 e TAM14) e uma foi implementada parcialmente (TAM9).
 
 Este capítulo buscou elucidar o processo de desenvolvimento, relatando a estrutura do projeto, as tecnologias
 utilizadas, as soluções de acessibilidade adotas e o resultado final do sistema DiaVision. Este que incluiu o
